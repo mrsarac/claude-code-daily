@@ -90,4 +90,14 @@ Read `~/Library/Messages/chat.db` for context. **Warning:** Privacy implications
 
 ---
 
+
+## 51. Reliable Element Interaction with Claude Code CLI
+**Source:** yksugi (Reddit)
+
+Improve Claude Code CLI interactions by using `read_page` to access the accessibility tree and `find` to locate elements via their descriptions. This allows interaction using element `ref`s instead of screen coordinates, providing more accurate and reliable clicking, especially when screenshots are unnecessary. Avoid taking screenshots unless explicitly required for a task.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1q0pbuh/a_quick_tip_on_improving_the_performance_of/) | Added: 2025-12-31
+
+---
+
 *[Back to Categories](../README.md)*
