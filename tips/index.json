@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-12-31",
+  "totalTips": 50,
+  "categories": [
+    {
+      "name": "Orchestration",
+      "slug": "orchestration",
+      "count": 10,
+      "icon": "🎭"
+    },
+    {
+      "name": "Context Management",
+      "slug": "context-management",
+      "count": 10,
+      "icon": "📝"
+    },
+    {
+      "name": "Workflow",
+      "slug": "workflow",
+      "count": 10,
+      "icon": "⚡"
+    },
+    {
+      "name": "Subagents",
+      "slug": "subagents",
+      "count": 10,
+      "icon": "🤖"
+    },
+    {
+      "name": "Tooling",
+      "slug": "tooling",
+      "count": 10,
+      "icon": "🔧"
+    }
+  ],
+  "sources": {
+    "primary": "https://x.com/alexalbert__/status/2004575443484319954",
+    "automation": ["twitter", "reddit"]
+  }
+}
