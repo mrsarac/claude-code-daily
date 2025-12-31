@@ -125,6 +125,9 @@ def fetch_twitter_tips():
 
             elif response.status_code == 429:
                 print(f"⚠️  Twitter: Rate limited, skipping #{hashtag}...")
+            elif response.status_code == 403:
+                print(f"⚠️  Twitter #{hashtag}: Access denied (Free tier doesn't include search API)")
+                break  # No point trying other hashtags
             else:
                 print(f"⚠️  Twitter #{hashtag}: API error {response.status_code}")
 
@@ -137,94 +140,54 @@ def fetch_twitter_tips():
 
 def fetch_reddit_tips():
     """
-    Fetch tips from Reddit using PRAW.
-
-    Requires REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET.
+    Fetch tips from Reddit using public JSON API (no auth required).
     """
-    client_id = os.getenv("REDDIT_CLIENT_ID")
-    client_secret = os.getenv("REDDIT_CLIENT_SECRET")
-
-    if not client_id or not client_secret:
-        print("⚠️  Reddit: No credentials found, skipping...")
-        return []
-
     tips = []
 
-    try:
-        import praw
+    print("🤖 Reddit: Using public API (no auth required)...")
 
-        reddit = praw.Reddit(
-            client_id=client_id,
-            client_secret=client_secret,
-            user_agent="claude-code-daily/1.0"
-        )
+    for subreddit_name in CONFIG["reddit"]["subreddits"]:
+        try:
+            url = f"https://www.reddit.com/r/{subreddit_name}/hot.json?limit=50"
+            headers = {"User-Agent": "claude-code-daily/1.0 (github.com/mrsarac/claude-code-daily)"}
+            response = requests.get(url, headers=headers, timeout=30)
 
-        for subreddit_name in CONFIG["reddit"]["subreddits"]:
-            try:
-                subreddit = reddit.subreddit(subreddit_name)
+            if response.status_code == 200:
+                data = response.json()
+                posts = data.get("data", {}).get("children", [])
+                subreddit_tips = 0
 
-                # Get hot and new posts from last week
-                for post in subreddit.hot(limit=50):
-                    # Check age
-                    post_age = datetime.utcnow() - datetime.utcfromtimestamp(post.created_utc)
-                    if post_age.days > CONFIG["reddit"]["max_age_days"]:
-                        continue
+                for post_data in posts:
+                    post = post_data.get("data", {})
+                    score = post.get("score", 0)
 
-                    # Check score
-                    if post.score >= CONFIG["reddit"]["min_score"]:
-                        # Look for tip-like content
-                        content = f"{post.title}\n\n{post.selftext}" if post.selftext else post.title
+                    if score >= CONFIG["reddit"]["min_score"]:
+                        title = post.get("title", "")
+                        selftext = post.get("selftext", "")
+                        content = f"{title}\n\n{selftext}" if selftext else title
 
-                        if any(kw in content.lower() for kw in ["tip", "trick", "workflow", "claude code", "context", "subagent"]):
+                        # Look for Claude Code related content
+                        keywords = ["tip", "trick", "workflow", "claude", "context", "mcp", "subagent", "prompt"]
+                        if any(kw in content.lower() for kw in keywords):
                             tips.append({
-                                "title": post.title[:100],
+                                "title": title[:100],
                                 "content": content,
                                 "source": "reddit",
-                                "author": str(post.author),
-                                "url": f"https://reddit.com{post.permalink}",
-                                "score": post.score,
-                                "created_at": datetime.utcfromtimestamp(post.created_utc).isoformat()
+                                "author": post.get("author", "unknown"),
+                                "url": f"https://reddit.com{post.get('permalink', '')}",
+                                "score": score
                             })
+                            subreddit_tips += 1
 
-                print(f"🤖 Reddit r/{subreddit_name}: Found tips")
+                print(f"🤖 Reddit r/{subreddit_name}: Found {subreddit_tips} tips (from {len(posts)} posts)")
 
-            except Exception as e:
-                print(f"⚠️  Reddit r/{subreddit_name}: Error - {str(e)[:50]}")
+            elif response.status_code == 429:
+                print(f"⚠️  Reddit r/{subreddit_name}: Rate limited, skipping...")
+            else:
+                print(f"⚠️  Reddit r/{subreddit_name}: HTTP {response.status_code}")
 
-    except ImportError:
-        print("⚠️  Reddit: PRAW not installed, using API directly...")
-        # Fallback to direct API (read-only, no auth needed for public posts)
-        for subreddit_name in CONFIG["reddit"]["subreddits"]:
-            try:
-                url = f"https://www.reddit.com/r/{subreddit_name}/hot.json?limit=50"
-                headers = {"User-Agent": "claude-code-daily/1.0"}
-                response = requests.get(url, headers=headers, timeout=30)
-
-                if response.status_code == 200:
-                    data = response.json()
-                    posts = data.get("data", {}).get("children", [])
-
-                    for post_data in posts:
-                        post = post_data.get("data", {})
-                        score = post.get("score", 0)
-
-                        if score >= CONFIG["reddit"]["min_score"]:
-                            content = f"{post.get('title', '')}\n\n{post.get('selftext', '')}"
-
-                            if any(kw in content.lower() for kw in ["tip", "trick", "workflow", "claude", "context"]):
-                                tips.append({
-                                    "title": post.get("title", "")[:100],
-                                    "content": content,
-                                    "source": "reddit",
-                                    "author": post.get("author", "unknown"),
-                                    "url": f"https://reddit.com{post.get('permalink', '')}",
-                                    "score": score
-                                })
-
-                    print(f"🤖 Reddit r/{subreddit_name}: Found {len([t for t in tips if subreddit_name.lower() in t.get('url', '').lower()])} tips")
-
-            except Exception as e:
-                print(f"⚠️  Reddit r/{subreddit_name}: Error - {str(e)[:50]}")
+        except Exception as e:
+            print(f"⚠️  Reddit r/{subreddit_name}: Error - {str(e)[:50]}")
 
     print(f"🤖 Reddit: Total {len(tips)} tips found")
     return tips
