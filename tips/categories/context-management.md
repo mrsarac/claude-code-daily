@@ -98,33 +98,4 @@ Maintain `corecontext.md` for new sessions, plus individual feature roadmaps for
 ---
 
 
-## 54. Claude uses diagram context, unprompted!
-**Source:** BenAttanasio (Reddit)
-
-Claude apparently analyzed a diagram from Nano Banana Pro and incorporated its information into its response without being explicitly prompted to do so. This suggests strong context understanding and proactive use of visual data within the input. The unprompted behavior highlights Claude's ability to leverage information beyond simple keyword recognition.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1q01a4d/opus_45_adorably_selfdeprecates/) | Added: 2025-12-31
-
----
-
-
-## 64. Self-Learning Skills for Claude Agents
-**Source:** bantler (Reddit)
-
-This tip describes a method for improving Claude agents' efficiency by building self-learning capabilities. It addresses the problem of agents repeatedly guessing at solutions already found in previous runs. The proposed solution involves a 'sidecar memory' that records successful solutions ('Aha moments') and allows for backporting proven knowledge, preventing agents from starting from scratch each time and streamlining the workflow.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1pzong4/letting_agent_skills_learn_from_experience/) | Added: 2025-12-31
-
----
-
-
-## 66. Claude's Arithmetic Errors and Prompting for Correction
-**Source:** PaulF707 (Reddit)
-
-This highlights a common issue with LLMs: occasional arithmetic errors. The user found that Claude made a mistake in totaling monthly figures. The tip suggests that prompting Claude to explicitly double-check its calculations and confirm the total can help it identify and correct these errors. This underscores the importance of verifying LLM output, especially for numerical tasks, and using prompting to guide the model towards accuracy.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1q05a1j/this_was_a_simple_arithmetic_mistake_on_my_part/) | Added: 2025-12-31
-
----
-
 *[Back to Categories](../README.md)*

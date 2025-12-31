@@ -82,13 +82,4 @@ For large API documentation, connect Claude to NotebookLM via MCP. Specialized k
 ---
 
 
-## 65. Claude Code Agents Visualize "Agency" Concept
-**Source:** jdeamattson (Reddit)
-
-User /u/jdeamattson reports success in using Claude Code agents (potentially with Opus 4.5) to visualize a concept, "Agency," defined as a group of agents working with a human. The agent generated a diagram explaining the concept after the user introduced the term, suggesting a potential for subagents to understand and represent complex user-defined ideas visually.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1q0diy6/claude_code_explains_my_term_agency_to_me_with_a/) | Added: 2025-12-31
-
----
-
 *[Back to Categories](../README.md)*

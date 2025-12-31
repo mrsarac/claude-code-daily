@@ -102,23 +102,4 @@ Explicit two-phase: "Create detailed MD plan" → Review → "Now implement iter
 ---
 
 
-## 55. LLM-Council integration with Claude via Model Context Protocol
-**Source:** NeitherRun3631 (Reddit)
-
-This tip showcases an integration of Andrej Karpathy's llm-council project with Claude through the Model Context Protocol (MCP). This allows users to perform multi-LLM deliberation directly within Claude Desktop, VS Code, or any MCP-compatible client. Users can trigger the full 3-stage deliberation process (individual responses, peer rankings, synthesis) by prefacing their query with "Use council_query", streamlining complex reasoning tasks within the Claude environment.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1q07mc8/built_an_mcp_server_for_andrej_karpathys_llm/) | Added: 2025-12-31
-
----
-
-
-## 69. Troubleshooting Skill Triggering: Tips and Strategies
-**Source:** diablodq (Reddit)
-
-The user highlights a common issue where Claude's skills fail to trigger automatically despite providing relevant keywords in the skill descriptions. This suggests a challenge in AI orchestration and highlights the need for strategies to improve skill triggering reliability, perhaps involving more precise keywords, optimized skill descriptions, or a more explicit orchestration framework.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1pzrl6e/how_do_you_get_claude_skills_to_trigger_reliably/) | Added: 2025-12-31
-
----
-
 *[Back to Categories](../README.md)*

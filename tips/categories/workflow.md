@@ -104,43 +104,4 @@ Plan → New Session → Implement → Bridge. This rule alone prevents 80% of q
 
 
 
-## 58. AI Legislation Analysis: TF-IDF Clustering & Co-sponsorship
-**Source:** YungBoiSocrates (Reddit)
-
-This tip details a workflow for analyzing AI legislation. It involves pulling bill text and metadata (2019-2024), using TF-IDF to categorize bills by policy area, and analyzing co-sponsorship networks to identify relationships between legislators. The analysis reveals a low passage rate, a post-ChatGPT surge in bills, and a partisan divide in legislative focus, with Democrats emphasizing regulation and privacy.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1q06w2h/given_the_recent_executive_order_by_trump_to/) | Added: 2025-12-31
-
----
-
-
-## 59. Automate Admin Tasks with Claude Code: Email, Outreach, Research
-**Source:** mikelupu (Reddit)
-
-This prompt explores using Claude Code for automating administrative tasks like email replies, proactive outreach, and web research/tracking. It encourages users to share their automation workflows, especially those triggered automatically or scheduled, to expand the understanding of Claude's non-coding automation capabilities beyond simple summarization.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1q0483v/what_have_you_automated_with_claudeai_besides/) | Added: 2025-12-31
-
----
-
-
-## 60. AI-Assisted OSS Maintenance with Claude Code
-**Source:** st0012 (Reddit)
-
-This submission describes the user's experience using Claude Code to improve their OSS maintenance and contributions over the past six months. It potentially offers valuable insights into practical applications of AI for streamlining open-source development workflows and could be a useful resource for others looking to leverage AI in this domain.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1q0ffja/ai_and_open_source_a_maintainers_take_end_of_2025/) | Added: 2025-12-31
-
----
-
-
-## 67. Direct Prompts vs. Agents: A Trade-off Analysis
-**Source:** theelectronicgenius (Reddit)
-
-The provided feedback highlights the trade-offs between using direct prompts and more complex agent-based workflows with Claude. While agents offer potential benefits, direct prompts can sometimes be faster and more effective. Choosing the optimal approach depends on the specific task and desired balance of speed and quality. The user tested various configurations including agents, MCP servers, and parallelism via worktrees.
-
-[Original](https://www.reddit.com/r/ClaudeAI/comments/1pzkuef/pushing_claude_code/) | Added: 2025-12-31
-
----
-
 *[Back to Categories](../README.md)*

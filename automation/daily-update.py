@@ -225,11 +225,23 @@ def fetch_reddit_tips():
                             keywords = ["tip", "trick", "workflow", "worktree", "context", "mcp", "subagent", "prompt", "claude code", "hack", "technique", "pattern"]
                             # Negative keywords - filter out non-tips
                             negative_keywords = [
+                                # Complaints and rants
                                 "appreciation", "rant", "frustrated", "angry", "disappointed",
                                 "broken", "bug report", "anyone else", "does anyone",
                                 "i believed", "data is gone", "lost my", "help me",
+                                # Questions (not tips)
                                 "question about", "how do i", "what is", "why does",
-                                "announcement", "hiring", "job", "newsletter"
+                                "can someone", "is there a way", "looking for",
+                                # Off-topic
+                                "announcement", "hiring", "job", "newsletter",
+                                "guitar", "music", "game", "trading", "crypto",
+                                "chatgpt", "openai", "gemini", "llama", "mistral",
+                                # App showcases (not Claude Code tips)
+                                "built an app", "made an app", "created an app",
+                                "my app", "check out my", "just launched",
+                                # Seeking help
+                                "need help", "please help", "struggling with",
+                                "not working", "doesn't work", "stopped working"
                             ]
                             content_lower = content.lower()
                             title_lower = title.lower()
@@ -311,16 +323,29 @@ def validate_and_categorize(tips: list) -> list:
         validated_tips = []
 
         for tip in tips:
-            prompt = f"""Analyze this potential Claude Code tip and respond with JSON only:
+            prompt = f"""You are a STRICT content validator for Claude Code tips. Be very selective.
 
 Content: {tip.get('content', '')[:500]}
 
+VALID Claude Code tips MUST:
+- Be about Claude Code CLI (the Anthropic terminal tool) or Claude Code workflows
+- Contain actionable techniques, tricks, or patterns for using Claude Code
+- Include specific commands, configurations, or methodologies
+
+REJECT if content is:
+- A bug report, question, or complaint
+- About general Claude AI chat (not Claude Code CLI)
+- About other AI tools (ChatGPT, Gemini, etc.)
+- A product announcement or hiring post
+- A general discussion without actionable advice
+- About apps/tools built WITH Claude (not ABOUT Claude Code)
+
 Tasks:
-1. Is this a useful Claude Code tip? (true/false)
-2. Rate quality 1-10
+1. Is this a VALID Claude Code tip? (true ONLY if it's actionable advice about Claude Code CLI)
+2. Rate quality 1-10 (be strict: 7+ only for genuinely useful tips)
 3. Assign category: orchestration, context-management, workflow, subagents, or tooling
 4. Write a concise title (max 60 chars)
-5. Write a one-paragraph summary
+5. Write a one-paragraph summary of the actionable tip
 
 Respond ONLY with valid JSON:
 {{"is_valid": true/false, "quality": 1-10, "category": "string", "title": "string", "summary": "string"}}"""
@@ -337,18 +362,20 @@ Respond ONLY with valid JSON:
 
                 result = json.loads(result_text)
 
-                if result.get("is_valid") and result.get("quality", 0) >= 6:
+                # STRICT: Must be valid AND quality >= 7
+                if result.get("is_valid") and result.get("quality", 0) >= 7:
                     tip["category"] = result.get("category", "workflow")
                     tip["ai_title"] = result.get("title", tip["title"])
                     tip["summary"] = result.get("summary", "")
                     tip["quality"] = result.get("quality", 5)
                     validated_tips.append(tip)
+                else:
+                    # Log rejected tips for debugging
+                    print(f"   ❌ Rejected: {tip.get('title', 'Unknown')[:40]}... (valid={result.get('is_valid')}, quality={result.get('quality')})")
 
             except Exception as e:
                 print(f"⚠️  Gemini validation error: {str(e)[:30]}")
-                # Keep tip without AI validation
-                tip["category"] = "workflow"
-                validated_tips.append(tip)
+                # Do NOT add tips that fail validation - skip them
 
         print(f"✨ Gemini: Validated {len(validated_tips)}/{len(tips)} tips")
         return validated_tips
