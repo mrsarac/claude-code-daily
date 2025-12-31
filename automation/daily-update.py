@@ -222,8 +222,23 @@ def fetch_reddit_tips():
                             content = re.sub(r'<[^>]+>', '', content)
 
                             # Look for Claude Code related content
-                            keywords = ["tip", "trick", "workflow", "claude", "context", "mcp", "subagent", "prompt", "claude code"]
-                            if any(kw in content.lower() for kw in keywords):
+                            keywords = ["tip", "trick", "workflow", "worktree", "context", "mcp", "subagent", "prompt", "claude code", "hack", "technique", "pattern"]
+                            # Negative keywords - filter out non-tips
+                            negative_keywords = [
+                                "appreciation", "rant", "frustrated", "angry", "disappointed",
+                                "broken", "bug report", "anyone else", "does anyone",
+                                "i believed", "data is gone", "lost my", "help me",
+                                "question about", "how do i", "what is", "why does",
+                                "announcement", "hiring", "job", "newsletter"
+                            ]
+                            content_lower = content.lower()
+                            title_lower = title.lower()
+
+                            # Must have positive keywords AND no negative keywords
+                            has_positive = any(kw in content_lower for kw in keywords)
+                            has_negative = any(nk in title_lower or nk in content_lower[:200] for nk in negative_keywords)
+
+                            if has_positive and not has_negative:
                                 tips.append({
                                     "title": title[:100],
                                     "content": content[:500],
@@ -418,15 +433,17 @@ def update_index(new_tips: list):
     else:
         index = {"categories": [], "totalTips": 0, "lastUpdated": ""}
 
-    # Update counts
+    # Update counts (case-insensitive category matching)
     for tip in new_tips:
-        category = tip.get("category", "workflow")
-        # Find or create category in index
-        cat_entry = next((c for c in index["categories"] if c["name"] == category), None)
-        if not cat_entry:
-            cat_entry = {"name": category, "count": 0}
-            index["categories"].append(cat_entry)
-        cat_entry["count"] = cat_entry.get("count", 0) + 1
+        category = tip.get("category", "workflow").lower()
+        # Find existing category (case-insensitive) - use slug for matching
+        cat_entry = next(
+            (c for c in index["categories"] if c.get("slug", c["name"]).lower() == category),
+            None
+        )
+        if cat_entry:
+            cat_entry["count"] = cat_entry.get("count", 0) + 1
+        # Don't create new categories - only update existing ones
 
     index["totalTips"] = index.get("totalTips", 0) + len(new_tips)
     index["lastUpdated"] = datetime.now().isoformat()
