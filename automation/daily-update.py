@@ -3,20 +3,32 @@
 Claude Code Daily - Automated Tip Curator
 
 This script runs daily to:
-1. Scrape Twitter for #ClaudeCode hashtag
-2. Scrape Reddit r/ClaudeAI for tips
+1. Scrape Twitter for #ClaudeCode hashtag (requires paid API)
+2. Scrape Reddit r/ClaudeAI for tips via RSS
 3. Use Gemini AI to validate and categorize
 4. Deduplicate against existing tips
 5. Update repository files
+
+Repository Structure:
+  tips/
+  ├── categories/
+  │   ├── orchestration.md      # Multiple tips in ## N. Title format
+  │   ├── context-management.md
+  │   ├── workflow.md
+  │   ├── subagents.md
+  │   └── tooling.md
+  └── index.json
 """
 
 import os
 import json
 import hashlib
 import requests
+import re
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List, Dict
 
 # Configuration
 CONFIG = {
@@ -27,7 +39,7 @@ CONFIG = {
         "max_age_days": 7
     },
     "reddit": {
-        "subreddits": ["ClaudeAI", "claudeai"],
+        "subreddits": ["ClaudeAI"],
         "min_score": 10,
         "max_age_days": 7
     },
@@ -37,27 +49,53 @@ CONFIG = {
         "workflow",
         "subagents",
         "tooling"
-    ]
+    ],
+    "category_keywords": {
+        "orchestration": ["worktree", "parallel", "agent", "delegate", "orchestrat"],
+        "context-management": ["context", "memory", "session", "bridge", "compact"],
+        "workflow": ["workflow", "prompt", "plan", "review", "command"],
+        "subagents": ["subagent", "spawn", "task", "coordinator", "mcp"],
+        "tooling": ["tool", "plugin", "hook", "script", "automation"]
+    }
 }
 
 
 def get_existing_tips():
-    """Load existing tips to check for duplicates."""
-    tips_dir = Path("tips")
-    all_tips = {"tips": [], "hashes": set()}
+    """Load existing tips to check for duplicates.
 
-    # Scan all category directories
+    Tips are stored in tips/categories/{category}.md files with format:
+    ## N. Tip Title
+    **Source:** Author Name
+    Content...
+    ---
+    """
+    tips_dir = Path("tips/categories")
+    all_tips = {"tips": [], "hashes": set(), "next_number": 51}  # Start after 50 existing
+
+    if not tips_dir.exists():
+        print(f"⚠️  Tips directory not found: {tips_dir}")
+        return all_tips
+
+    # Scan all category files
     for category in CONFIG["categories"]:
-        category_dir = tips_dir / category
-        if category_dir.exists():
-            for tip_file in category_dir.glob("*.md"):
-                content = tip_file.read_text()
-                # Extract title from first line
-                lines = content.strip().split('\n')
-                if lines:
-                    title = lines[0].replace('#', '').strip()
-                    all_tips["tips"].append({"title": title, "file": str(tip_file)})
-                    all_tips["hashes"].add(generate_tip_hash(title))
+        category_file = tips_dir / f"{category}.md"
+        if category_file.exists():
+            content = category_file.read_text()
+            # Find all tip titles using regex: ## N. Title
+            tip_pattern = r'^## (\d+)\. (.+)$'
+            for match in re.finditer(tip_pattern, content, re.MULTILINE):
+                tip_num = int(match.group(1))
+                title = match.group(2).strip()
+                all_tips["tips"].append({
+                    "number": tip_num,
+                    "title": title,
+                    "category": category,
+                    "file": str(category_file)
+                })
+                all_tips["hashes"].add(generate_tip_hash(title))
+                # Track highest tip number
+                if tip_num >= all_tips["next_number"]:
+                    all_tips["next_number"] = tip_num + 1
 
     return all_tips
 
@@ -140,46 +178,66 @@ def fetch_twitter_tips():
 
 def fetch_reddit_tips():
     """
-    Fetch tips from Reddit using public JSON API (no auth required).
+    Fetch tips from Reddit using RSS feed (more reliable than JSON API).
+
+    RSS feeds don't require authentication and are less likely to be blocked.
     """
     tips = []
 
-    print("🤖 Reddit: Using public API (no auth required)...")
+    print("🤖 Reddit: Using RSS feed (no auth required)...")
 
     for subreddit_name in CONFIG["reddit"]["subreddits"]:
         try:
-            url = f"https://www.reddit.com/r/{subreddit_name}/hot.json?limit=50"
-            headers = {"User-Agent": "claude-code-daily/1.0 (github.com/mrsarac/claude-code-daily)"}
+            # RSS feed is more reliable than JSON API
+            url = f"https://www.reddit.com/r/{subreddit_name}/hot/.rss?limit=50"
+            headers = {
+                "User-Agent": "Mozilla/5.0 (compatible; claude-code-daily/1.0; +https://github.com/mrsarac/claude-code-daily)",
+                "Accept": "application/rss+xml, application/xml, text/xml"
+            }
             response = requests.get(url, headers=headers, timeout=30)
 
             if response.status_code == 200:
-                data = response.json()
-                posts = data.get("data", {}).get("children", [])
-                subreddit_tips = 0
+                # Parse RSS/Atom feed
+                try:
+                    root = ET.fromstring(response.content)
+                    # Handle Atom namespace
+                    ns = {"atom": "http://www.w3.org/2005/Atom"}
 
-                for post_data in posts:
-                    post = post_data.get("data", {})
-                    score = post.get("score", 0)
+                    entries = root.findall(".//atom:entry", ns)
+                    subreddit_tips = 0
 
-                    if score >= CONFIG["reddit"]["min_score"]:
-                        title = post.get("title", "")
-                        selftext = post.get("selftext", "")
-                        content = f"{title}\n\n{selftext}" if selftext else title
+                    for entry in entries:
+                        title_elem = entry.find("atom:title", ns)
+                        content_elem = entry.find("atom:content", ns)
+                        link_elem = entry.find("atom:link", ns)
+                        author_elem = entry.find("atom:author/atom:name", ns)
 
-                        # Look for Claude Code related content
-                        keywords = ["tip", "trick", "workflow", "claude", "context", "mcp", "subagent", "prompt"]
-                        if any(kw in content.lower() for kw in keywords):
-                            tips.append({
-                                "title": title[:100],
-                                "content": content,
-                                "source": "reddit",
-                                "author": post.get("author", "unknown"),
-                                "url": f"https://reddit.com{post.get('permalink', '')}",
-                                "score": score
-                            })
-                            subreddit_tips += 1
+                        if title_elem is not None:
+                            title = title_elem.text or ""
+                            content = content_elem.text if content_elem is not None else title
+                            link = link_elem.get("href", "") if link_elem is not None else ""
+                            author = author_elem.text if author_elem is not None else "unknown"
 
-                print(f"🤖 Reddit r/{subreddit_name}: Found {subreddit_tips} tips (from {len(posts)} posts)")
+                            # Clean HTML from content
+                            content = re.sub(r'<[^>]+>', '', content)
+
+                            # Look for Claude Code related content
+                            keywords = ["tip", "trick", "workflow", "claude", "context", "mcp", "subagent", "prompt", "claude code"]
+                            if any(kw in content.lower() for kw in keywords):
+                                tips.append({
+                                    "title": title[:100],
+                                    "content": content[:500],
+                                    "source": "reddit",
+                                    "author": author.replace("/u/", ""),
+                                    "url": link,
+                                    "score": 0  # RSS doesn't include score
+                                })
+                                subreddit_tips += 1
+
+                    print(f"🤖 Reddit r/{subreddit_name}: Found {subreddit_tips} tips (from {len(entries)} posts)")
+
+                except ET.ParseError as e:
+                    print(f"⚠️  Reddit r/{subreddit_name}: RSS parse error - {str(e)[:30]}")
 
             elif response.status_code == 429:
                 print(f"⚠️  Reddit r/{subreddit_name}: Rate limited, skipping...")
@@ -193,6 +251,28 @@ def fetch_reddit_tips():
     return tips
 
 
+def categorize_by_keywords(tips: list) -> list:
+    """Fallback categorization using keywords when Gemini is unavailable."""
+    categorized = []
+    for tip in tips:
+        content = (tip.get("content", "") + " " + tip.get("title", "")).lower()
+        category = "workflow"  # default
+
+        # Check each category's keywords
+        for cat, keywords in CONFIG["category_keywords"].items():
+            if any(kw in content for kw in keywords):
+                category = cat
+                break
+
+        tip["category"] = category
+        tip["ai_title"] = tip.get("title", "Tip")[:60]
+        tip["summary"] = tip.get("content", "")[:200]
+        categorized.append(tip)
+
+    print(f"📂 Keyword categorization: {len(categorized)} tips categorized")
+    return categorized
+
+
 def validate_and_categorize(tips: list) -> list:
     """
     Use Gemini AI to validate tips and assign categories.
@@ -200,10 +280,12 @@ def validate_and_categorize(tips: list) -> list:
     Requires GEMINI_API_KEY environment variable.
     """
     api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key or not tips:
-        if not api_key:
-            print("⚠️  Gemini: No API key found, skipping validation...")
+    if not tips:
         return tips
+
+    if not api_key:
+        print("⚠️  Gemini: No API key found, using keyword categorization...")
+        return categorize_by_keywords(tips)
 
     try:
         import google.generativeai as genai
@@ -257,8 +339,8 @@ Respond ONLY with valid JSON:
         return validated_tips
 
     except ImportError:
-        print("⚠️  Gemini: google-generativeai not installed")
-        return tips
+        print("⚠️  Gemini: google-generativeai not installed, using keyword categorization...")
+        return categorize_by_keywords(tips)
 
 
 def deduplicate(new_tips: list, existing_tips: dict) -> list:
@@ -278,39 +360,52 @@ def deduplicate(new_tips: list, existing_tips: dict) -> list:
     return unique_tips
 
 
-def create_tip_file(tip: dict, tip_number: int) -> Optional[Path]:
-    """Create a markdown file for a new tip."""
+def append_tip_to_category(tip: dict, tip_number: int) -> bool:
+    """Append a new tip to the category markdown file.
+
+    Format:
+    ## N. Tip Title
+    **Source:** Author Name
+
+    Content...
+
+    ---
+    """
     category = tip.get("category", "workflow")
-    category_dir = Path(f"tips/{category}")
-    category_dir.mkdir(parents=True, exist_ok=True)
+    category_file = Path(f"tips/categories/{category}.md")
 
-    # Generate filename
-    title_slug = tip.get("ai_title", tip.get("title", "tip"))[:40]
-    title_slug = "".join(c if c.isalnum() or c == " " else "" for c in title_slug)
-    title_slug = title_slug.strip().replace(" ", "-").lower()
+    if not category_file.exists():
+        print(f"⚠️  Category file not found: {category_file}")
+        return False
 
-    filename = f"{tip_number:03d}-{title_slug}.md"
-    filepath = category_dir / filename
+    # Read existing content
+    content = category_file.read_text()
 
-    # Create content
-    content = f"""# {tip.get('ai_title', tip.get('title', 'Tip'))}
+    # Find the last tip entry (before the footer)
+    footer_marker = "*[Back to Categories]"
+
+    # Create new tip entry
+    new_tip = f"""
+## {tip_number}. {tip.get('ai_title', tip.get('title', 'New Tip'))}
+**Source:** {tip.get('author', 'Community')} ({tip.get('source', 'community').title()})
 
 {tip.get('summary', tip.get('content', '')[:300])}
 
-## Source
+[Original]({tip.get('url', '#')}) | Added: {datetime.now().strftime('%Y-%m-%d')}
 
-- **Author:** {tip.get('author', 'Community')}
-- **Platform:** {tip.get('source', 'unknown').title()}
-- **Link:** [{tip.get('source', 'source')}]({tip.get('url', '#')})
-- **Added:** {datetime.now().strftime('%Y-%m-%d')}
-
-## Tags
-
-`#{category}` `#claude-code` `#tip`
+---
 """
 
-    filepath.write_text(content)
-    return filepath
+    # Insert before footer or append at end
+    if footer_marker in content:
+        parts = content.split(footer_marker)
+        new_content = parts[0] + new_tip + "\n" + footer_marker + parts[1]
+    else:
+        new_content = content.rstrip() + "\n" + new_tip
+
+    category_file.write_text(new_content)
+    print(f"✅ Added tip #{tip_number} to {category}.md")
+    return True
 
 
 def update_index(new_tips: list):
@@ -382,13 +477,12 @@ def update_repository(tips: list):
 
     # Get current tip count for numbering
     existing = get_existing_tips()
-    tip_number = len(existing.get("tips", [])) + 1
+    tip_number = existing.get("next_number", 51)
 
-    created_files = []
+    added_count = 0
     for tip in tips:
-        filepath = create_tip_file(tip, tip_number)
-        if filepath:
-            created_files.append(filepath)
+        if append_tip_to_category(tip, tip_number):
+            added_count += 1
             tip_number += 1
 
     # Update index
@@ -397,7 +491,7 @@ def update_repository(tips: list):
     # Update README
     update_readme_today_tip(tips)
 
-    print(f"✅ Created {len(created_files)} new tip files")
+    print(f"✅ Added {added_count} new tips to category files")
 
 
 def main():
