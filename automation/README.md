@@ -15,27 +15,42 @@ automation/
 ### Daily Workflow
 
 1. **GitHub Actions** triggers at 00:00 UTC daily
-2. **Twitter Scraper** fetches posts with #ClaudeCode
-3. **Reddit Scraper** fetches from r/ClaudeAI (optional)
-4. **Gemini AI** validates and categorizes tips
+2. **Reddit RSS** fetches from r/ClaudeAI (public, no auth needed)
+3. **Keyword Filter** pre-filters content (positive + negative keywords)
+4. **Gemini AI** validates and categorizes tips (strict criteria)
 5. **Deduplication** removes existing tips
 6. **Repository Update** adds new tips to markdown files
 
 ### Data Sources
 
-| Source | What We Look For | Status |
-|--------|------------------|--------|
-| Twitter/X | #ClaudeCode, #ClaudeDev hashtags | ✅ Active |
-| Reddit | r/ClaudeAI posts with 20+ upvotes | ⚡ Optional |
+| Source | Method | Status |
+|--------|--------|--------|
+| Reddit | RSS Feed (public) | ✅ Primary |
+| Twitter/X | API v2 | ❌ Requires $100/mo Basic tier |
 
-> **Note:** The automation works with Twitter-only mode. Reddit integration is optional and can be enabled by adding Reddit API credentials.
+### Filtering Pipeline
+
+```
+Reddit RSS → Keyword Filter → Gemini Validation → Dedupe → Commit
+                  ↓                    ↓
+           +25 negative          Quality >= 7
+            keywords             STRICT criteria
+```
 
 ### AI Curation
 
-Gemini AI performs:
-- **Validation**: Is this actually a Claude Code tip?
-- **Categorization**: Which of the 5 categories?
-- **Quality Check**: Is it specific and actionable?
+Gemini AI (gemini-2.0-flash) validates with strict criteria:
+
+**VALID tips must:**
+- Be about Claude Code CLI (not general Claude chat)
+- Contain actionable techniques or patterns
+- Include specific commands or methodologies
+
+**REJECTED content:**
+- Bug reports, questions, complaints
+- Other AI tools (ChatGPT, Gemini, etc.)
+- App showcases (built WITH Claude, not ABOUT Claude Code)
+- General discussions without actionable advice
 
 ## Setup
 
@@ -45,47 +60,40 @@ Set these in your GitHub repository settings:
 
 | Secret | Required | Description |
 |--------|----------|-------------|
-| `TWITTER_BEARER_TOKEN` | ✅ Yes | Twitter API v2 bearer token |
 | `GEMINI_API_KEY` | ✅ Yes | Google Gemini API key |
-| `REDDIT_CLIENT_ID` | ⚡ Optional | Reddit app client ID |
-| `REDDIT_CLIENT_SECRET` | ⚡ Optional | Reddit app client secret |
+| `TWITTER_BEARER_TOKEN` | ⚠️ Optional | Twitter API v2 (needs Basic tier) |
 
 ### Getting API Keys
 
-1. **Twitter**: [developer.twitter.com](https://developer.twitter.com)
-2. **Gemini**: [aistudio.google.com](https://aistudio.google.com)
-3. **Reddit** (optional): [reddit.com/prefs/apps](https://www.reddit.com/prefs/apps)
-   - Create a "script" type application
-   - Copy the client ID (under app name) and secret
+1. **Gemini**: [aistudio.google.com](https://aistudio.google.com) (free)
+2. **Twitter**: [developer.twitter.com](https://developer.twitter.com) ($100/mo for search)
 
 ## Manual Trigger
 
-You can manually run the workflow:
+```bash
+# Via GitHub CLI
+gh workflow run daily-update.yml
 
-1. Go to Actions tab
-2. Select "Daily Update"
-3. Click "Run workflow"
+# Check status
+gh run list --limit 3
+```
+
+Or via GitHub UI: Actions → Daily Update → Run workflow
 
 ## Local Development
 
 ```bash
-# Set environment variables (Reddit is optional)
-export TWITTER_BEARER_TOKEN="your-token"
+# Set environment variable
 export GEMINI_API_KEY="your-key"
 
-# Optional: Reddit integration
-export REDDIT_CLIENT_ID="your-id"
-export REDDIT_CLIENT_SECRET="your-secret"
-
 # Run locally
+cd /path/to/claude-code-daily
 python automation/daily-update.py
 ```
 
 ## Graceful Degradation
 
 The script handles missing credentials gracefully:
-- Missing Twitter token → Skips Twitter, logs warning
-- Missing Reddit credentials → Skips Reddit, logs warning
-- Missing Gemini key → Skips AI validation, passes tips through
-
-This means the automation will run successfully even with partial configuration.
+- Missing Gemini key → Falls back to keyword categorization
+- Missing Twitter token → Skips Twitter (logged)
+- Reddit RSS always works (public, no auth)
