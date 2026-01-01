@@ -100,4 +100,14 @@ Improve Claude Code CLI interactions by using `read_page` to access the accessib
 
 ---
 
+
+## 52. Improve Claude Code Reliability with Accessibility Tree
+**Source:** yksugi (Reddit)
+
+Instead of relying on screenshots and screen coordinates for interaction, use `read_page` to access the accessibility tree and obtain element references. Then, use `find` to locate elements by their description and interact using `ref`. This approach offers increased accuracy and speed, avoiding the pitfalls of coordinate-based interaction that can be unreliable.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1q0pbuh/a_quick_tip_on_improving_the_performance_of/) | Added: 2026-01-01
+
+---
+
 *[Back to Categories](../README.md)*

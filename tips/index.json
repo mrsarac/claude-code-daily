@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-12-31T23:47:07.658808",
-  "totalTips": 51,
+  "lastUpdated": "2026-01-01T00:14:31.297799",
+  "totalTips": 52,
   "categories": [
     {
       "name": "Orchestration",
@@ -30,7 +30,7 @@
     {
       "name": "Tooling",
       "slug": "tooling",
-      "count": 11,
+      "count": 12,
       "icon": "\ud83d\udd27"
     }
   ],
