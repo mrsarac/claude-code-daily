@@ -103,6 +103,9 @@ async fn run_app<B: ratatui::backend::Backend>(
                     KeyCode::Char('S') => app.send_newsletter().await?,
                     KeyCode::Char('r') => app.refresh().await?,
                     KeyCode::Char('?') => app.show_help = !app.show_help,
+                    KeyCode::Char('c') => app.cycle_category(),
+                    KeyCode::Char('a') => app.select_all(),
+                    KeyCode::Char('d') => app.remove_from_draft(),
 
                     // Cancel quit confirmation
                     _ => {

@@ -236,6 +236,59 @@ impl App {
         }
     }
 
+    /// Cycle through category filters
+    pub fn cycle_category(&mut self) {
+        if self.current_tab != Tab::Tips {
+            return;
+        }
+
+        self.category_filter = match self.category_filter {
+            Category::All => Category::Orchestration,
+            Category::Orchestration => Category::ContextManagement,
+            Category::ContextManagement => Category::Workflow,
+            Category::Workflow => Category::Subagents,
+            Category::Subagents => Category::Tooling,
+            Category::Tooling => Category::All,
+        };
+        self.list_index = 0;
+        self.status_message = Some(format!("Filter: {}", self.category_filter.as_str()));
+    }
+
+    /// Select all visible tips (up to limit)
+    pub fn select_all(&mut self) {
+        if self.current_tab != Tab::Tips {
+            return;
+        }
+
+        let max = self.config.tips_per_issue;
+
+        // Collect just the indices first, dropping references to self
+        let indices: Vec<usize> = self
+            .filtered_tips()
+            .into_iter()
+            .take(max)
+            .map(|(idx, _)| idx)
+            .collect();
+
+        self.selected_tips = indices;
+        self.status_message = Some(format!("Selected {} tips", self.selected_tips.len()));
+    }
+
+    /// Remove current item from draft
+    pub fn remove_from_draft(&mut self) {
+        if self.current_tab != Tab::Draft {
+            return;
+        }
+
+        if self.list_index < self.selected_tips.len() {
+            self.selected_tips.remove(self.list_index);
+            if self.list_index > 0 && self.list_index >= self.selected_tips.len() {
+                self.list_index = self.selected_tips.len().saturating_sub(1);
+            }
+            self.status_message = Some("Tip removed from draft".to_string());
+        }
+    }
+
     /// Confirm action (Enter key)
     pub async fn confirm_action(&mut self) -> Result<()> {
         match self.current_tab {
@@ -298,13 +351,55 @@ impl App {
         }
 
         self.is_loading = true;
-        self.status_message = Some("Sending newsletter...".to_string());
+        self.status_message = Some("Generating newsletter...".to_string());
 
-        // TODO: Implement actual API call
-        // let result = self.client.send_newsletter(&self.selected_tips).await?;
+        // Get selected tips
+        let tips: Vec<_> = self
+            .selected_tips
+            .iter()
+            .filter_map(|&i| self.tips.get(i).cloned())
+            .collect();
+
+        let issue_number = self
+            .stats
+            .as_ref()
+            .map(|s| s.total_issues + 1)
+            .unwrap_or(1);
+
+        // Generate HTML
+        let html = crate::api::generate_newsletter_html(&tips, issue_number);
+        let subject = format!("Claude Code Daily #{}: {} Real Use Cases", issue_number, tips.len());
+
+        self.status_message = Some("Creating newsletter issue...".to_string());
+
+        // Create issue via API
+        match self.client.create_issue(&subject, &html).await {
+            Ok(issue_id) => {
+                self.status_message = Some(format!("Sending to subscribers... (issue: {})", issue_id));
+
+                // Send the issue
+                match self.client.send_issue(&issue_id).await {
+                    Ok(count) => {
+                        self.status_message = Some(format!(
+                            "Newsletter sent to {} subscribers!",
+                            count
+                        ));
+                        // Clear selection after successful send
+                        self.selected_tips.clear();
+                        // Refresh stats
+                        let _ = self.refresh().await;
+                    }
+                    Err(e) => {
+                        self.status_message = Some(format!("Send failed: {}", e));
+                    }
+                }
+            }
+            Err(e) => {
+                self.status_message = Some(format!("Create issue failed: {}", e));
+            }
+        }
 
         self.is_loading = false;
-        self.status_message = Some("Newsletter sent successfully!".to_string());
         Ok(())
     }
 
