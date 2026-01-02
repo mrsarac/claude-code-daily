@@ -1,0 +1,43 @@
+name: Weekly Newsletter
+
+on:
+  schedule:
+    # Every Monday at 08:00 UTC (10:00 Berlin time)
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (preview only, no send)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Send weekly newsletter
+        env:
+          WAITLIST_API_URL: https://waitlist.neurabytelabs.com
+          WAITLIST_PROJECT_ID: claudecodedaily
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: python automation/weekly-newsletter.py
+
+      - name: Upload preview (dry run only)
+        if: github.event.inputs.dry_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter-preview
+          path: automation/preview.html
