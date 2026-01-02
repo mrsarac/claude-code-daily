@@ -23,15 +23,15 @@ pub struct Tip {
     pub content: String,
 }
 
-/// Category to icon mapping
+/// Category to icon mapping (emoji icons)
 fn category_icon(category: &str) -> &'static str {
     match category {
-        "orchestration" => "O",
-        "context-management" => "C",
-        "workflow" => "W",
-        "subagents" => "S",
-        "tooling" => "T",
-        _ => "*",
+        "orchestration" => "🎭",
+        "context-management" => "📝",
+        "workflow" => "⚡",
+        "subagents" => "🤖",
+        "tooling" => "🔧",
+        _ => "💡",
     }
 }
 
@@ -69,8 +69,18 @@ pub fn load_tips_from_files(repo_root: &Path) -> Result<Vec<Tip>> {
                         tips.push(tip);
                     }
 
-                    // Start new tip
-                    let title = line[3..].trim().to_string();
+                    // Start new tip - remove number prefix like "1. " or "11. "
+                    let raw_title = line[3..].trim();
+                    let title = if raw_title.contains(". ") {
+                        // Remove number prefix (e.g., "1. Title" -> "Title")
+                        raw_title
+                            .split_once(". ")
+                            .map(|(_, t)| t.to_string())
+                            .unwrap_or_else(|| raw_title.to_string())
+                    } else {
+                        raw_title.to_string()
+                    };
+
                     current_tip = Some(Tip {
                         category: category.clone(),
                         icon: icon.clone(),
