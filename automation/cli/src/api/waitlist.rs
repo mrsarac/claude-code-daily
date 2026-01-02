@@ -16,6 +16,7 @@ pub struct Stats {
 
 /// API response wrapper
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct ApiResponse<T> {
     success: bool,
     data: Option<T>,

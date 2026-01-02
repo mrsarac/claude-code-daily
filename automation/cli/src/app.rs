@@ -52,17 +52,6 @@ impl Category {
             Category::Tooling => "tooling",
         }
     }
-
-    pub fn icon(&self) -> &'static str {
-        match self {
-            Category::All => "*",
-            Category::Orchestration => "O",
-            Category::ContextManagement => "C",
-            Category::Workflow => "W",
-            Category::Subagents => "S",
-            Category::Tooling => "T",
-        }
-    }
 }
 
 /// Main application state
@@ -82,7 +71,8 @@ pub struct App {
     /// Category filter
     pub category_filter: Category,
 
-    /// Draft subject line
+    /// Draft subject line (reserved for future custom subject editing)
+    #[allow(dead_code)]
     pub draft_subject: String,
 
     /// Newsletter stats from API

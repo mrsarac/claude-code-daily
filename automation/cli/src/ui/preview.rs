@@ -137,11 +137,11 @@ fn draw_send_actions(f: &mut Frame, app: &App, area: Rect) {
 
     let actions = if can_send {
         format!(
-            " [S] Send to {} subscribers | [s] Save draft first | [Esc] Back to Draft",
+            " [S] SEND to {} subscribers | [s] Save draft | [2] Back to Draft",
             subscriber_count
         )
     } else {
-        " No content to send".to_string()
+        " No content to send. Select tips first!".to_string()
     };
 
     let style = if can_send {

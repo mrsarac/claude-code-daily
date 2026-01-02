@@ -119,7 +119,7 @@ fn draw_selection_info(f: &mut Frame, app: &App, area: Rect) {
     let selected = app.selected_tips.len();
 
     let info = Paragraph::new(format!(
-        " Selected: {}/{} | [Space] Toggle | [Enter] Add to Draft | [?] Help",
+        " Selected: {}/{} | [Space] Toggle | [a] All | [c] Filter | [Enter] Draft | [?] Help",
         selected, max
     ))
     .style(Style::default().fg(Color::DarkGray));

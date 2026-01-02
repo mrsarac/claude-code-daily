@@ -120,7 +120,7 @@ fn draw_status_bar(f: &mut Frame, app: &App, area: Rect) {
 }
 
 fn draw_help_overlay(f: &mut Frame, _app: &App) {
-    let area = centered_rect(60, 70, f.area());
+    let area = centered_rect(60, 80, f.area());
 
     let help_text = vec![
         "",
@@ -131,16 +131,23 @@ fn draw_help_overlay(f: &mut Frame, _app: &App) {
         " j/k      Move down/up",
         " gg/G     Go to top/bottom",
         "",
-        " SELECTION (Tips tab)",
+        " TIPS TAB",
         " ──────────────────────────────────",
         " Space    Toggle selection",
+        " a        Select all (up to limit)",
+        " c        Cycle category filter",
         " Enter    Add selected to draft",
+        "",
+        " DRAFT TAB",
+        " ──────────────────────────────────",
+        " d        Remove from draft",
+        " Enter    Go to preview",
         "",
         " ACTIONS",
         " ──────────────────────────────────",
-        " s        Save draft",
-        " S        Send newsletter",
-        " r        Refresh data",
+        " s        Save draft to file",
+        " S        Send newsletter (API)",
+        " r        Refresh stats",
         " ?        Toggle this help",
         " q        Quit",
         "",

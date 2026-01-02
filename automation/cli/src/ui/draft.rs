@@ -114,9 +114,9 @@ fn draw_actions(f: &mut Frame, app: &App, area: Rect) {
     let can_preview = !app.selected_tips.is_empty();
 
     let actions = if can_preview {
-        " [s] Save draft | [Enter] Preview | [K/J] Reorder | [d] Remove"
+        " [s] Save draft | [Enter] Preview | [d] Remove | [j/k] Navigate"
     } else {
-        " Select tips first to create a draft"
+        " Select tips first to create a draft (go to Tips tab with [1])"
     };
 
     let style = if can_preview {

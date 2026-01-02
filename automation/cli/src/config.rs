@@ -77,7 +77,8 @@ impl Config {
         }
     }
 
-    /// Save config to file
+    /// Save config to file (reserved for settings UI)
+    #[allow(dead_code)]
     pub fn save(&self) -> Result<()> {
         let path = Self::path()?;
 
@@ -90,7 +91,8 @@ impl Config {
         Ok(())
     }
 
-    /// Get full API endpoint
+    /// Get full API endpoint (helper for future endpoints)
+    #[allow(dead_code)]
     pub fn api_endpoint(&self, path: &str) -> String {
         format!("{}/api/{}{}", self.api_url, self.project_id, path)
     }
