@@ -24,7 +24,7 @@ from pathlib import Path
 # Configuration
 API_BASE = os.environ.get('WAITLIST_API_URL', 'https://waitlist.neurabytelabs.com')
 PROJECT_ID = os.environ.get('WAITLIST_PROJECT_ID', 'claudecodedaily')
-TIPS_PER_NEWSLETTER = 5
+TIPS_PER_NEWSLETTER = 8  # 8 is our lucky number!
 REPO_ROOT = Path(__file__).parent.parent
 
 # Category icons
@@ -99,26 +99,52 @@ def select_tips(tips, count=TIPS_PER_NEWSLETTER):
 
 
 def generate_html(tips, issue_number):
-    """Generate newsletter HTML from selected tips."""
-    date_str = datetime.now().strftime('%B %d, %Y')
+    """Generate CLI-style newsletter HTML from selected tips."""
+    date_str = datetime.now().strftime('%Y-%m-%d')
 
-    tips_html = ''
+    # Extract source from content if present
+    def get_source(content):
+        for line in content.split('\n'):
+            if line.startswith('**Source:**'):
+                return line.replace('**Source:**', '').strip()
+        return 'Community'
+
+    cases_html = ''
     for i, tip in enumerate(tips, 1):
-        # Clean up content - extract just the key parts
         content = tip['content'].strip()
-        # Remove source lines and code blocks for preview
-        preview = content.split('```')[0][:300] + '...' if len(content) > 300 else content.split('```')[0]
+        source = get_source(content)
 
-        tips_html += f'''
-        <div style="margin-bottom: 32px; padding: 24px; background: #1a1a1a; border-radius: 8px; border-left: 3px solid #06b6d4;">
-          <div style="display: flex; align-items: center; margin-bottom: 12px;">
-            <span style="font-size: 24px; margin-right: 12px;">{tip['icon']}</span>
-            <h3 style="margin: 0; color: #fff; font-size: 18px;">{tip['title']}</h3>
-          </div>
-          <p style="color: #a1a1aa; line-height: 1.6; margin: 0; font-family: ui-monospace, monospace; font-size: 14px;">
-            {preview.replace(chr(10), '<br>')}
-          </p>
+        # Clean content - convert markdown to HTML-ish
+        display_content = content
+        display_content = display_content.replace('**Source:**', '// source:')
+        display_content = display_content.replace('**Why it works:**', '<br><br><strong style="color:#06b6d4;">Why it works:</strong>')
+        display_content = display_content.replace('**', '')
+        display_content = display_content.replace('\n\n', '</p><p style="margin: 8px 0; color: #a1a1aa;">')
+        display_content = display_content.replace('\n', '<br>')
+        display_content = display_content.replace('```bash', '<pre style="background: #000; padding: 12px; border-radius: 4px; overflow-x: auto; margin: 12px 0; color: #22c55e;">')
+        display_content = display_content.replace('```markdown', '<pre style="background: #000; padding: 12px; border-radius: 4px; overflow-x: auto; margin: 12px 0; color: #a1a1aa;">')
+        display_content = display_content.replace('```json', '<pre style="background: #000; padding: 12px; border-radius: 4px; overflow-x: auto; margin: 12px 0; color: #fbbf24;">')
+        display_content = display_content.replace('```', '</pre>')
+
+        cases_html += f'''
+    <div style="margin-bottom: 24px; font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;">
+      <div style="background: #18181b; padding: 12px 16px; border-radius: 8px 8px 0 0; border-bottom: 1px solid #27272a;">
+        <span style="color: #22c55e;">❯</span>
+        <span style="color: #06b6d4;"> claude</span>
+        <span style="color: #a1a1aa;"> --use-case {i}</span>
+      </div>
+      <div style="background: #0a0a0a; padding: 16px; border-radius: 0 0 8px 8px;">
+        <div style="color: #fafafa; font-size: 14px; font-weight: 600; margin-bottom: 8px;">
+          {tip['icon']} {tip['title']}
         </div>
+        <div style="color: #71717a; font-size: 11px; margin-bottom: 12px;">
+          // source: {source}
+        </div>
+        <div style="color: #a1a1aa; font-size: 13px; line-height: 1.6;">
+          {display_content}
+        </div>
+      </div>
+    </div>
         '''
 
     html = f'''<!DOCTYPE html>
@@ -128,31 +154,47 @@ def generate_html(tips, issue_number):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Claude Code Daily #{issue_number}</title>
 </head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; background: #0a0a0a;">
-  <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; background: #09090b;">
+  <div style="max-width: 640px; margin: 0 auto; padding: 32px 16px;">
 
-    <!-- Header -->
-    <div style="text-align: center; margin-bottom: 40px;">
-      <h1 style="color: #06b6d4; font-size: 28px; margin: 0 0 8px;">Claude Code Daily</h1>
-      <p style="color: #71717a; font-size: 14px; margin: 0;">Issue #{issue_number} • {date_str}</p>
+    <!-- Terminal Header -->
+    <div style="background: #18181b; border-radius: 8px; padding: 16px; margin-bottom: 24px; border: 1px solid #27272a;">
+      <div style="display: flex; align-items: center; margin-bottom: 12px;">
+        <span style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444; margin-right: 8px;"></span>
+        <span style="width: 12px; height: 12px; border-radius: 50%; background: #eab308; margin-right: 8px;"></span>
+        <span style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></span>
+        <span style="color: #71717a; font-size: 12px; margin-left: auto; font-family: ui-monospace, monospace;">claude-code-daily</span>
+      </div>
+      <div style="color: #06b6d4; font-size: 20px; font-weight: 600;">
+        Claude Code Daily
+      </div>
+      <div style="color: #52525b; font-size: 12px; margin-top: 4px; font-family: ui-monospace, monospace;">
+        Issue #{issue_number} • {date_str} • {len(tips)} real use cases
+      </div>
     </div>
 
-    <!-- Intro -->
-    <p style="color: #d4d4d8; line-height: 1.6; margin-bottom: 32px;">
-      Hey! Here are this week's top {len(tips)} Claude Code tips to level up your workflow. 🚀
-    </p>
+    <!-- Intro as command -->
+    <div style="margin-bottom: 24px; padding: 12px 16px; background: #0a0a0a; border-radius: 8px; font-family: ui-monospace, monospace;">
+      <span style="color: #22c55e;">❯</span>
+      <span style="color: #a1a1aa;"> cat intro.md</span>
+      <p style="color: #d4d4d8; margin: 12px 0 0; font-size: 13px; line-height: 1.6;">
+        This week's collection: <span style="color: #06b6d4;">{len(tips)} real use cases</span> from developers
+        who've cracked the code on Claude Code workflows. Each one tested in production.
+      </p>
+    </div>
 
-    <!-- Tips -->
-    {tips_html}
+    <!-- Use Cases -->
+    {cases_html}
 
     <!-- Footer -->
-    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #27272a; text-align: center;">
-      <p style="color: #71717a; font-size: 12px; margin: 0 0 8px;">
-        Curated from Reddit & the Claude Code community
-      </p>
-      <p style="color: #52525b; font-size: 11px; margin: 0;">
-        <a href="{{{{unsubscribe_url}}}}" style="color: #52525b;">Unsubscribe</a>
-      </p>
+    <div style="margin-top: 32px; padding: 16px; background: #18181b; border-radius: 8px; text-align: center; font-family: ui-monospace, monospace;">
+      <div style="color: #52525b; font-size: 11px;">
+        <span style="color: #22c55e;">❯</span> curated from reddit & claude code community
+      </div>
+      <div style="color: #3f3f46; font-size: 10px; margin-top: 8px;">
+        <a href="{{{{unsubscribe_url}}}}" style="color: #3f3f46;">unsubscribe</a> •
+        <a href="https://mustafasarac.com" style="color: #3f3f46;">mustafasarac.com</a>
+      </div>
     </div>
 
   </div>
@@ -242,7 +284,7 @@ def main():
     html = generate_html(selected, issue_number)
 
     # Create subject line
-    subject = f'Claude Code Daily #{issue_number}: {len(selected)} Pro Tips This Week'
+    subject = f'Claude Code Daily #{issue_number}: {len(selected)} Real Use Cases'
 
     # Check if we should actually send
     if os.environ.get('DRY_RUN', '').lower() == 'true':
