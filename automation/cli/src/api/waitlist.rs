@@ -51,8 +51,9 @@ impl WaitlistClient {
             .post(&url)
             .json(&serde_json::json!({
                 "subject": subject,
-                "html_content": html_content,
-                "text_content": "View in browser for best experience."
+                "title": subject,
+                "content_html": html_content,
+                "content_text": "View in browser for best experience."
             }))
             .send()
             .await?
@@ -60,8 +61,10 @@ impl WaitlistClient {
             .await?;
 
         if response["success"].as_bool().unwrap_or(false) {
-            let issue_id = response["issue"]["id"]
+            // API returns { success: true, data: { id: "..." } }
+            let issue_id = response["data"]["id"]
                 .as_str()
+                .or_else(|| response["issue"]["id"].as_str())
                 .or_else(|| response["id"].as_str())
                 .ok_or_else(|| anyhow::anyhow!("No issue ID in response"))?;
             Ok(issue_id.to_string())
@@ -81,7 +84,11 @@ impl WaitlistClient {
         let response: serde_json::Value = self.client.post(&url).send().await?.json().await?;
 
         if response["success"].as_bool().unwrap_or(false) {
-            let count = response["recipientCount"].as_u64().unwrap_or(0) as u32;
+            // API returns { success: true, data: { sent: N, errors: N, total: N } }
+            let count = response["data"]["sent"]
+                .as_u64()
+                .or_else(|| response["recipientCount"].as_u64())
+                .unwrap_or(0) as u32;
             Ok(count)
         } else {
             Err(anyhow::anyhow!(

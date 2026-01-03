@@ -1,63 +1,63 @@
 {
-  "issue_number": 1,
-  "subject": "Claude Code Daily #1: 8 Real Use Cases",
-  "created_at": "2026-01-02T18:00:00Z",
+  "created_at": "2026-01-03T15:46:16.440356+00:00",
+  "issue_number": 4,
+  "subject": "Claude Code Daily #4: 8 Real Use Cases",
   "tips": [
     {
-      "category": "orchestration",
-      "icon": "🎭",
-      "title": "Git Worktree Orchestration",
-      "source": "Pushkar Jain",
-      "content": "Run an \"Orchestrator Agent\" on your main branch. Delegate subtasks to other agents running in different Git worktrees on separate branches.\n\n```bash\n# Create worktree for feature\ngit worktree add ../feature-auth feature/auth\n\n# Run Claude in worktree with specific context\ncd ../feature-auth && claude\n```\n\n**Why it works:** Each agent gets isolated context. No cross-contamination. Merge when ready."
-    },
-    {
-      "category": "context-management",
-      "icon": "📝",
-      "title": "Markdown Bridge Documents",
-      "source": "Saad",
-      "content": "After every significant session, have Claude dump everything into a `.md` file with strict naming conventions.\n\n```markdown\n# SESSION_2025-12-31_auth-implementation.md\n\n## Completed\n- [x] JWT token generation\n- [x] Refresh token flow\n\n## Next Steps\n- [ ] Add rate limiting\n\n## Key Decisions\n- Using RS256 for token signing\n```"
-    },
-    {
-      "category": "workflow",
-      "icon": "⚡",
-      "title": "The Full Automation Loop",
-      "source": "Ibrahim Hammad",
-      "content": "The ultimate Claude Code workflow:\n\n1. **Plan** with OpenSpec → create concrete specification\n2. **New session** → fresh context\n3. **Claude Code** → implement\n4. **Codex MCP** → review\n5. **Claude** → fix issues\n6. **Repeat** until aligned"
-    },
-    {
-      "category": "subagents",
-      "icon": "🤖",
-      "title": "Manual Subagent Management",
-      "source": "Marcin Dudek",
-      "content": "When you sense context limits approaching, explicitly tell Claude:\n\n> \"For each task, delegate to a subagent. You are the manager—coordinate, don't execute.\"\n\nThis forces hierarchical execution and preserves main session context."
+      "category": "tooling",
+      "content": "**Source:** Graeme\n\nCreate an agent that writes customer help documentation from feature branches (fed with PRD context). Achieves **95% accuracy** on first pass.\n\n---\n\n",
+      "icon": "🔧",
+      "source": "Graeme",
+      "title": "Automated Documentation Agent"
     },
     {
       "category": "tooling",
+      "content": "**Source:** Multiple Users\n\nFor up-to-date library documentation (bypassing knowledge cutoff), connect:\n- **Context7 MCP** → Real-time documentation\n- **GitTrees MCP** → Repository exploration\n\n```json\n{\n  \"mcpServers\": {\n    \"context7\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@context7/mcp-server\"]\n    }\n  }\n}\n```\n\n---\n\n",
       "icon": "🔧",
-      "title": "Context7 & GitTrees MCP Servers",
       "source": "Multiple Users",
-      "content": "For up-to-date library documentation (bypassing knowledge cutoff), connect:\n\n- **Context7 MCP** → Real-time documentation\n- **GitTrees MCP** → Repository exploration\n\n```json\n{\n  \"mcpServers\": {\n    \"context7\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@context7/mcp-server\"]\n    }\n  }\n}\n```"
+      "title": "Context7 & GitTrees MCP Servers"
     },
     {
-      "category": "workflow",
-      "icon": "⚡",
-      "title": "The Golden Rule",
-      "source": "Claude Code Best Practices",
-      "content": "**Planning and Implementation should NEVER happen in the same session.**\n\n| Phase | Session | Output |\n|-------|---------|--------|\n| PLAN | Session 1 | `FEATURE_plan.md` |\n| REVIEW | Manual | User approves |\n| IMPLEMENT | Session 2 | Code changes |\n\nFresh context = cleaner code. Always."
+      "category": "tooling",
+      "content": "**Source:** Jairo\n\nCreate `/ping` command for Telegram notifications after every task. Add to CLAUDE.md: \"Summarize and ping after each task.\"\n\n---\n\n",
+      "icon": "🔧",
+      "source": "Jairo",
+      "title": "Notification System"
     },
     {
-      "category": "subagents",
-      "icon": "🤖",
-      "title": "The Sensei Pattern",
-      "source": "Alizain Feerasta",
-      "content": "Keep main context clean by using subagents liberally. Your main session is the \"sensei\"—it teaches and coordinates, but doesn't do the work itself.\n\nReference: [github.com/803/sensei](https://github.com/803/sensei)"
+      "category": "tooling",
+      "content": "**Source:** DiamondEyesFox\n\nExport raw session logs to Obsidian. Maintain both summary and detailed logs for future reference.\n\n---\n\n",
+      "icon": "🔧",
+      "source": "DiamondEyesFox",
+      "title": "Obsidian Export"
     },
     {
-      "category": "context-management",
-      "icon": "📝",
-      "title": "Date Check Discipline",
-      "source": "Matthew Bergvinson",
-      "content": "Add to your CLAUDE.md:\n\n```markdown\n### SESSION STARTUP (MANDATORY)\n1. CHECK DATE: Always verify today's date\n2. LOAD BRIDGE: Read corecontext.md\n3. CHECK TODO: Review active tasks\n```\n\nPrevents outdated context and ensures continuity."
+      "category": "tooling",
+      "content": "**Source:** John Hashem\n\nTreat memory files like code files. Naming conventions and organization are critical for maintainability.\n\n---\n\n",
+      "icon": "🔧",
+      "source": "John Hashem",
+      "title": "File Discipline"
+    },
+    {
+      "category": "tooling",
+      "content": "**Source:** Tyler Nishida\n\nEvery project should leave an Obsidian trail: decisions, implementations, pivots, and insights.\n\n---\n\n",
+      "icon": "🔧",
+      "source": "Tyler Nishida",
+      "title": "Obsidian Trail"
+    },
+    {
+      "category": "tooling",
+      "content": "**Source:** Skill Creator\n\nWrite a Skill that explains your codebase patterns and architecture. New sessions understand context immediately.\n\n---\n\n",
+      "icon": "🔧",
+      "source": "Skill Creator",
+      "title": "Architecture Skills"
+    },
+    {
+      "category": "tooling",
+      "content": "**Source:** Community\n\nWrite Skills that encode your team's patterns. Architecture decisions, naming conventions, testing strategies.\n\n---\n\n",
+      "icon": "🔧",
+      "source": "Community",
+      "title": "Custom Skills for Patterns"
     }
   ]
 }
