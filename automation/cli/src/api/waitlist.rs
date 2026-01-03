@@ -5,41 +5,13 @@ use serde::{Deserialize, Serialize};
 
 use crate::config::Config;
 
-/// Newsletter statistics
+/// Newsletter statistics (matches API response format)
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Stats {
     pub total_subscribers: u32,
     pub confirmed_subscribers: u32,
     pub pending_subscribers: u32,
     pub total_issues: u32,
-}
-
-/// API response wrapper
-#[derive(Debug, Deserialize)]
-#[allow(dead_code)]
-struct ApiResponse<T> {
-    success: bool,
-    data: Option<T>,
-    error: Option<String>,
-}
-
-/// Stats response data
-#[derive(Debug, Deserialize)]
-struct StatsData {
-    subscribers: SubscriberStats,
-    issues: IssueStats,
-}
-
-#[derive(Debug, Deserialize)]
-struct SubscriberStats {
-    total: u32,
-    confirmed: u32,
-    pending: u32,
-}
-
-#[derive(Debug, Deserialize)]
-struct IssueStats {
-    total_issues: u32,
 }
 
 /// Waitlist API client
@@ -67,20 +39,8 @@ impl WaitlistClient {
     /// Get newsletter stats
     pub async fn get_stats(&self) -> Result<Stats> {
         let url = self.endpoint("/newsletter/stats");
-        let response: ApiResponse<StatsData> = self.client.get(&url).send().await?.json().await?;
-
-        if let Some(data) = response.data {
-            Ok(Stats {
-                total_subscribers: data.subscribers.total,
-                confirmed_subscribers: data.subscribers.confirmed,
-                pending_subscribers: data.subscribers.pending,
-                total_issues: data.issues.total_issues,
-            })
-        } else {
-            Err(anyhow::anyhow!(
-                response.error.unwrap_or_else(|| "Unknown error".to_string())
-            ))
-        }
+        let stats: Stats = self.client.get(&url).send().await?.json().await?;
+        Ok(stats)
     }
 
     /// Create a newsletter issue (draft)
