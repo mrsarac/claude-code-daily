@@ -540,4 +540,14 @@ I built LightningProx, which is a way to access Claude without needing to manage
 
 ---
 
+
+## 122. Essential Claude Code CLI Commands for Beginners
+**Source:** Ege Pakten (Devto)
+
+This guide introduces essential Claude Code CLI commands like `/help`, `/add`, `/ls`, `/clear`, `/code`, and `/architect` to help beginners quickly understand and utilize the tool. These commands are fundamental for managing context, generating code, and planning projects within the Claude Code environment, enabling a streamlined development workflow.
+
+[Original](https://dev.to/egepakten/claude-code-in-terminal-a-beginners-guide-to-10x-faster-development-3196) | Added: 2026-01-04
+
+---
+
 *[Back to Categories](../README.md)*

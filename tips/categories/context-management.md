@@ -333,4 +333,24 @@ I’ve tried the normal ways to learn Spanish: apps, random Anki decks, half-fin
 
 ---
 
+
+## 121. Use CLAUDE.md to Enforce Project Conventions
+**Source:** Sean K (Devto)
+
+Claude Code uses CLAUDE.md files to understand project conventions. Instead of manually correcting Claude repeatedly, proactively populate CLAUDE.md with key information like preferred package managers (e.g., "Use pnpm for dependency management") to ensure consistent behavior across sessions and avoid repetitive corrections.
+
+[Original](https://dev.to/sean8/memento-give-claude-code-persistent-memory-so-you-stop-repeating-yourself-22je) | Added: 2026-01-04
+
+---
+
+
+## 124. CCK: Automate Claude Code Context Management
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summarizing your project for Claude Code, ensuring consistent context. Also allows per-turn context injection with history using the `cck watch --with-history` command, streamlining your workflow.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-04
+
+---
+
 *[Back to Categories](../README.md)*

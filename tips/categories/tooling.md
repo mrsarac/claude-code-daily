@@ -169,4 +169,24 @@ Hello guys I wanna present my verify loop - https://github.com/golovatskygroup/l
 
 ---
 
+
+## 123. Use Goose for Real-Time Terminal Assistance
+**Source:** Erica (Devto)
+
+The tip suggests using Goose (likely a reference to the Claude Code CLI terminal integration) to provide real-time assistance while building a scheduling application. By observing terminal commands and understanding the context, Goose can offer guidance during the development process, streamlining the workflow compared to manual organization or spreadsheets.
+
+[Original](https://dev.to/eriperspective/ai-engineering-advent-of-ai-with-goose-day-13-scheduling-application-4069) | Added: 2026-01-04
+
+---
+
+
+## 125. iOS Dev with Claude Code: XcodeBuildMCP Integration
+**Source:** kodOZANI (Reddit)
+
+Integrate Claude Code CLI with XcodeBuildMCP for iOS development workflows. Configure Claude Code to build, test, and run iOS simulators directly from the command line. This streamlines development by enabling rapid iterations and automated testing triggered by Claude Code, improving efficiency.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1q3n0dg/complete_claude_code_setup_guide_for_iosswift/) | Added: 2026-01-04
+
+---
+
 *[Back to Categories](../README.md)*
