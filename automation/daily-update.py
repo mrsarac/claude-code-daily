@@ -3,11 +3,16 @@
 Claude Code Daily - Automated Tip Curator
 
 This script runs daily to:
-1. Scrape Twitter for #ClaudeCode hashtag (requires paid API)
-2. Scrape Reddit r/ClaudeAI for tips via RSS
-3. Use Gemini AI to validate and categorize
-4. Deduplicate against existing tips
-5. Update repository files
+1. Scrape Dev.to for #claude tag via RSS
+2. Scrape Hacker News for Claude Code via RSS
+3. Scrape Reddit r/ClaudeAI for tips via RSS
+4. Use Gemini AI to validate and categorize
+5. Deduplicate against existing tips
+6. Update repository files
+
+Note: Twitter/X API requires $100/month paid tier for search.
+      Nitter RSS alternatives are blocked by Twitter/X.
+      Using Dev.to and HN as primary sources instead.
 
 Repository Structure:
   tips/
@@ -32,15 +37,26 @@ from typing import Optional, List, Dict
 
 # Configuration
 CONFIG = {
-    "twitter": {
-        "hashtags": ["ClaudeCode", "ClaudeDev"],
-        "accounts": ["anthropic", "alexalbert__", "AmandaAskell"],
-        "min_likes": 5,
+    "devto": {
+        "tags": ["claude", "claudecode", "anthropic"],
+        "max_age_days": 7
+    },
+    "hackernews": {
+        "queries": ["claude code", "claude-code", "ClaudeCode"],
+        "min_points": 3,
         "max_age_days": 7
     },
     "reddit": {
         "subreddits": ["ClaudeAI"],
         "min_score": 10,
+        "max_age_days": 7
+    },
+    # Twitter disabled - requires $100/month paid API tier
+    "twitter": {
+        "enabled": False,
+        "hashtags": ["ClaudeCode", "ClaudeDev"],
+        "accounts": ["anthropic", "alexalbert__", "AmandaAskell"],
+        "min_likes": 5,
         "max_age_days": 7
     },
     "categories": [
@@ -109,12 +125,162 @@ def generate_tip_hash(tip_text: str) -> str:
     return hashlib.md5(normalized.encode()).hexdigest()[:12]
 
 
+def fetch_devto_tips():
+    """
+    Fetch tips from Dev.to using RSS feeds.
+
+    Dev.to provides free RSS feeds for tags.
+    """
+    tips = []
+    print("📰 Dev.to: Fetching RSS feeds...")
+
+    for tag in CONFIG["devto"]["tags"]:
+        try:
+            url = f"https://dev.to/feed/tag/{tag}"
+            headers = {
+                "User-Agent": "Mozilla/5.0 (compatible; claude-code-daily/1.0)",
+                "Accept": "application/rss+xml, application/xml, text/xml"
+            }
+            response = requests.get(url, headers=headers, timeout=30)
+
+            if response.status_code == 200:
+                try:
+                    root = ET.fromstring(response.content)
+                    items = root.findall(".//item")
+                    tag_tips = 0
+
+                    for item in items:
+                        title_elem = item.find("title")
+                        desc_elem = item.find("description")
+                        link_elem = item.find("link")
+                        creator_elem = item.find("{http://purl.org/dc/elements/1.1/}creator")
+                        pubdate_elem = item.find("pubDate")
+
+                        if title_elem is not None:
+                            title = title_elem.text or ""
+                            desc = desc_elem.text if desc_elem is not None else ""
+                            link = link_elem.text if link_elem is not None else ""
+                            author = creator_elem.text if creator_elem is not None else "unknown"
+
+                            # Clean HTML
+                            desc = re.sub(r'<[^>]+>', '', desc)
+
+                            # Claude Code keywords
+                            keywords = ["claude code", "claude-code", "tip", "workflow", "worktree",
+                                       "mcp", "subagent", "prompt", "trick", "technique"]
+                            content_lower = (title + " " + desc).lower()
+
+                            if any(kw in content_lower for kw in keywords):
+                                tips.append({
+                                    "title": title[:100],
+                                    "content": desc[:500],
+                                    "source": "devto",
+                                    "author": author,
+                                    "url": link,
+                                    "score": 0
+                                })
+                                tag_tips += 1
+
+                    print(f"📰 Dev.to #{tag}: Found {tag_tips} tips (from {len(items)} posts)")
+
+                except ET.ParseError as e:
+                    print(f"⚠️  Dev.to #{tag}: RSS parse error - {str(e)[:30]}")
+
+            else:
+                print(f"⚠️  Dev.to #{tag}: HTTP {response.status_code}")
+
+        except Exception as e:
+            print(f"⚠️  Dev.to #{tag}: Error - {str(e)[:50]}")
+
+    print(f"📰 Dev.to: Total {len(tips)} tips found")
+    return tips
+
+
+def fetch_hackernews_tips():
+    """
+    Fetch tips from Hacker News using hnrss.org.
+
+    hnrss.org provides free RSS feeds for HN searches.
+    """
+    tips = []
+    print("🔶 Hacker News: Fetching RSS feeds...")
+
+    for query in CONFIG["hackernews"]["queries"]:
+        try:
+            # hnrss.org provides HN as RSS
+            url = f"https://hnrss.org/newest?q={query.replace(' ', '+')}"
+            headers = {
+                "User-Agent": "Mozilla/5.0 (compatible; claude-code-daily/1.0)",
+                "Accept": "application/rss+xml, application/xml, text/xml"
+            }
+            response = requests.get(url, headers=headers, timeout=30)
+
+            if response.status_code == 200:
+                try:
+                    root = ET.fromstring(response.content)
+                    items = root.findall(".//item")
+                    query_tips = 0
+
+                    for item in items:
+                        title_elem = item.find("title")
+                        desc_elem = item.find("description")
+                        link_elem = item.find("link")
+                        creator_elem = item.find("{http://purl.org/dc/elements/1.1/}creator")
+                        comments_elem = item.find("comments")
+
+                        if title_elem is not None:
+                            title = title_elem.text or ""
+                            desc = desc_elem.text if desc_elem is not None else ""
+                            link = link_elem.text if link_elem is not None else ""
+                            author = creator_elem.text if creator_elem is not None else "unknown"
+                            comments_url = comments_elem.text if comments_elem is not None else ""
+
+                            # Clean HTML
+                            desc = re.sub(r'<[^>]+>', '', desc)
+
+                            # Extract points from description
+                            points_match = re.search(r'Points: (\d+)', desc)
+                            points = int(points_match.group(1)) if points_match else 0
+
+                            # Filter by minimum points
+                            if points >= CONFIG["hackernews"]["min_points"]:
+                                tips.append({
+                                    "title": title[:100],
+                                    "content": desc[:500],
+                                    "source": "hackernews",
+                                    "author": author,
+                                    "url": link,
+                                    "score": points,
+                                    "comments_url": comments_url
+                                })
+                                query_tips += 1
+
+                    print(f"🔶 HN '{query}': Found {query_tips} tips (from {len(items)} posts)")
+
+                except ET.ParseError as e:
+                    print(f"⚠️  HN '{query}': RSS parse error - {str(e)[:30]}")
+
+            else:
+                print(f"⚠️  HN '{query}': HTTP {response.status_code}")
+
+        except Exception as e:
+            print(f"⚠️  HN '{query}': Error - {str(e)[:50]}")
+
+    print(f"🔶 Hacker News: Total {len(tips)} tips found")
+    return tips
+
+
 def fetch_twitter_tips():
     """
     Fetch tips from Twitter/X using API v2.
 
-    Requires TWITTER_BEARER_TOKEN environment variable.
+    DISABLED: Requires paid API tier ($100/month for search).
+    Nitter RSS alternatives are blocked by Twitter/X.
     """
+    if not CONFIG["twitter"].get("enabled", False):
+        print("⚠️  Twitter: Disabled (requires $100/month paid API tier)")
+        return []
+
     token = os.getenv("TWITTER_BEARER_TOKEN")
     if not token:
         print("⚠️  Twitter: No bearer token found, skipping...")
@@ -547,11 +713,13 @@ def main():
     existing = get_existing_tips()
     print(f"📊 Existing tips: {len(existing.get('tips', []))}")
 
-    # Fetch from sources
-    twitter_tips = fetch_twitter_tips()
+    # Fetch from sources (Dev.to + HN + Reddit)
+    devto_tips = fetch_devto_tips()
+    hn_tips = fetch_hackernews_tips()
     reddit_tips = fetch_reddit_tips()
+    twitter_tips = fetch_twitter_tips()  # Will skip if disabled
 
-    all_new_tips = twitter_tips + reddit_tips
+    all_new_tips = devto_tips + hn_tips + reddit_tips + twitter_tips
     print(f"🌐 Found {len(all_new_tips)} potential tips")
 
     if all_new_tips:

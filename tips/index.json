@@ -1,24 +1,24 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-01-01T00:14:31.297799",
-  "totalTips": 52,
+  "lastUpdated": "2026-01-04T01:53:29.736561",
+  "totalTips": 120,
   "categories": [
     {
       "name": "Orchestration",
       "slug": "orchestration",
-      "count": 10,
+      "count": 21,
       "icon": "\ud83c\udfad"
     },
     {
       "name": "Context Management",
       "slug": "context-management",
-      "count": 10,
+      "count": 28,
       "icon": "\ud83d\udcdd"
     },
     {
       "name": "Workflow",
       "slug": "workflow",
-      "count": 10,
+      "count": 45,
       "icon": "\u26a1"
     },
     {
@@ -30,13 +30,15 @@
     {
       "name": "Tooling",
       "slug": "tooling",
-      "count": 12,
+      "count": 16,
       "icon": "\ud83d\udd27"
     }
   ],
   "sources": {
     "primary": "https://x.com/alexalbert__/status/2004575443484319954",
     "automation": [
+      "devto",
+      "hackernews",
       "reddit"
     ]
   }

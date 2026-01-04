@@ -3,7 +3,7 @@
 > **Fresh Claude Code tips, every single day.** Auto-curated from the developer community.
 
 [![Daily Update](https://github.com/mrsarac/claude-code-daily/actions/workflows/daily-update.yml/badge.svg)](https://github.com/mrsarac/claude-code-daily/actions/workflows/daily-update.yml)
-[![Tips Count](https://img.shields.io/badge/tips-50+-blue)](./tips/)
+[![Tips Count](https://img.shields.io/badge/tips-120+-blue)](./tips/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Twitter](https://img.shields.io/badge/Follow-%40theRenaisseur-1DA1F2?logo=twitter)](https://twitter.com/theRenaisseur)
 
@@ -67,14 +67,14 @@
 │                    Daily at 00:00 UTC                       │
 ├─────────────────────────────────────────────────────────────┤
 │  ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐  │
-│  │ Twitter │ -> │ Reddit  │ -> │ Gemini  │ -> │  Push   │  │
-│  │ Scrape  │    │ Scrape  │    │ Curate  │    │ to Repo │  │
+│  │ Dev.to  │    │   HN    │    │ Reddit  │    │ Gemini  │  │
+│  │   RSS   │ -> │   RSS   │ -> │   RSS   │ -> │ Curate  │  │
 │  └─────────┘    └─────────┘    └─────────┘    └─────────┘  │
 │                                                             │
 │  Sources:                                                   │
-│  • #ClaudeCode on X/Twitter                                │
+│  • Dev.to #claude, #claudecode, #anthropic                 │
+│  • Hacker News "claude code" (hnrss.org)                   │
 │  • r/ClaudeAI on Reddit                                    │
-│  • @anthropic, @alexalbert__ mentions                      │
 └─────────────────────────────────────────────────────────────┘
 ```
 

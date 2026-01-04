@@ -110,4 +110,63 @@ Instead of relying on screenshots and screen coordinates for interaction, use `r
 
 ---
 
+
+## 58. I Built a Claude Code Plugin That Unifies 10 AI Image Provid
+**Source:** Merlin Rabens (Devto)
+
+
+  
+  
+  The Problem
+
+
+Last month I was working on a project that needed AI-generated images. Sometimes I needed photorealistic product shots. Sometimes logos with clean typography. Sometimes artistic
+
+[Original](https://dev.to/merlinrabens/i-built-a-claude-code-plugin-that-unifies-10-ai-image-providers-5gpd) | Added: 2026-01-04
+
+---
+
+
+## 72. I Used ClaudeCode to Rescue an npm Package with 760K Downloa
+**Source:** steve greensill (Devto)
+
+
+  
+  
+  The Inciting Incident
+
+
+It started with a bug.
+
+I was trying to get a unrelated typescript project running, when I hit an issue with one of its dependencies... license-checker. No big deal, I
+
+[Original](https://dev.to/greenstevester/i-used-claudecode-to-rescue-an-npm-package-with-760k-downloads-and-now-i-have-a-mission-from-my-3kdj) | Added: 2026-01-04
+
+---
+
+
+## 85. Reverse engineered Claude Code's web tools
+**Source:** liran_yo (Hackernews)
+
+
+Article URL: https://medium.com/@liranyoffe/reverse-engineering-claude-code-web-tools-1409249316c3
+Comments URL: https://news.ycombinator.com/item?id=46456648
+Points: 3
+# Comments: 0
+
+
+[Original](https://medium.com/@liranyoffe/reverse-engineering-claude-code-web-tools-1409249316c3) | Added: 2026-01-04
+
+---
+
+
+## 105. Verify loop inspired by Boris Cherny work
+**Source:** nyarumes (Reddit)
+
+Hello guys I wanna present my verify loop - https://github.com/golovatskygroup/llm (Support Go, JS, Python) Please ask claude code to configure hooks for your project after you init by a script   &#32
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1q36iph/verify_loop_inspired_by_boris_cherny_work/) | Added: 2026-01-04
+
+---
+
 *[Back to Categories](../README.md)*
