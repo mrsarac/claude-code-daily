@@ -353,4 +353,24 @@ Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summa
 
 ---
 
+
+## 126. Use CLAUDE.md to persist project setup instructions
+**Source:** Sean K (Devto)
+
+Claude Code reads `CLAUDE.md` files to understand project conventions. Maintain a `CLAUDE.md` to instruct Claude Code to use specific tools (like pnpm) and configurations, avoiding repeated corrections across sessions. This provides a way to persist project-specific instructions without relying on session history.
+
+[Original](https://dev.to/sean8/memento-give-claude-code-persistent-memory-so-you-stop-repeating-yourself-22je) | Added: 2026-01-05
+
+---
+
+
+## 129. Automate Claude Code Context with cck
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (cck) to automate the creation and injection of context into your Claude Code sessions. This tool scans your codebase to generate a `CLAUDE.md` file for initial context and offers per-turn context injection, ensuring Claude Code is always aware of project details without manual re-explanation. Install with `pip install .` and sync your project with `cck sync`.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-05
+
+---
+
 *[Back to Categories](../README.md)*

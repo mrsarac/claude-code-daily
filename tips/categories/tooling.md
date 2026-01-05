@@ -189,4 +189,24 @@ Integrate Claude Code CLI with XcodeBuildMCP for iOS development workflows. Conf
 
 ---
 
+
+## 128. Use Claude Code CLI for Building Apps with Terminal Guidance
+**Source:** Erica (Devto)
+
+Leverage Claude Code's terminal integration to build applications. The AI can observe commands, understand context, and offer real-time assistance while you build a system, potentially streamlining the development process compared to manual methods or spreadsheets. This allows Claude to guide the entire process directly from the terminal.
+
+[Original](https://dev.to/eriperspective/ai-engineering-advent-of-ai-with-goose-day-13-scheduling-application-4069) | Added: 2026-01-05
+
+---
+
+
+## 130. Executable Markdown with Claude Code CLI via shebang
+**Source:** jedwhite (Reddit)
+
+This tip introduces an open-source tool that allows you to execute markdown files using Claude Code. By adding a shebang line (#!/usr/bin/env claude-run) to your markdown file, you can treat it as an executable script that utilizes Claude Code for processing, enabling workflows like automated codebase analysis and summarization directly from a markdown document.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1q44kkd/make_markdown_files_executable_with_claude_code/) | Added: 2026-01-05
+
+---
+
 *[Back to Categories](../README.md)*

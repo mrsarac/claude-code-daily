@@ -550,4 +550,14 @@ This guide introduces essential Claude Code CLI commands like `/help`, `/add`, `
 
 ---
 
+
+## 127. Mastering Claude Code CLI Commands
+**Source:** Ege Pakten (Devto)
+
+This guide provides a practical overview of essential Claude Code CLI commands like `/help`, `/add`, `/ls`, `/clear`, `/code`, and `/architect`. It focuses on using these commands to effectively manage context, write/edit code, and plan architectures directly within the terminal, streamlining your development workflow.
+
+[Original](https://dev.to/egepakten/claude-code-in-terminal-a-beginners-guide-to-10x-faster-development-3196) | Added: 2026-01-05
+
+---
+
 *[Back to Categories](../README.md)*
