@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-01-05T00:14:57.356609",
-  "totalTips": 130,
+  "lastUpdated": "2026-01-06T00:14:03.984021",
+  "totalTips": 132,
   "categories": [
     {
       "name": "Orchestration",
@@ -12,13 +12,13 @@
     {
       "name": "Context Management",
       "slug": "context-management",
-      "count": 32,
+      "count": 33,
       "icon": "\ud83d\udcdd"
     },
     {
       "name": "Workflow",
       "slug": "workflow",
-      "count": 47,
+      "count": 48,
       "icon": "\u26a1"
     },
     {
