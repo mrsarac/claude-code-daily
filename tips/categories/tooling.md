@@ -209,4 +209,24 @@ This tip introduces an open-source tool that allows you to execute markdown file
 
 ---
 
+
+## 134. Tidy Claude Code: Remove Unused MCP Servers
+**Source:** sr-white (Hackernews)
+
+The `mcp-tidy` tool helps manage Claude Code's MCP server configurations by listing configured servers, checking their actual usage from transcript logs, and removing unused ones. This prevents unnecessary overhead from loading descriptions of forgotten servers into context, keeping Claude Code sessions leaner and more efficient.
+
+[Original](https://github.com/nnnkkk7/mcp-tidy) | Added: 2026-01-07
+
+---
+
+
+## 135. Tidy Claude Code Configs with mcp-tidy
+**Source:** sr-white (Hackernews)
+
+The `mcp-tidy` tool helps manage your Claude Code MCP server configurations by listing configured servers, checking usage from transcript logs, and removing unused server entries. This prevents accumulating outdated server definitions in your `~/.claude.json`, which can reduce unnecessary overhead during Claude Code execution. Use `mcp-tidy list`, `mcp-tidy stats`, and `mcp-tidy remove` commands to maintain a clean and efficient configuration.
+
+[Original](https://github.com/nnnkkk7/mcp-tidy) | Added: 2026-01-07
+
+---
+
 *[Back to Categories](../README.md)*
