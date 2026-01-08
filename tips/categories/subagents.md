@@ -82,4 +82,14 @@ For large API documentation, connect Claude to NotebookLM via MCP. Specialized k
 ---
 
 
+
+## 138. Run Skills in Forked Sub-Agent Contexts
+**Source:** mDarken (Reddit)
+
+Claude Code now supports running skills and slash commands in a forked sub-agent context. By adding `context: fork` in the skill's frontmatter, you can isolate the skill's execution environment. This allows for better resource management, prevents interference between skills, and potentially enables more complex multi-agent workflows. This feature is configured within the skill definition itself, making it straightforward to implement.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1q6q9my/claudecode_v210_just_dropped/) | Added: 2026-01-08
+
+---
+
 *[Back to Categories](../README.md)*

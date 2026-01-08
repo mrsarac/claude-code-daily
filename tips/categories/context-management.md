@@ -383,4 +383,24 @@ Use the `claude-context-keeper` (cck) CLI tool to automatically generate a `CLAU
 
 ---
 
+
+## 136. Use CLAUDE.md to Persist Project Conventions
+**Source:** Sean K (Devto)
+
+Claude Code uses CLAUDE.md to learn project conventions, but manually maintaining this file is tedious. By actively updating CLAUDE.md with specific commands and preferences, you ensure that Claude consistently uses tools like `pnpm` instead of defaulting to `npm` across different sessions, avoiding repeated corrections and improving workflow efficiency.
+
+[Original](https://dev.to/sean8/memento-give-claude-code-persistent-memory-so-you-stop-repeating-yourself-22je) | Added: 2026-01-08
+
+---
+
+
+## 137. CCK: Automate Claude Code Context with CLI
+**Source:** takawasi (Hackernews)
+
+Use the `claude-context-keeper` (cck) CLI to automatically generate a `CLAUDE.md` file containing your project's structure and conventions. This provides Claude Code with essential context at the start of each session, eliminating repetitive explanations. Additionally, `cck watch --with-history` enables per-turn context injection, providing even richer contextual awareness for Claude Code.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-08
+
+---
+
 *[Back to Categories](../README.md)*
