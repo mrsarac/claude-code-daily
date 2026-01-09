@@ -580,4 +580,14 @@ This guide provides a practical introduction to Claude Code CLI for beginners, f
 
 ---
 
+
+## 141. Hot-reload Skills for faster iteration
+**Source:** mDarken (Reddit)
+
+Claude Code now supports automatic hot-reloading of skills. When you create or modify skills in the `~/.claude/skills` or `.claude/skills` directories, the changes are immediately available without requiring a restart of your Claude Code session. This feature speeds up the development and testing process by allowing you to quickly iterate on your skills.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1q6q9my/claudecode_v210_just_dropped/) | Added: 2026-01-09
+
+---
+
 *[Back to Categories](../README.md)*

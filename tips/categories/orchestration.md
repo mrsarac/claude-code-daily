@@ -218,4 +218,14 @@ I’d really appreciate it if there’s already a test/benchmark for this (or an
 
 ---
 
+
+## 140. Skills and Sub-agents for Scalable Workflows
+**Source:** Sandeep Thuthike (Devto)
+
+Claude Code uses Skills (filesystem-based documentation) and Sub-agents (execution engines) as primitives for building scalable workflows. Skills define how work should be done, while Sub-agents execute the work, often in parallel. This combination enables efficient orchestration of complex tasks within the Claude Code environment.
+
+[Original](https://dev.to/sandeep_thuthike/claude-skills-vs-sub-agents-architecture-use-cases-and-effective-patterns-2moa) | Added: 2026-01-09
+
+---
+
 *[Back to Categories](../README.md)*

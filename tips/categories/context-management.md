@@ -403,4 +403,14 @@ Use the `claude-context-keeper` (cck) CLI to automatically generate a `CLAUDE.md
 
 ---
 
+
+## 139. Make Claude Code remember conventions with CLAUDE.md
+**Source:** Sean K (Devto)
+
+Claude Code reads CLAUDE.md at the start of each session to learn project conventions. To avoid repeatedly correcting Claude, document important conventions like preferred package managers (e.g., pnpm install) in a CLAUDE.md file at the root of your project.
+
+[Original](https://dev.to/sean8/memento-give-claude-code-persistent-memory-so-you-stop-repeating-yourself-22je) | Added: 2026-01-09
+
+---
+
 *[Back to Categories](../README.md)*
