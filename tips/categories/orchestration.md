@@ -228,4 +228,14 @@ Claude Code uses Skills (filesystem-based documentation) and Sub-agents (executi
 
 ---
 
+
+## 142. Skills and Sub-agents for Claude Code Workflows
+**Source:** Sandeep Thuthike (Devto)
+
+Claude Code provides Skills (persistent, filesystem-based documentation) and Sub-agents (parallel execution engines) for building scalable workflows. Use Skills to define work processes and Sub-agents to execute them efficiently, treating the CLI as a coordination layer for complex tasks.
+
+[Original](https://dev.to/sandeep_thuthike/claude-skills-vs-sub-agents-architecture-use-cases-and-effective-patterns-2moa) | Added: 2026-01-10
+
+---
+
 *[Back to Categories](../README.md)*
