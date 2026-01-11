@@ -229,4 +229,14 @@ The `mcp-tidy` tool helps manage your Claude Code MCP server configurations by l
 
 ---
 
+
+## 144. Claude Code CLI: Slash Commands Merged Into Skills
+**Source:** shanraisshan (Reddit)
+
+The SlashCommand tool is now integrated into the Skill tool within Claude Code CLI. This change simplifies the internal structure, meaning skills are now accessible via the slash command menu. However, existing folder structures in .claude/commands/ and .claude/skills/ remain unchanged, and your previously created commands and skills will function as before.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1q92wwv/merged_commands_and_skills_in_213_update/) | Added: 2026-01-11
+
+---
+
 *[Back to Categories](../README.md)*

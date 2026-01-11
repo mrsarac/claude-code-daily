@@ -413,4 +413,14 @@ Claude Code reads CLAUDE.md at the start of each session to learn project conven
 
 ---
 
+
+## 143. CCK: Automate Claude Code context using CLAUDE.md
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file that summarizes your project structure, commands, and conventions. This eliminates the need to manually re-explain your project at the start of each Claude Code session, improving efficiency and reducing boilerplate. CCK can also inject context per turn, further enhancing Claude's understanding.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-11
+
+---
+
 *[Back to Categories](../README.md)*
