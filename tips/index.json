@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-01-11T00:15:05.768479",
-  "totalTips": 144,
+  "lastUpdated": "2026-01-12T00:14:04.860012",
+  "totalTips": 147,
   "categories": [
     {
       "name": "Orchestration",
@@ -12,7 +12,7 @@
     {
       "name": "Context Management",
       "slug": "context-management",
-      "count": 37,
+      "count": 38,
       "icon": "\ud83d\udcdd"
     },
     {
@@ -24,7 +24,7 @@
     {
       "name": "Subagents",
       "slug": "subagents",
-      "count": 11,
+      "count": 13,
       "icon": "\ud83e\udd16"
     },
     {

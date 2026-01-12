@@ -92,4 +92,24 @@ Claude Code now supports running skills and slash commands in a forked sub-agent
 
 ---
 
+
+## 145. Researching complex topics with async subagents in Claude Code
+**Source:** sberens (Hackernews)
+
+Use Claude Code with async subagents to research multiple aspects of a complex topic like the California budget simultaneously. This approach enables parallel processing of different budget line items across various years, allowing for efficient data gathering and context addition. While frontend modifications may still require manual effort, this method can significantly accelerate research throughput.
+
+[Original](https://california-budget.com) | Added: 2026-01-12
+
+---
+
+
+## 146. Use Async Subagents for Research with Claude Code
+**Source:** sberens (Hackernews)
+
+Claude Code can leverage async subagents to efficiently research multiple budget line items across various years. This method allows for parallel processing of complex research tasks, significantly increasing throughput and providing contextual information with graphs. This is particularly useful for users who are new to the subject matter and require in-depth data analysis.
+
+[Original](https://california-budget.com) | Added: 2026-01-12
+
+---
+
 *[Back to Categories](../README.md)*
