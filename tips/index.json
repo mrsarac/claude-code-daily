@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-01-12T00:14:04.860012",
-  "totalTips": 147,
+  "lastUpdated": "2026-01-13T00:15:04.731184",
+  "totalTips": 149,
   "categories": [
     {
       "name": "Orchestration",
@@ -24,13 +24,13 @@
     {
       "name": "Subagents",
       "slug": "subagents",
-      "count": 13,
+      "count": 14,
       "icon": "\ud83e\udd16"
     },
     {
       "name": "Tooling",
       "slug": "tooling",
-      "count": 23,
+      "count": 24,
       "icon": "\ud83d\udd27"
     }
   ],

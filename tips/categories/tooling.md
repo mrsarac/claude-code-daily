@@ -239,4 +239,14 @@ The SlashCommand tool is now integrated into the Skill tool within Claude Code C
 
 ---
 
+
+## 149. Integrate Google NotebookLM with Claude Code CLI
+**Source:** Opposite_Fox5559 (Reddit)
+
+This tip shows how to extend Claude Code CLI's capabilities by integrating with Google NotebookLM via an updated 'notebooklm-py' library. By injecting a custom skill into Claude, users can manage their NotebookLM research directly from the terminal, streamlining workflows and reducing context switching. This involves using a specific command to automatically inject the tool into Claude Code CLI, enhancing its functionality.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qasqn5/i_gave_claude_code_full_control_of_google/) | Added: 2026-01-13
+
+---
+
 *[Back to Categories](../README.md)*

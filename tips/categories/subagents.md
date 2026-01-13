@@ -112,4 +112,14 @@ Claude Code can leverage async subagents to efficiently research multiple budget
 
 ---
 
+
+## 148. Parallel Editor Subagents in Claude Code for Writing
+**Source:** ArtySuer (Reddit)
+
+Improve Claude's writing feedback by using Claude Code to create multiple editor subagents. Each editor is trained on a specific writing style (e.g., Paul Graham, Bob Dylan) and provides independent feedback. The main Claude instance then synthesizes these perspectives, highlighting areas of agreement and disagreement to offer more nuanced and actionable writing suggestions. The /editors command in the provided GitHub repo facilitates this process.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qb59ya/15_claudes_arguing_about_an_essay/) | Added: 2026-01-13
+
+---
+
 *[Back to Categories](../README.md)*
