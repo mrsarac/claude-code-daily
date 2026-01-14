@@ -249,4 +249,14 @@ This tip shows how to extend Claude Code CLI's capabilities by integrating with 
 
 ---
 
+
+## 150. Leverage Claude's Global Config and MCP Servers
+**Source:** TheDecipherist (Reddit)
+
+Use a global `~/.claude/CLAUDE.md` file to enforce project structure and prevent accidental secret exposure. MCP servers drastically expand Claude's capabilities. Context7 provides up-to-date documentation access. Custom commands and agents automate common tasks. Avoid mixing topics in a single chat to maintain performance and focus.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qbkk1n/the_complete_guide_to_claude_code_global_claudemd/) | Added: 2026-01-14
+
+---
+
 *[Back to Categories](../README.md)*
