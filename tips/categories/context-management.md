@@ -433,4 +433,14 @@ Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summa
 
 ---
 
+
+## 151. Custom MCP server for focused context
+**Source:** betauser123 (Reddit)
+
+This tip introduces a custom MCP server using the Claude Code CLI to provide Claude with targeted context, improving efficiency and reducing token usage. The server, implemented via `claude mcp add --scope user --transport stdio scantool -- uvx scantool`, leverages tree-sitter for parsing, call graph generation, and entropy analysis to extract relevant code snippets, enhancing Claude's ability to understand and process information effectively.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qd3afo/i_built_an_mcp_server_that_gives_claude_a_birds/) | Added: 2026-01-15
+
+---
+
 *[Back to Categories](../README.md)*
