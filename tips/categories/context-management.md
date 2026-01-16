@@ -443,4 +443,24 @@ This tip introduces a custom MCP server using the Claude Code CLI to provide Cla
 
 ---
 
+
+## 152. Manage Claude.md Size for Better Performance
+**Source:** Eugene Oleinik (Devto)
+
+Large CLAUDE.md files negatively impact Claude Code's performance by reducing available context and triggering more frequent compactions. Regularly review and trim CLAUDE.md to maintain optimal context window size and prevent degradation in session length and agent coherence. Consider using techniques to summarize or prioritize learnings within the CLAUDE.md file.
+
+[Original](https://dev.to/evoleinik/the-best-agent-architecture-is-already-in-your-terminal-1fg0) | Added: 2026-01-16
+
+---
+
+
+## 153. Name Your Claude Sessions for Better Context Retrieval
+**Source:** Rajesh Royal (Devto)
+
+To avoid losing track of conversations and context in Claude Code, name your sessions descriptively. This helps you quickly identify and revisit specific discussions, especially when working on complex projects like code migrations or API refactoring, ensuring you can easily find past insights and solutions.
+
+[Original](https://dev.to/rajeshroyal/named-sessions-your-git-branches-have-names-why-shouldnt-your-claude-sessions-43oc) | Added: 2026-01-16
+
+---
+
 *[Back to Categories](../README.md)*
