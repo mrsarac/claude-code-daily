@@ -463,4 +463,14 @@ To avoid losing track of conversations and context in Claude Code, name your ses
 
 ---
 
+
+## 154. CCK: Automate Claude Code Context & History Injection
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summarizing your project for Claude Code, ensuring it has the necessary context at the start of each session.  The `cck watch --with-history` command injects relevant code snippets and past conversation history into each turn, significantly improving Claude Code's understanding and ability to assist with complex coding tasks without manual copy-pasting.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-17
+
+---
+
 *[Back to Categories](../README.md)*
