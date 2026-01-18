@@ -590,4 +590,24 @@ Claude Code now supports automatic hot-reloading of skills. When you create or m
 
 ---
 
+
+## 157. Structured Workflow with /plan, /execute, /verify, /ship
+**Source:** milkphetamine (Reddit)
+
+Automate code development workflows in Claude Code with a structured approach. The plugin enforces a sequence of /plan, /execute, /verify, and /ship commands. Progress is gated, preventing skipping steps. You cannot execute without a plan, verify without execution, or ship without verification, ensuring quality control at each stage.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qfigbs/claudikins_kernel_based_exactly_on_boris_chernys/) | Added: 2026-01-18
+
+---
+
+
+## 158. Faster Claude Code Execution with Auto-Paste
+**Source:** coygeek (Reddit)
+
+The new 'Yes, clear context and bypass permissions' option in Claude Code's plan mode enables faster plan execution. Selecting this option copies the plan to your clipboard, clears the current session, auto-pastes the plan, and immediately begins coding, streamlining the workflow.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qf91g4/clear_context_new_option_when_plan_finishes/) | Added: 2026-01-18
+
+---
+
 *[Back to Categories](../README.md)*

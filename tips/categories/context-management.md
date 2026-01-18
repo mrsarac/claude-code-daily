@@ -473,4 +473,24 @@ Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summa
 
 ---
 
+
+## 155. Name Your Claude Sessions for Better Context
+**Source:** Rajesh Royal (Devto)
+
+Avoid losing track of your Claude sessions by naming them descriptively. This simple organizational habit can save you time and frustration, especially when working on complex projects involving multiple interactions with Claude. Clearly named sessions make it easy to quickly identify and revisit specific discussions or code explorations.
+
+[Original](https://dev.to/rajeshroyal/named-sessions-your-git-branches-have-names-why-shouldnt-your-claude-sessions-43oc) | Added: 2026-01-18
+
+---
+
+
+## 156. CCK: Automate Claude Code Context with CLAUDE.md & Watch
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a `CLAUDE.md` file containing your project's structure and conventions, enabling Claude Code to start sessions with full context. Additionally, CCK's `watch` command injects relevant file history into each turn, improving Claude Code's awareness and problem-solving capabilities.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-18
+
+---
+
 *[Back to Categories](../README.md)*
