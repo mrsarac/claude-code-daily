@@ -610,4 +610,14 @@ The new 'Yes, clear context and bypass permissions' option in Claude Code's plan
 
 ---
 
+
+## 159. Control Claude Code with PreToolUse Hooks
+**Source:** Mike Lane (Devto)
+
+Use Claude Code's PreToolUse hook system to intercept tool calls, enforce project rules, and inject contextual guidance. This allows you to prevent dangerous operations like 'git reset --hard' and ensure compliance with team standards like GPG-signed commits or using the correct GitHub organization. Implement custom hooks to customize Claude Code's behavior and align it with your specific project requirements.
+
+[Original](https://dev.to/mikelane/building-guardrails-for-ai-coding-assistants-a-pretooluse-hook-system-for-claude-code-ilj) | Added: 2026-01-19
+
+---
+
 *[Back to Categories](../README.md)*
