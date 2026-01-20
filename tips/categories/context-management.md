@@ -503,4 +503,14 @@ Use Claude Context Keeper (CCK) to automate Claude Code session setup.  CCK gene
 
 ---
 
+
+## 163. Automate Claude Context with cck
+**Source:** takawasi (Hackernews)
+
+Use the `cck` (Claude Context Keeper) CLI tool to automate context management in your Claude Code sessions.  Generate a `CLAUDE.md` file summarizing your project structure and conventions, which Claude can read at the start of each session.  The `cck watch` command can also inject relevant historical context into each turn, improving Claude's understanding and reducing the need for repetitive explanations.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-20
+
+---
+
 *[Back to Categories](../README.md)*

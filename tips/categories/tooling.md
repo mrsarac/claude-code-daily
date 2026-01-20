@@ -259,4 +259,34 @@ Use a global `~/.claude/CLAUDE.md` file to enforce project structure and prevent
 
 ---
 
+
+## 161. Use Ollama with Claude Code by Setting Environment Variables
+**Source:** codemee (Devto)
+
+You can configure Claude Code to use Ollama as a backend by setting the `ANTHROPIC_AUTH_TOKEN` and `ANTHROPIC_BASE_URL` environment variables. This allows Claude Code to use local or cloud-based models served by Ollama instead of the Anthropic API. The tip provides the exact environment variables and explains how to configure the base URL for both local and remote Ollama servers.
+
+[Original](https://dev.to/codemee/rang-claude-code-chuan-jie-ollama-shi-yong-ben-di-duan-mo-xing-5aph) | Added: 2026-01-20
+
+---
+
+
+## 162. Customize Claude Code with PreToolUse Hooks
+**Source:** Mike Lane (Devto)
+
+Claude Code's PreToolUse hook system allows you to intercept and modify tool calls before execution. This lets you enforce project-specific rules, block dangerous operations (like `git reset --hard`), and inject contextual guidance, ensuring that the AI coding assistant adheres to your team's standards and conventions, rather than just its default training.
+
+[Original](https://dev.to/mikelane/building-guardrails-for-ai-coding-assistants-a-pretooluse-hook-system-for-claude-code-ilj) | Added: 2026-01-20
+
+---
+
+
+## 164. Customize Claude Code Status Line
+**Source:** yksugi (Reddit)
+
+Customize the Claude Code CLI status line to display information such as the model, current directory, git branch, uncommitted file count, sync status, and token usage. Displaying the last message can also be useful to provide persistent context of the last prompt.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qgccgs/25_claude_code_tips_from_11_months_of_intense_use/) | Added: 2026-01-20
+
+---
+
 *[Back to Categories](../README.md)*
