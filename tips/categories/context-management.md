@@ -513,4 +513,34 @@ Use the `cck` (Claude Context Keeper) CLI tool to automate context management in
 
 ---
 
+
+## 165. Compact Claude Code Context for Smaller Payloads
+**Source:** anton (Devto)
+
+Claude Code stores conversations locally and sends the entire history to Anthropic's servers with each message. Using the `/compact` command creates a summary checkpoint, significantly reducing API payload sizes (around 85%) at the cost of losing granular context from the older messages. This tip highlights how to manage and reduce the size of conversation history being sent to the API.
+
+[Original](https://dev.to/rigby_/what-actually-happens-when-you-run-compact-in-claude-code-3kl9) | Added: 2026-01-21
+
+---
+
+
+## 166. Compacting Claude Code Conversations for Smaller Payloads
+**Source:** anton (Devto)
+
+Claude Code stores conversation history locally and sends it to Anthropic's servers with each message. Using the `/compact` command creates a summary checkpoint, significantly reducing API payload sizes (approximately 85%). This helps manage context and reduce costs, but it sacrifices fine-grained context from the entire history.
+
+[Original](https://dev.to/rigby_/what-actually-happens-when-you-run-compact-in-claude-code-3kl9) | Added: 2026-01-21
+
+---
+
+
+## 167. Managing Claude Code Context with /clear and REWRITE.MD
+**Source:** Dacadey (Reddit)
+
+To prevent Claude Code from running out of context during multi-stage refactoring, instruct it to use the `/clear` command at the end of each stage. This clears the current context. Then, ask it to read a file like `REWRITE.MD` to refresh its understanding of the rewrite plan and progress, avoiding code quality degradation while maintaining context.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qhz46z/how_do_you_stop_running_out_of_context_on_long/) | Added: 2026-01-21
+
+---
+
 *[Back to Categories](../README.md)*
