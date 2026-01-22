@@ -289,4 +289,24 @@ Customize the Claude Code CLI status line to display information such as the mod
 
 ---
 
+
+## 168. Customize Claude Code Behavior with PreToolUse Hooks
+**Source:** Mike Lane (Devto)
+
+Leverage Claude Code's PreToolUse hook system to enforce project-specific rules and prevent undesirable actions. This allows you to intercept tool calls before they're executed, blocking operations like 'git reset --hard' and injecting guidance such as mandating GPG-signed commits or using a specific GitHub organization. This ensures Claude Code adheres to your team's standards and workflows.
+
+[Original](https://dev.to/mikelane/building-guardrails-for-ai-coding-assistants-a-pretooluse-hook-system-for-claude-code-ilj) | Added: 2026-01-22
+
+---
+
+
+## 171. Claude Code CLI: History-Based Autocomplete
+**Source:** BuildwithVignesh (Reddit)
+
+The Claude Code CLI now supports history-based autocomplete in bash mode. Users can type a partial command and press Tab to complete it from their bash command history, streamlining command entry and recall of previous commands. This feature improves efficiency and reduces typing errors when using the CLI for complex workflows.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qj9g2a/official_anthropic_just_released_claude_code_2114/) | Added: 2026-01-22
+
+---
+
 *[Back to Categories](../README.md)*

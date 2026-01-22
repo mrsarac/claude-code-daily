@@ -543,4 +543,24 @@ To prevent Claude Code from running out of context during multi-stage refactorin
 
 ---
 
+
+## 169. Compact Claude Code Context to Reduce Payload Size
+**Source:** anton (Devto)
+
+Claude Code stores conversation history locally and sends it to Anthropic with each message. The `/compact` command creates a summary checkpoint, significantly reducing API payload size (around 85%), but this comes at the cost of losing granular context. This tip highlights the trade-off between payload size and context retention when using `/compact`.
+
+[Original](https://dev.to/rigby_/what-actually-happens-when-you-run-compact-in-claude-code-3kl9) | Added: 2026-01-22
+
+---
+
+
+## 170. Streamline Claude Code with Context Keeper (CCK)
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automate context injection for Claude Code.  CCK generates a comprehensive CLAUDE.md file from your codebase that Claude reads at the beginning of each session, or injects relevant files into each turn. Install with `pip install .` and then use `cck sync` to create CLAUDE.md or `cck setup --cb-style` followed by `cck watch --with-history` for per-turn context injection.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-22
+
+---
+
 *[Back to Categories](../README.md)*
