@@ -563,4 +563,24 @@ Use Claude Context Keeper (CCK) to automate context injection for Claude Code.  
 
 ---
 
+
+## 174. Use @ to Inject Files and Directories into Claude Code Prompts
+**Source:** Rajesh Royal (Devto)
+
+The `@` mention in Claude Code allows you to directly inject file contents or directory listings into your prompts. This avoids having to copy and paste content or manually specify file paths, speeding up the process of providing context to Claude. This streamlines the interaction and eliminates friction when working with code.
+
+[Original](https://dev.to/rajeshroyal/-mentions-the-2-character-shortcut-that-10x-your-ai-coding-speed-3jej) | Added: 2026-01-23
+
+---
+
+
+## 175. Reduce Claude Code API Payloads with /compact
+**Source:** anton (Devto)
+
+Claude Code CLI stores conversation history locally and sends the full history with each API request. The `/compact` command creates a summary checkpoint, significantly reducing the size of API payloads (approximately 85%) at the cost of some granular context. This can improve performance and reduce costs, but users should be aware of the trade-off between payload size and context retention.
+
+[Original](https://dev.to/rigby_/what-actually-happens-when-you-run-compact-in-claude-code-3kl9) | Added: 2026-01-23
+
+---
+
 *[Back to Categories](../README.md)*

@@ -309,4 +309,24 @@ The Claude Code CLI now supports history-based autocomplete in bash mode. Users 
 
 ---
 
+
+## 172. Install Claude Code CLI on Windows with Scoop
+**Source:** 0xkoji (Devto)
+
+This tip shows how to install Git via Scoop (a Windows package manager), set the path for Git Bash, and then install Claude Code using the provided PowerShell script. Finally, it validates the installation by checking the Claude Code version. This automates and simplifies the Claude Code CLI installation process on Windows.
+
+[Original](https://dev.to/0xkoji/install-claude-code-on-windows-with-scoop-2452) | Added: 2026-01-23
+
+---
+
+
+## 173. Fix 'claude' not recognized error on Windows
+**Source:** Yuto Takashi (Devto)
+
+If you encounter a 'claude' is not recognized error on Windows after an update, it's due to Claude Code migrating to a new installation location. To fix this, you need to update your system's PATH environment variable to include the new Claude Code executable directory, resolving the issue and allowing you to use the `claude` command again.
+
+[Original](https://dev.to/tielec-takashi/claude-code-stopped-working-on-windows-heres-the-quick-fix-5a36) | Added: 2026-01-23
+
+---
+
 *[Back to Categories](../README.md)*
