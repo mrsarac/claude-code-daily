@@ -329,4 +329,14 @@ If you encounter a 'claude' is not recognized error on Windows after an update, 
 
 ---
 
+
+## 176. Fix 'claude' command not recognized on Windows
+**Source:** Yuto Takashi (Devto)
+
+After Claude Code's auto-migration to native installation, the 'claude' command might not be recognized. The fix involves adding the new installation directory to your system's PATH environment variable, resolving the "'claude' is not recognized" error on Windows and restoring Claude Code CLI functionality.
+
+[Original](https://dev.to/tielec-takashi/claude-code-stopped-working-on-windows-heres-the-quick-fix-5a36) | Added: 2026-01-24
+
+---
+
 *[Back to Categories](../README.md)*

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-01-23T00:14:27.907446",
-  "totalTips": 175,
+  "lastUpdated": "2026-01-24T00:13:37.001694",
+  "totalTips": 179,
   "categories": [
     {
       "name": "Orchestration",
@@ -12,7 +12,7 @@
     {
       "name": "Context Management",
       "slug": "context-management",
-      "count": 53,
+      "count": 56,
       "icon": "\ud83d\udcdd"
     },
     {
@@ -30,7 +30,7 @@
     {
       "name": "Tooling",
       "slug": "tooling",
-      "count": 32,
+      "count": 33,
       "icon": "\ud83d\udd27"
     }
   ],

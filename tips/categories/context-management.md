@@ -583,4 +583,34 @@ Claude Code CLI stores conversation history locally and sends the full history w
 
 ---
 
+
+## 177. Use @ Mentions for Universal Context Injection in Claude Code
+**Source:** Rajesh Royal (Devto)
+
+The `@` mention feature in Claude Code allows you to directly inject files, list directories, or invoke tools into your prompt. This eliminates the need to manually navigate file trees or copy paths, streamlining the process of providing context to Claude and improving coding efficiency. Use `@` followed by the action to inject the necessary context.
+
+[Original](https://dev.to/rajeshroyal/-mentions-the-2-character-shortcut-that-10x-your-ai-coding-speed-3jej) | Added: 2026-01-24
+
+---
+
+
+## 178. CCK: Automate Claude Code context with CLAUDE.md and history
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automate context management for Claude Code sessions. Generate a `CLAUDE.md` file containing project structure and conventions, which Claude reads at session start. Enable per-turn context injection with `cck watch --with-history` for automated history inclusion.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-24
+
+---
+
+
+## 179. Breadcrumbs: Git-Based Context Saving for Long Claude Code Runs
+**Source:** entheosoul (Reddit)
+
+Use "breadcrumbs", a pair of shell scripts leveraging git notes and jq, to save Claude's state before context compaction and reload it at session start. This helps Claude remember its progress, decisions, uncertainties, and next steps when working on long loops, preventing it from getting lost due to context limits. This solution involves pre-compaction and session-start hooks.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1ql30yu/when_your_claude_code_session_compacts_midloop/) | Added: 2026-01-24
+
+---
+
 *[Back to Categories](../README.md)*
