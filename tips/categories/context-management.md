@@ -613,4 +613,24 @@ Use "breadcrumbs", a pair of shell scripts leveraging git notes and jq, to save 
 
 ---
 
+
+## 182. CCK: Automate Claude Code Context with CLAUDE.md & History
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summarizing your project and inject it into Claude Code sessions, ensuring Claude always has the necessary context.  The `cck sync` command generates the CLAUDE.md, and `cck watch --with-history` automatically includes previous turns to further improve context retention.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-25
+
+---
+
+
+## 184. PMP-GYWD: Manage Claude Code Context with File Persistence
+**Source:** Hawkbetsdefi (Reddit)
+
+The PMP-GYWD framework helps manage Claude Code's context window limitations by automatically persisting project decisions and specifications into structured files. This includes architecture, test strategies, and feature planning in dedicated directories (.planning/, .claude-plugin/, .commands/gywd/). The `gywd init` command sets up the project's memory structure.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qlyrki/meet_pmpgywd/) | Added: 2026-01-25
+
+---
+
 *[Back to Categories](../README.md)*

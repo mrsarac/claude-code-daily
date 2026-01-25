@@ -339,4 +339,24 @@ After Claude Code's auto-migration to native installation, the 'claude' command 
 
 ---
 
+
+## 180. Install Claude Code on Windows via Powershell
+**Source:** 0xkoji (Devto)
+
+This tip details how to install Claude Code CLI on Windows using Powershell and Scoop. First, install git via Scoop, then set an environment variable for the git bash path. Finally, install Claude Code using the provided install script and verify the installation by checking the version. This simplifies the setup process for Windows users.
+
+[Original](https://dev.to/0xkoji/install-claude-code-on-windows-with-scoop-2452) | Added: 2026-01-25
+
+---
+
+
+## 181. Fix 'claude not recognized' error on Windows
+**Source:** Yuto Takashi (Devto)
+
+After Claude Code CLI's auto-migration to a native installation on Windows, the 'claude' command may not be recognized. This tip explains that the executable is in a new location not included in your system's PATH environment variable, and instructs users to update their PATH to resolve the issue and restore functionality. This is a quick and easy fix.
+
+[Original](https://dev.to/tielec-takashi/claude-code-stopped-working-on-windows-heres-the-quick-fix-5a36) | Added: 2026-01-25
+
+---
+
 *[Back to Categories](../README.md)*

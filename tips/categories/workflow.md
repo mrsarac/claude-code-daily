@@ -620,4 +620,14 @@ Use Claude Code's PreToolUse hook system to intercept tool calls, enforce projec
 
 ---
 
+
+## 183. Troubleshooting Embedded Systems with Claude Code over SSH
+**Source:** reezcapital (Reddit)
+
+Leverage Claude Code (Opus 4.5) over SSH to debug driver issues on embedded systems like the Jetson Nano. By piping terminal output, kernel source code, and build errors to Claude in real-time, you can efficiently iterate and resolve compatibility problems that arise during development.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qlt8du/built_a_jetpack_62_camera_driver_from_scratch/) | Added: 2026-01-25
+
+---
+
 *[Back to Categories](../README.md)*
