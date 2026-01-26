@@ -633,4 +633,24 @@ The PMP-GYWD framework helps manage Claude Code's context window limitations by 
 
 ---
 
+
+## 185. Compact Claude Code Context for Smaller API Payloads
+**Source:** anton (Devto)
+
+Claude Code stores conversation history locally and sends it with each message. Using the `/compact` command creates a summary checkpoint, significantly reducing API payload sizes (around 85%). While this shrinks the context, it sacrifices granular detail from the previous conversation, balancing payload size with contextual precision.
+
+[Original](https://dev.to/rigby_/what-actually-happens-when-you-run-compact-in-claude-code-3kl9) | Added: 2026-01-26
+
+---
+
+
+## 186. CCK: Automate Claude Code context injection
+**Source:** takawasi (Hackernews)
+
+The Claude Context Keeper (CCK) CLI automates context injection for Claude Code. It generates a CLAUDE.md file with project information, and automatically injects relevant files and conversation history into each turn using `cck watch --with-history`, eliminating repetitive project setup and improving efficiency.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-26
+
+---
+
 *[Back to Categories](../README.md)*

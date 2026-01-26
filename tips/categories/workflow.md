@@ -630,4 +630,14 @@ Leverage Claude Code (Opus 4.5) over SSH to debug driver issues on embedded syst
 
 ---
 
+
+## 187. Leverage Claude Code Hooks for Custom Workflow Control
+**Source:** karanb192 (Reddit)
+
+Claude Code's hook system allows you to inject custom code at 13 different points in its workflow, such as before file writes or after command executions. By utilizing these hooks, you can extend functionality, block dangerous commands, or automate processes, enabling fine-grained control over Claude Code's behavior.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qlzxr1/claude_codes_most_underrated_feature_hooks_wrote/) | Added: 2026-01-26
+
+---
+
 *[Back to Categories](../README.md)*
