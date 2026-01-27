@@ -653,4 +653,14 @@ The Claude Context Keeper (CCK) CLI automates context injection for Claude Code.
 
 ---
 
+
+## 188. Reduce Claude API payload size via /compact
+**Source:** anton (Devto)
+
+Claude Code stores conversation history locally and sends the full history with each message. The `/compact` command creates a summary checkpoint, reducing API payload size by approximately 85%. While this shrinks the payload, it also results in a loss of granular context from earlier messages, so use judiciously.
+
+[Original](https://dev.to/rigby_/what-actually-happens-when-you-run-compact-in-claude-code-3kl9) | Added: 2026-01-27
+
+---
+
 *[Back to Categories](../README.md)*
