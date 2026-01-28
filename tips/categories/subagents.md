@@ -122,4 +122,14 @@ Improve Claude's writing feedback by using Claude Code to create multiple editor
 
 ---
 
+
+## 189. Using Claude Code's Task Tool for Sub-Agents
+**Source:** Bilal Haidar (Devto)
+
+The Task tool in Claude Code allows for the creation of autonomous sub-agents to handle complex, multi-step operations. These sub-agents can work independently, enabling parallel processing and delegation of specific tasks within a larger workflow. This is beneficial for breaking down intricate problems into manageable components and leveraging specialized agents for each part.
+
+[Original](https://dev.to/bhaidar/the-task-tool-claude-codes-agent-orchestration-system-4bf2) | Added: 2026-01-28
+
+---
+
 *[Back to Categories](../README.md)*
