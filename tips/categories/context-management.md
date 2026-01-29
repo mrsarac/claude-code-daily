@@ -663,4 +663,24 @@ Claude Code stores conversation history locally and sends the full history with 
 
 ---
 
+
+## 190. Maximize Claude Code Tokens with Context Management
+**Source:** Richard Joseph Porter (Devto)
+
+Optimize your Claude Code usage by employing context management commands like `/clear` to reset between unrelated tasks and `/compact` to summarize conversations proactively. This prevents unnecessary token consumption and maintains code quality by focusing the model's attention on relevant information, keeping your usage under the 30K token limit.
+
+[Original](https://dev.to/richardporter/claude-code-token-management-8-strategies-to-save-50-70-on-pro-plan-3hob) | Added: 2026-01-29
+
+---
+
+
+## 191. CCK: Automate Claude.md for consistent Claude Code context
+**Source:** takawasi (Hackernews)
+
+Use the Claude Context Keeper (CCK) CLI tool to automatically generate a CLAUDE.md file describing your project structure, commands, and conventions. This ensures that Claude Code has consistent context at the beginning of each session, preventing the need for repetitive explanations. CCK can also inject relevant history into each turn.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-29
+
+---
+
 *[Back to Categories](../README.md)*
