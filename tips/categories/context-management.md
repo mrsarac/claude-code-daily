@@ -683,4 +683,24 @@ Use the Claude Context Keeper (CCK) CLI tool to automatically generate a CLAUDE.
 
 ---
 
+
+## 192. Maximize Claude Code Usage with Context Management
+**Source:** Richard Joseph Porter (Devto)
+
+Optimize your Claude Code Pro plan by strategically managing context to avoid token limits. Use `/clear` to reset the context between unrelated tasks, preventing unnecessary token consumption. Employ `/compact` to summarize the context proactively, aiming for 70% capacity, and regularly monitor your usage with `/context`. Targeting under 30K tokens per session will help maintain code quality without hitting limits.
+
+[Original](https://dev.to/richardporter/claude-code-token-management-8-strategies-to-save-50-70-on-pro-plan-3hob) | Added: 2026-01-30
+
+---
+
+
+## 193. CCK: Automate Claude.md and Context Injection for Claude Code
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file that summarizes your project structure, commands, and conventions for Claude Code. CCK also offers per-turn context injection with history, using `cck setup --cb-style` and `cck watch --with-history`, improving Claude's understanding of your codebase and reducing repetitive explanations.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-01-30
+
+---
+
 *[Back to Categories](../README.md)*
