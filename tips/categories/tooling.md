@@ -359,4 +359,24 @@ After Claude Code CLI's auto-migration to a native installation on Windows, the 
 
 ---
 
+
+## 195. /copy command for easy clipboard access
+**Source:** yksugi (Reddit)
+
+The `/copy` command in Claude Code CLI allows you to quickly copy Claude's last response to your clipboard as markdown. This is useful for incorporating Claude's output into other documents or tools without manual copying and pasting.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qqxkuj/5_new_claude_code_tips_from_the_past_12_days/) | Added: 2026-01-31
+
+---
+
+
+## 196. Claude Code Plugins: Power-Up Your Workflows
+**Source:** Dull_Preference_1873 (Reddit)
+
+Leverage Claude Code plugins for enhanced workflows. Plugins bundle skills, MCPs, hooks, and agents into a single install, providing versioning, documentation, and easy management through the `/plugin` command. This centralizes dependencies and facilitates maintenance.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qrlsly/everyones_hyped_on_skills_but_claude_code_plugins/) | Added: 2026-01-31
+
+---
+
 *[Back to Categories](../README.md)*
