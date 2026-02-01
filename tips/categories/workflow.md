@@ -640,4 +640,14 @@ Claude Code's hook system allows you to inject custom code at 13 different point
 
 ---
 
+
+## 197. Link Claude Code Sessions to GitHub Pull Requests
+**Source:** BuildwithVignesh (Reddit)
+
+Claude Code CLI now automatically links sessions to GitHub Pull Requests when creating them via `gh pr create`. Alternatively, use the `--from-pr` flag with a PR number or URL to resume a session specifically associated with that PR. This streamlines workflow and context management when working on code changes.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qs2pp6/official_anthropic_just_released_claude_code_2127/) | Added: 2026-02-01
+
+---
+
 *[Back to Categories](../README.md)*
