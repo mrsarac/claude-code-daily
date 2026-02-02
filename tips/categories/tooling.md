@@ -379,4 +379,14 @@ Leverage Claude Code plugins for enhanced workflows. Plugins bundle skills, MCPs
 
 ---
 
+
+## 199. Automate Claude Code workflows with Pre/Post Tool Hooks
+**Source:** IulianHI (Reddit)
+
+Leverage Claude Code's `PreToolUse` and `PostToolUse` hooks in `.claude/settings.json` to automatically trigger actions before and after tool calls. This enables automated linting after file edits or security checks before bash commands, enhancing workflow efficiency and security.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qstcb9/7_claude_code_power_tips_nobodys_talking_about/) | Added: 2026-02-02
+
+---
+
 *[Back to Categories](../README.md)*

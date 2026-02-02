@@ -650,4 +650,14 @@ Claude Code CLI now automatically links sessions to GitHub Pull Requests when cr
 
 ---
 
+
+## 198. Parallel Claude Code Sessions with Git Worktrees
+**Source:** yksugi (Reddit)
+
+Boost productivity by using multiple Git worktrees, each running a separate Claude Code session. This allows you to work on different aspects of a project simultaneously without context switching within a single session. Create shell aliases (e.g., za, zb, zc) to quickly switch between these worktrees in your terminal, streamlining your workflow and maximizing efficiency.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qspcip/10_claude_code_tips_from_boris_the_creator_of/) | Added: 2026-02-02
+
+---
+
 *[Back to Categories](../README.md)*
