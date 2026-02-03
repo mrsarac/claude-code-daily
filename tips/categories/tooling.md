@@ -389,4 +389,14 @@ Leverage Claude Code's `PreToolUse` and `PostToolUse` hooks in `.claude/settings
 
 ---
 
+
+## 200. Setting Up Claude Code CLI: Install, Auth, REPL
+**Source:** Cristian Sifuentes (Devto)
+
+This section focuses on the initial setup of Claude Code CLI. It provides guidance on installing the tool, authenticating it (presumably with API keys or a similar mechanism), and then effectively utilizing the REPL (Read-Eval-Print Loop) for interactive development. Details on editor integration for a more seamless workflow are also highlighted, providing actionable steps to get the CLI up and running.
+
+[Original](https://dev.to/cristiansifuentes/conversational-development-with-claude-code-part-3-installing-trusting-and-operating-the-tool-2ekp) | Added: 2026-02-03
+
+---
+
 *[Back to Categories](../README.md)*
