@@ -399,4 +399,24 @@ This section focuses on the initial setup of Claude Code CLI. It provides guidan
 
 ---
 
+
+## 201. Manage Claude Code Providers with Profiles
+**Source:** Rashed Iqbal (Devto)
+
+Use `claude-provider` to manage multiple Claude Code configurations (base URL, key, model) via profiles. This allows you to switch between different providers or settings with a single command, either as a Claude Code plugin (slash commands) or as a standalone CLI tool, avoiding manual edits to the settings file.
+
+[Original](https://dev.to/rashed_iqbal/switch-claude-code-providers-in-seconds-with-claude-provider-plugin-cli-3719) | Added: 2026-02-04
+
+---
+
+
+## 203. Claude CLI: Control PDF Read & Add MCP OAuth Credentials
+**Source:** BuildwithVignesh (Reddit)
+
+The Claude CLI now supports reading specific page ranges from PDFs using the `pages` parameter with the Read tool, optimizing context management for large documents. Additionally, you can now add pre-configured OAuth client credentials for MCP servers (like Slack) that don't support Dynamic Client Registration using the `--client-id` and `--client-secret` flags with the `claude mcp add` command, enabling integration with more platforms.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qv0oo5/official_anthropic_just_released_claude_code_2130/) | Added: 2026-02-04
+
+---
+
 *[Back to Categories](../README.md)*

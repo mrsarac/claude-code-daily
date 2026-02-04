@@ -713,4 +713,14 @@ Use Claude Context Keeper (CCK) to maintain project context across Claude Code s
 
 ---
 
+
+## 202. CCK: Automate Claude.md for persistent code context
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate and update a CLAUDE.md file from your codebase.  This file provides Claude with project context at the start of each session, eliminating the need to re-explain project structure, build commands, and conventions repeatedly. Install CCK and use the `cck sync` command to generate CLAUDE.md.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-02-04
+
+---
+
 *[Back to Categories](../README.md)*
