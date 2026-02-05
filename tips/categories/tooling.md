@@ -419,4 +419,14 @@ The Claude CLI now supports reading specific page ranges from PDFs using the `pa
 
 ---
 
+
+## 206. Claude Code CLI 2.1.30: PDF Pages and OAuth Client Auth
+**Source:** BuildwithVignesh (Reddit)
+
+Claude Code CLI 2.1.30 adds functionality to specify page ranges when reading PDFs using the Read tool (e.g., `pages: "1-5"`). It also introduces pre-configured OAuth client credentials for MCP servers lacking Dynamic Client Registration, enabled via `--client-id` and `--client-secret` with `claude mcp add`. Large PDFs now return a lightweight reference when @ mentioned.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qv0oo5/official_anthropic_just_released_claude_code_2130/) | Added: 2026-02-05
+
+---
+
 *[Back to Categories](../README.md)*

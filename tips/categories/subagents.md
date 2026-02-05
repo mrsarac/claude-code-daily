@@ -132,4 +132,14 @@ The Task tool in Claude Code allows for the creation of autonomous sub-agents to
 
 ---
 
+
+## 204. Async Subagents for Budget Research in Claude Code
+**Source:** sberens (Hackernews)
+
+Use async subagents within Claude Code to research and analyze multiple budget line items simultaneously across several years. This approach significantly accelerates research and contextualization, especially when dealing with large datasets or complex topics. While frontend modifications may require additional effort, this method substantially improves research throughput.
+
+[Original](https://california-budget.com) | Added: 2026-02-05
+
+---
+
 *[Back to Categories](../README.md)*
