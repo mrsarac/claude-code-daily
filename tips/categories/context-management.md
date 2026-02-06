@@ -733,4 +733,14 @@ Use Claude Context Keeper (CCK) to automate context management for Claude Code. 
 
 ---
 
+
+## 207. Utilize Persistent Memory with MEMORY.md in Claude Code
+**Source:** bitr8 (Reddit)
+
+Claude Code CLI features a persistent memory function. By placing a `MEMORY.md` file within the `~/.claude/projects/<project-path>/memory/` directory, its content will be automatically loaded into the system prompt of each Claude Code session for that project, providing a persistent context for ongoing conversations and tasks.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qw9hr4/claude_code_has_an_undocumented_persistent_memory/) | Added: 2026-02-06
+
+---
+
 *[Back to Categories](../README.md)*
