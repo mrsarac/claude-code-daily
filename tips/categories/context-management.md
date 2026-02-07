@@ -743,4 +743,14 @@ Claude Code CLI features a persistent memory function. By placing a `MEMORY.md` 
 
 ---
 
+
+## 209. Automate Claude Context with cck (Claude Context Keeper)
+**Source:** takawasi (Hackernews)
+
+Use the `cck` CLI tool to automate context injection for Claude Code. It generates a `CLAUDE.md` file summarizing your project, ensuring Claude always has the necessary information. The tool can also inject relevant files and past conversations during each turn with the `--with-history` flag.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-02-07
+
+---
+
 *[Back to Categories](../README.md)*

@@ -142,4 +142,14 @@ Use async subagents within Claude Code to research and analyze multiple budget l
 
 ---
 
+
+## 210. Enable Agent Teams for Multi-Agent Collaboration
+**Source:** BuildwithVignesh (Reddit)
+
+Claude Code CLI now supports multi-agent collaboration using a research preview feature called 'agent teams'. To enable this token-intensive feature, you must set the environment variable `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`. This allows you to experiment with workflows involving multiple Claude instances working together on complex tasks.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1qxas6v/official_anthropic_released_2132_with_12_cli_37/) | Added: 2026-02-07
+
+---
+
 *[Back to Categories](../README.md)*

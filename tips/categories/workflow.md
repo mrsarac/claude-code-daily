@@ -660,4 +660,14 @@ Boost productivity by using multiple Git worktrees, each running a separate Clau
 
 ---
 
+
+## 208. Configuring Claude Code for Consistent Refactoring
+**Source:** Helder Burato Berto (Devto)
+
+Claude Code's behavior can be controlled through configuration to enforce specific coding standards. You can guide Claude Code to follow TDD, maintain immutability, automate development workflows, and improve overall code consistency by providing it with precise instructions and context, essentially making it an extension of your established development practices.
+
+[Original](https://dev.to/helderberto/teaching-claude-code-your-standards-k9p) | Added: 2026-02-07
+
+---
+
 *[Back to Categories](../README.md)*
