@@ -753,4 +753,24 @@ Use the `cck` CLI tool to automate context injection for Claude Code. It generat
 
 ---
 
+
+## 211. Control Claude Code's Behavior with Configuration
+**Source:** Helder Burato Berto (Devto)
+
+Claude Code can be configured to follow specific development standards, like enforcing immutability and TDD. This is crucial to prevent it from making unwanted changes. Clear instructions are necessary to avoid chaotic refactoring or excessive commenting. By properly configuring Claude Code, it can be turned into a tool that consistently aligns with your preferred workflow.
+
+[Original](https://dev.to/helderberto/teaching-claude-code-your-standards-k9p) | Added: 2026-02-08
+
+---
+
+
+## 212. Streamline Claude Code Sessions with cck
+**Source:** takawasi (Hackernews)
+
+Use the `claude-context-keeper` (cck) CLI tool to automate context management in Claude Code. It generates a `CLAUDE.md` file summarizing your project for Claude Code, and it can inject relevant context from your codebase and chat history into each turn. Install with `pip install .`, generate the file with `cck sync`, and use `cck watch --with-history` to inject code snippets and previous messages, significantly improving Claude Code's understanding and performance.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-02-08
+
+---
+
 *[Back to Categories](../README.md)*
