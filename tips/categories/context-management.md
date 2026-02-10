@@ -773,4 +773,14 @@ Use the `claude-context-keeper` (cck) CLI tool to automate context management in
 
 ---
 
+
+## 214. Conserve Context: Avoid Redundant Agent Definitions
+**Source:** Helder Burato Berto (Devto)
+
+Claude Code has a limited context window. Avoid using overly detailed agent configurations, examples, or boilerplate. These consume valuable context that could be used for more relevant code analysis, leading to better results. Focus on providing only the necessary information to Claude, reducing redundancy and maximizing the effectiveness of each token.
+
+[Original](https://dev.to/helderberto/what-your-claude-code-agents-dont-need-to-be-told-4ed5) | Added: 2026-02-10
+
+---
+
 *[Back to Categories](../README.md)*

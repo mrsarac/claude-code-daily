@@ -680,4 +680,14 @@ Claude Code's behavior is heavily influenced by configuration. Without it, resul
 
 ---
 
+
+## 215. Automate workflows with Claude Code lifecycle hooks
+**Source:** Lukas Fryc (Devto)
+
+Claude Code hooks automate tasks at specific points in the lifecycle, such as formatting on file write or blocking dangerous commands. Use PostToolUse hooks to enforce deterministic control, like automatically linting files, rather than relying on the AI's memory. This allows you to inject context after compaction and automate repetitive workflows.
+
+[Original](https://dev.to/lukaszfryc/claude-code-hooks-complete-guide-with-20-ready-to-use-examples-2026-dcg) | Added: 2026-02-10
+
+---
+
 *[Back to Categories](../README.md)*
