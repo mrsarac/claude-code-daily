@@ -152,4 +152,14 @@ Claude Code CLI now supports multi-agent collaboration using a research preview 
 
 ---
 
+
+## 216. Using Sub-Agents for Structured Planning in Claude Code
+**Source:** Cristian Sifuentes (Devto)
+
+Leverage Claude Code's sub-agent functionality to create specialized agents, such as an 'Architect' agent, that can generate structured implementation plans. This allows for reusable context via resume, versioned storage of plans in Markdown, and improved auditability within your Claude Code workflows. This tip focuses on a practical approach to planning within a Claude Code project.
+
+[Original](https://dev.to/cristiansifuentes/conversational-development-with-claude-code-part-7-designing-sub-agents-for-planning-meet-1nlk) | Added: 2026-02-12
+
+---
+
 *[Back to Categories](../README.md)*

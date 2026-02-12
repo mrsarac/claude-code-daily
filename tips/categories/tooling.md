@@ -429,4 +429,14 @@ Claude Code CLI 2.1.30 adds functionality to specify page ranges when reading PD
 
 ---
 
+
+## 217. Configure Claude Code Terminal & Effort Level
+**Source:** BuildwithVignesh (Reddit)
+
+Customize your Claude Code CLI experience by configuring terminal themes (light/dark), enabling notifications, and setting up newline handling for specific terminals using `/config` and `/terminal-setup`. Adjust the response verbosity and speed by selecting an effort level (Low, Medium, High) using the `/model` command, trading off token usage for speed.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r2b5xk/claude_code_creator_boris_shares_12_ways_that/) | Added: 2026-02-12
+
+---
+
 *[Back to Categories](../README.md)*
