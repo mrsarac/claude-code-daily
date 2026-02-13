@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-02-12T00:17:08.344242",
-  "totalTips": 217,
+  "lastUpdated": "2026-02-13T00:19:08.567621",
+  "totalTips": 222,
   "categories": [
     {
       "name": "Orchestration",
@@ -12,25 +12,25 @@
     {
       "name": "Context Management",
       "slug": "context-management",
-      "count": 73,
+      "count": 74,
       "icon": "\ud83d\udcdd"
     },
     {
       "name": "Workflow",
       "slug": "workflow",
-      "count": 60,
+      "count": 61,
       "icon": "\u26a1"
     },
     {
       "name": "Subagents",
       "slug": "subagents",
-      "count": 18,
+      "count": 19,
       "icon": "\ud83e\udd16"
     },
     {
       "name": "Tooling",
       "slug": "tooling",
-      "count": 43,
+      "count": 45,
       "icon": "\ud83d\udd27"
     }
   ],

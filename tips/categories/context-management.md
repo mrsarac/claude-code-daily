@@ -783,4 +783,14 @@ Claude Code has a limited context window. Avoid using overly detailed agent conf
 
 ---
 
+
+## 219. Use CCK to manage Claude Code context
+**Source:** takawasi (Hackernews)
+
+The Claude Context Keeper (CCK) CLI tool automatically generates a CLAUDE.md file summarizing your project, enabling Claude Code to start with full context. CCK also offers per-turn context injection, enhancing Claude Code's understanding with relevant code snippets and history. Install with `pip install .`, sync with `cck sync`, set up with `cck setup --cb-style`, and watch with `cck watch --with-history`.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-02-13
+
+---
+
 *[Back to Categories](../README.md)*

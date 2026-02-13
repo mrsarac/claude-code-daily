@@ -439,4 +439,24 @@ Customize your Claude Code CLI experience by configuring terminal themes (light/
 
 ---
 
+
+## 220. Managing Claude Code's Disk Usage
+**Source:** uppinote (Reddit)
+
+Claude Code's CLI stores session data under `~/.claude`, which can grow significantly over time due to session logs, debug logs, shell snapshots, file edit history, TODO files, and plans. To manage disk space, users can investigate the size of subdirectories within `~/.claude` using `du -sh ~/.claude/*/ | sort -rh` to identify the largest contributors and potentially prune or archive older data to reduce overall storage usage.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r2snly/cleanup_script_for_claude_mine_grew_to_13gb_in_4/) | Added: 2026-02-13
+
+---
+
+
+## 221. Customize Claude Code CLI Terminal
+**Source:** BuildwithVignesh (Reddit)
+
+This tip details how to configure the Claude Code CLI terminal for optimal usage. It includes commands to set light/dark mode using `/config`, enabling notifications for iTerm2 or setting custom notification hooks, and using `/terminal-setup` to enable shift+enter for newlines in specific terminals like Apple Terminal, Warp, and Alacritty. These customizations improve the user experience within the Claude Code CLI environment.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r2b5xk/claude_code_creator_boris_shares_12_ways_that/) | Added: 2026-02-13
+
+---
+
 *[Back to Categories](../README.md)*

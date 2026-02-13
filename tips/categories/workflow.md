@@ -690,4 +690,14 @@ Claude Code hooks automate tasks at specific points in the lifecycle, such as fo
 
 ---
 
+
+## 222. Recursive Agent Loops with .loop
+**Source:** jandrikus (Reddit)
+
+The `.loop` bash harness enables running Claude Code in an iterative loop with persistent memory. Crucially, any iteration can spawn child agents, each running their own independent loop. This allows for the creation of recursive agent workflows, where a parent agent can delegate subtasks to child agents running in parallel, improving overall workflow efficiency and complexity management.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r39diw/loop_an_experiment_in_turning_claude_code_into_a/) | Added: 2026-02-13
+
+---
+
 *[Back to Categories](../README.md)*

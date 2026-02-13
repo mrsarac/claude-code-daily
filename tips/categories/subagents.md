@@ -162,4 +162,14 @@ Leverage Claude Code's sub-agent functionality to create specialized agents, suc
 
 ---
 
+
+## 218. Architect Sub-Agent for Structured Planning
+**Source:** Cristian Sifuentes (Devto)
+
+This tip introduces using sub-agents within Claude Code workflows, specifically an "Architect" agent. The agent leverages resume to retain context, generates structured implementation plans (e.g., for a feature like star ratings) in Markdown, and persists these plans in the repository with versioning. This enables structured planning, reuse of prior knowledge, and auditability within Claude Code projects by creating specialist agent workflows.
+
+[Original](https://dev.to/cristiansifuentes/conversational-development-with-claude-code-part-7-designing-sub-agents-for-planning-meet-1nlk) | Added: 2026-02-13
+
+---
+
 *[Back to Categories](../README.md)*
