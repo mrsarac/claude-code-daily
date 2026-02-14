@@ -459,4 +459,14 @@ This tip details how to configure the Claude Code CLI terminal for optimal usage
 
 ---
 
+
+## 224. Claude CLI: Authentication & Session Naming Updates
+**Source:** BuildwithVignesh (Reddit)
+
+The Claude CLI changelog introduces `claude auth` subcommands for login, status, and logout, streamlining authentication. Additionally, the `/rename` command now automatically generates session names from conversation context when no arguments are provided, enhancing workflow efficiency. These changes simplify authentication management and session organization within the Claude CLI.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r3lxpe/official_anthropic_just_released_claude_code_2141/) | Added: 2026-02-14
+
+---
+
 *[Back to Categories](../README.md)*
