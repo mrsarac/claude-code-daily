@@ -803,4 +803,14 @@ Use cck (Claude Context Keeper) to automatically generate a CLAUDE.md file summa
 
 ---
 
+
+## 229. Optimize Claude Code Agent Token Usage with Task Tool
+**Source:** amragl (Reddit)
+
+When using the Task tool in Claude Code with custom agents, each task invocation reloads the entire agent prompt, leading to excessive token usage if agent definitions are large. Keep agent definition files concise to reduce token consumption and improve performance.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r5mdu0/heads_up_claude_code_task_tool_reloads_full_agent/) | Added: 2026-02-16
+
+---
+
 *[Back to Categories](../README.md)*

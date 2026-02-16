@@ -238,4 +238,14 @@ Claude Code provides Skills (persistent, filesystem-based documentation) and Sub
 
 ---
 
+
+## 226. Automate Research Reports with Claude Code CLI
+**Source:** Tatsuya Shimomoto (Devto)
+
+Automate daily research reports using Claude Code CLI in non-interactive mode. Schedule a shell script with `claude -p` to crawl the web, generate reports, and save them to Obsidian, leveraging the Max plan's flat rate. This allows for automated information gathering and organization without writing Python code.
+
+[Original](https://dev.to/shimo4228/zero-python-code-how-i-built-a-daily-ai-research-report-system-4357) | Added: 2026-02-16
+
+---
+
 *[Back to Categories](../README.md)*

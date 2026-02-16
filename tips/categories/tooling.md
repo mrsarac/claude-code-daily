@@ -469,4 +469,14 @@ The Claude CLI changelog introduces `claude auth` subcommands for login, status,
 
 ---
 
+
+## 227. Generate Claude Code startup files with a script
+**Source:** Yurukusa (Devto)
+
+Automate the creation of your CLAUDE.md file using a Bash script. This script prompts you for key information about your project, team conventions, and safety rules, then generates a CLAUDE.md file ready to be used with Claude Code. This eliminates the manual effort of creating the file from scratch and ensures consistency across sessions.
+
+[Original](https://dev.to/yurukusa/generate-your-claudemd-in-30-seconds-interactive-script-54n4) | Added: 2026-02-16
+
+---
+
 *[Back to Categories](../README.md)*

@@ -700,4 +700,24 @@ The `.loop` bash harness enables running Claude Code in an iterative loop with p
 
 ---
 
+
+## 225. Automated Research Reports with Claude Code CLI
+**Source:** Tatsuya Shimomoto (Devto)
+
+Automate web crawling and report generation with Claude Code CLI's non-interactive mode (claude -p). Schedule the script to run regularly (e.g., using cron) to generate and save research reports to a desired location like an Obsidian vault. This allows for hands-free data gathering and report creation without incurring extra costs, as it operates within the flat rate of the Max plan.
+
+[Original](https://dev.to/shimo4228/zero-python-code-how-i-built-a-daily-ai-research-report-system-4357) | Added: 2026-02-16
+
+---
+
+
+## 228. Guided Codebase Refactoring with Claude Code CLI
+**Source:** durable-racoon (Reddit)
+
+This tip describes a workflow where you manually refactor a specific part of your codebase (e.g., a file or function) to establish a desired pattern, and then use Claude Code CLI to propagate that pattern throughout the rest of the codebase. This 'manual-then-AI' approach is effective for complex refactorings where you have a strong mental model of the desired outcome and wish to guide the AI's changes.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r5o7jv/an_ai_coding_technique_i_havent_seen_discussed_yet/) | Added: 2026-02-16
+
+---
+
 *[Back to Categories](../README.md)*
