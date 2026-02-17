@@ -479,4 +479,14 @@ Automate the creation of your CLAUDE.md file using a Bash script. This script pr
 
 ---
 
+
+## 232. Claude Code CLI Guide Updated with New Commands
+**Source:** wesam_mustafa100 (Reddit)
+
+A GitHub guide for Claude Code CLI has been updated, documenting new commands such as /fast, /auth, /debug, /teleport, /rename, and /hooks. The guide also includes a new 'Skills' section with step-by-step instructions. This provides users with actionable information on how to utilize these new features within their Claude Code workflows.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r6cka2/claude_code_everything_you_need_to_know/) | Added: 2026-02-17
+
+---
+
 *[Back to Categories](../README.md)*

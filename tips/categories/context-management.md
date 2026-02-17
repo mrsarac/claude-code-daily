@@ -813,4 +813,24 @@ When using the Task tool in Claude Code with custom agents, each task invocation
 
 ---
 
+
+## 230. CCK: Automate Context Management for Claude Code
+**Source:** takawasi (Hackernews)
+
+The Claude Context Keeper (CCK) CLI tool automates the creation and injection of context into Claude Code sessions. It generates a `CLAUDE.md` file summarizing your project and can inject previous turn history into each interaction, eliminating the need to manually re-explain project details or repeat past conversations.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-02-17
+
+---
+
+
+## 231. Enable Auto Memory in Claude Code for Performance Boost
+**Source:** NegativeCandy860 (Reddit)
+
+If you experience performance differences between Claude Code accounts using the same model and codebase, check if Auto Memory is enabled. Use `/memory` to check its status. If disabled, enable it by setting the environment variable `CLAUDE_CODE_DISABLE_AUTO_MEMORY=0`. This can significantly improve Claude Code's performance by allowing it to automatically retain relevant context.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r6j36u/claude_codes_auto_memory_is_so_good_make_sure_you/) | Added: 2026-02-17
+
+---
+
 *[Back to Categories](../README.md)*
