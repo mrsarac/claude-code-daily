@@ -489,4 +489,24 @@ A GitHub guide for Claude Code CLI has been updated, documenting new commands su
 
 ---
 
+
+## 233. Automate Tool Call Tasks with Claude Code Hooks
+**Source:** Dan Jeong (Devto)
+
+Claude Code's hooks feature allows you to execute custom scripts before and after tool calls. By configuring these hooks in `~/.claude/settings.json`, you can automate tasks such as data validation, pre-processing, or logging for specific tools like Bash, enhancing your Claude Code workflows. The configuration specifies the lifecycle event (e.g., PreToolUse) and the script to run.
+
+[Original](https://dev.to/aegisuser/5-claude-code-hooks-every-developer-needs-1fm) | Added: 2026-02-18
+
+---
+
+
+## 234. Secure Claude Code with Lifecycle Hooks
+**Source:** Dan Jeong (Devto)
+
+Prevent dangerous commands by using lifecycle hooks in Claude Code. These hooks, which run before and after tool executions, allow you to block potentially harmful commands like 'rm -rf /' before they can impact your system. This provides an extra layer of security in under 30 minutes.
+
+[Original](https://dev.to/aegisuser/how-to-stop-claude-code-from-destroying-your-system-2pij) | Added: 2026-02-18
+
+---
+
 *[Back to Categories](../README.md)*
