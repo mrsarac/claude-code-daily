@@ -833,4 +833,14 @@ If you experience performance differences between Claude Code accounts using the
 
 ---
 
+
+## 235. CCK: Automate Claude Code Context with CLAUDE.md and CLI
+**Source:** takawasi (Hackernews)
+
+Use the Claude Context Keeper (CCK) CLI to automatically generate a CLAUDE.md file summarizing your project for Claude Code, ensuring consistent context across sessions. Additionally, CCK can be used to inject per-turn history into Claude Code prompts using `cck watch`, enabling more informed and contextualized interactions.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-02-19
+
+---
+
 *[Back to Categories](../README.md)*
