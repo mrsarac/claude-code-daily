@@ -509,4 +509,14 @@ Prevent dangerous commands by using lifecycle hooks in Claude Code. These hooks,
 
 ---
 
+
+## 237. Install Cursor Plugins in Claude Code via Manifests
+**Source:** leszcz (Reddit)
+
+The Cursor IDE recently open-sourced its plugin repository. This tip describes how to use plugins, like the deslop skill, within Claude Code by forking the repo and adding .claude-plugin/ manifests to make the plugins installable via the `/plugin install` command. The original plugin logic remains unchanged; only the manifests are added for Claude Code compatibility.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r97mjk/i_forked_cursors_official_plugins_to_work_with/) | Added: 2026-02-20
+
+---
+
 *[Back to Categories](../README.md)*

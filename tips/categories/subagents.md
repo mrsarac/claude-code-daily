@@ -172,4 +172,14 @@ This tip introduces using sub-agents within Claude Code workflows, specifically 
 
 ---
 
+
+## 238. Claude Code: Isolated Git Worktrees via --worktree Flag
+**Source:** coygeek (Reddit)
+
+Claude Code CLI v2.1.49 introduced the `-w` or `--worktree` flag to launch Claude in an isolated Git worktree. This enables subagents to operate within temporary, separate Git environments, preventing interference with the main repository. To use, simply include the flag when invoking Claude Code: `claude-code --worktree <other arguments>` or `claude-code -w <other arguments>`.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r9fzky/claude_code_supports_native_worktree/) | Added: 2026-02-20
+
+---
+
 *[Back to Categories](../README.md)*
