@@ -182,4 +182,14 @@ Claude Code CLI v2.1.49 introduced the `-w` or `--worktree` flag to launch Claud
 
 ---
 
+
+## 239. Isolate subagents with worktrees for cleaner projects
+**Source:** BuildwithVignesh (Reddit)
+
+You can now isolate subagents in temporary Git worktrees using the `worktree` option in the subagent configuration. This keeps their changes separate from your main project until you're ready to integrate them. This prevents accidental modification of your main branch.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1r9p5e3/official_anthropic_just_released_claude_code_2149/) | Added: 2026-02-21
+
+---
+
 *[Back to Categories](../README.md)*
