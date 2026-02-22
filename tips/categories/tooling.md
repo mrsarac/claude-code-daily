@@ -519,4 +519,14 @@ The Cursor IDE recently open-sourced its plugin repository. This tip describes h
 
 ---
 
+
+## 240. Control Claude Code Costs by Setting Default Model
+**Source:** Robin (Devto)
+
+To reduce Claude Code costs, especially for simpler tasks, configure the default model to a less expensive option than Opus 4.6. This allows you to leverage a faster, cheaper model for routine tasks without sacrificing the power of Opus for more complex coding challenges.  This configuration change should be done through the appropriate Claude Code configuration file or CLI setting.
+
+[Original](https://dev.to/robinbanner/claude-code-is-expensive-by-default-heres-how-to-fix-that-45j0) | Added: 2026-02-22
+
+---
+
 *[Back to Categories](../README.md)*

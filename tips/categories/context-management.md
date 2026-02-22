@@ -853,4 +853,14 @@ The Claude Context Keeper (cck) CLI tool automates context management for Claude
 
 ---
 
+
+## 241. Backup Claude Code Sessions to Avoid Data Loss
+**Source:** decker (Devto)
+
+Claude Code's compaction feature can silently delete session context. To prevent losing work, this tip provides a bash script to backup Claude Code sessions located at ~/.claude/projects/[hash]/[session-id].jsonl to a timestamped directory. This allows for restoring previous session states after compaction.
+
+[Original](https://dev.to/gonewx/claude-code-session-recovery-the-complete-2026-guide-2aml) | Added: 2026-02-22
+
+---
+
 *[Back to Categories](../README.md)*
