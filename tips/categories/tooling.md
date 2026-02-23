@@ -529,4 +529,14 @@ To reduce Claude Code costs, especially for simpler tasks, configure the default
 
 ---
 
+
+## 244. Remote Approval for Claude Code CLI Tool Use
+**Source:** Yuuichi Eguchi (Devto)
+
+Use `claude-remote-approver` and `ntfy.sh` to receive Claude Code CLI tool approval requests as push notifications on your phone. This allows you to remotely approve or deny requests, preventing Claude Code from stalling when you are away from your terminal.
+
+[Original](https://dev.to/yuu1ch13/approve-claude-code-permission-requests-from-your-phone-47nd) | Added: 2026-02-23
+
+---
+
 *[Back to Categories](../README.md)*

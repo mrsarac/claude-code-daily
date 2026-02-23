@@ -863,4 +863,34 @@ Claude Code's compaction feature can silently delete session context. To prevent
 
 ---
 
+
+## 242. Consistent Claude Code with CLAUDE.md
+**Source:** decker (Devto)
+
+Maintain consistent AI behavior across Claude Code sessions by crafting a detailed and comprehensive CLAUDE.md file. Treat it as a crucial configuration to enforce coding styles, constraints (e.g., avoiding specific libraries like Redux), and project guidelines, preventing the AI from deviating in subsequent sessions.
+
+[Original](https://dev.to/gonewx/the-claudemd-pattern-that-keeps-ai-coding-sessions-consistent-across-weeks-250j) | Added: 2026-02-23
+
+---
+
+
+## 243. Reduce Claude Code Cost by Managing Context Window Size
+**Source:** Ethan Nguyen (Devto)
+
+Reduce Claude Code costs by optimizing the context window. Understanding where tokens are being used and preventing unnecessary context bloat can significantly decrease expenses. Focus on strategies to limit the size of the context passed to Claude Code to achieve similar output quality at a lower cost, such as being more judicious with the files/snippets you include in your prompts.
+
+[Original](https://dev.to/truongnguyenptit/how-i-cut-my-claude-code-bill-by-60-without-losing-productivity-29mn) | Added: 2026-02-23
+
+---
+
+
+## 245. Claude Code's Hidden Project Memory
+**Source:** Dawid M. (Devto)
+
+Claude Code automatically maintains a `MEMORY.md` file within the `~/.claude/projects/<project-path>/memory/` directory, scoped per project. This file persists architectural decisions, conventions, and preferences across sessions as Claude Code learns about your project, acting as an automatically updating project knowledge base.
+
+[Original](https://dev.to/dawidm/claude-code-has-a-hidden-memory-system-you-probably-dont-know-about-4ak3) | Added: 2026-02-23
+
+---
+
 *[Back to Categories](../README.md)*
