@@ -893,4 +893,24 @@ Claude Code automatically maintains a `MEMORY.md` file within the `~/.claude/pro
 
 ---
 
+
+## 246. Use CLAUDE.md for Project Context in Claude Code
+**Source:** myougaTheAxo (Devto)
+
+The CLAUDE.md file acts as a briefing document for Claude Code, providing essential context about your project, coding conventions, and areas to avoid modifying. By placing a CLAUDE.md file in your project root, you ensure that each Claude Code session starts with a consistent understanding of the project, preventing the AI from operating in a vacuum.
+
+[Original](https://dev.to/myougatheaxo/4-claudemd-patterns-that-actually-work-in-production-with-full-templates-1mbk) | Added: 2026-02-24
+
+---
+
+
+## 247. CCK: Automate Claude Context with Context Keeper
+**Source:** takawasi (Hackernews)
+
+Use `claude-context-keeper` (CCK) to automate context management for Claude Code. Generate a `CLAUDE.md` file summarizing your project, which Claude reads at the beginning of each session. Use `cck watch --with-history` to inject relevant context into each turn, maintaining a consistent and informed conversation with Claude Code.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-02-24
+
+---
+
 *[Back to Categories](../README.md)*
