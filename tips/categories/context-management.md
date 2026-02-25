@@ -913,4 +913,34 @@ Use `claude-context-keeper` (CCK) to automate context management for Claude Code
 
 ---
 
+
+## 248. Skills: Claude Code's Muscle Memory for Recurring Tasks
+**Source:** TK Lin (Devto)
+
+Claude Code forgets past solutions. Use "skills" (markdown files automatically loaded into context) to give it persistent memory. Skills allow Claude to recognize and address recurring problems, like specific bug patterns, without requiring repeated debugging. This creates a more efficient and reliable workflow by leveraging AI's pattern recognition with stored knowledge.
+
+[Original](https://dev.to/stklen/shi-zhan-deduan-eta-112-no-claude-code-skills-he-shi-jian-mokaketabaguxiu-zheng-wo-anatahazao-rifan-sanakuteii-19ei) | Added: 2026-02-25
+
+---
+
+
+## 249. Skills: Give Claude Code Persistent Memory
+**Source:** TK Lin (Devto)
+
+Use Claude Code's 'skills' feature (markdown files that load automatically) to create persistent memories for your AI assistant. Skills record common problems, root causes, fixes, and trigger conditions, allowing Claude Code to automatically apply this knowledge when similar patterns are detected, preventing repetitive debugging.
+
+[Original](https://dev.to/stklen/112-ge-shi-zhan-cui-lian-de-claude-code-skills-mei-ge-rang-wo-cai-keng-shu-xiao-shi-de-bug-xiu-fu-rang-ni-bu-bi-zai-cai-2dcn) | Added: 2026-02-25
+
+---
+
+
+## 250. Use CLAUDE.md to Brief Claude Code on Your Project
+**Source:** myougaTheAxo (Devto)
+
+To ensure Claude Code understands your project's context, conventions, and boundaries, create a CLAUDE.md file in the project root. Claude Code automatically reads this Markdown file at the start of each session, providing it with essential information and preventing it from starting from scratch each time.
+
+[Original](https://dev.to/myougatheaxo/4-claudemd-patterns-that-actually-work-in-production-with-full-templates-1mbk) | Added: 2026-02-25
+
+---
+
 *[Back to Categories](../README.md)*

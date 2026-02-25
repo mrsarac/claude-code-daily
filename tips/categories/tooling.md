@@ -539,4 +539,14 @@ Use `claude-remote-approver` and `ntfy.sh` to receive Claude Code CLI tool appro
 
 ---
 
+
+## 251. Streamlined Git/PR + Agent SDK updates
+**Source:** Dramatic_Squash_3502 (Reddit)
+
+This update provides quality-of-life improvements for Claude Code users, including quick git commit and PR creation shortcuts. It also brings Agent SDK references updated across multiple languages (Python, TypeScript, Java, C#, Ruby, Go, PHP) with version bumps and streaming rewrites, plus the promotion of Code execution and memory to GA, and enhancements to skill creation.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1rdmwra/whats_new_in_cc_2151_and_2152_system_prompts_6918/) | Added: 2026-02-25
+
+---
+
 *[Back to Categories](../README.md)*
