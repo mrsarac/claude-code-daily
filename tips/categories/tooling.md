@@ -549,4 +549,14 @@ This update provides quality-of-life improvements for Claude Code users, includi
 
 ---
 
+
+## 252. Cost Management Strategies in Claude Code CLI
+**Source:** Cristian Sifuentes (Devto)
+
+Optimize Claude Code CLI usage by monitoring token consumption in real-time, analyzing historical usage with the `ccusage` tool, and strategically selecting models based on cost and performance. Effective caching can also dramatically reduce expenses. Understanding the impact of authentication methods (subscription vs Anthropic Console) is crucial for cost management.
+
+[Original](https://dev.to/cristiansifuentes/conversational-development-with-claude-code-part-15-cost-control-and-model-strategy-in-claude-2018) | Added: 2026-02-26
+
+---
+
 *[Back to Categories](../README.md)*

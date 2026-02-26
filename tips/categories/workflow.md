@@ -720,4 +720,14 @@ This tip describes a workflow where you manually refactor a specific part of you
 
 ---
 
+
+## 253. Automate Code Review with Claude Code in GitHub Pull Requests
+**Source:** Cristian Sifuentes (Devto)
+
+Integrate Claude Code into GitHub Pull Requests using GitHub Actions for automated code review cycles. By leveraging conversational triggers and terminal-driven resolution, streamline the feedback process without needing a code editor. This involves configuring workflows that use Claude Code CLI to analyze and provide feedback directly within the pull request, facilitating a dialogue-driven review process.
+
+[Original](https://dev.to/cristiansifuentes/conversational-development-with-claude-code-part-17-integrating-claude-code-into-github-pull-2079) | Added: 2026-02-26
+
+---
+
 *[Back to Categories](../README.md)*
