@@ -943,4 +943,14 @@ To ensure Claude Code understands your project's context, conventions, and bound
 
 ---
 
+
+## 254. Claude Code: Auto-Memory for Persistent Context
+**Source:** BuildwithVignesh (Reddit)
+
+Claude Code CLI now features auto-memory. Useful context from previous interactions is automatically saved, enabling persistent cross-session memories. You can manage this memory using the `/memory` command to view or edit the automatically saved context. This allows Claude to retain information across different sessions without manual context injection.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1rf6ajn/official_anthropic_just_released_claude_code_2159/) | Added: 2026-02-27
+
+---
+
 *[Back to Categories](../README.md)*
