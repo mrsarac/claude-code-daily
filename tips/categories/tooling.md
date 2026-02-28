@@ -559,4 +559,14 @@ Optimize Claude Code CLI usage by monitoring token consumption in real-time, ana
 
 ---
 
+
+## 255. Version Control Claude Code Configuration with Git
+**Source:** Felipe Philipp (Devto)
+
+Use git to manage and backup your Claude Code configuration files. Initialize a git repository in your `~/.claude` directory to track changes to `CLAUDE.md`, `settings.json`, skills, agents, commands, and `statusline.sh`. This protects your settings and custom configurations from accidental loss or corruption and allows for easy rollback to previous versions.
+
+[Original](https://dev.to/felipeelias/you-should-be-versioning-your-claude-config-1cmb) | Added: 2026-02-28
+
+---
+
 *[Back to Categories](../README.md)*
