@@ -569,4 +569,14 @@ Use git to manage and backup your Claude Code configuration files. Initialize a 
 
 ---
 
+
+## 256. New /simplify & /batch Commands + Shared Configs
+**Source:** BuildwithVignesh (Reddit)
+
+The Claude Code CLI now includes bundled `/simplify` and `/batch` slash commands for streamlined workflows. Project configurations and auto memory are now shared across git worktrees within the same repository, improving consistency. Additionally, hooks can now communicate via JSON payloads instead of shell commands.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1rgw4eo/official_anthropic_just_released_claude_code_2163/) | Added: 2026-03-01
+
+---
+
 *[Back to Categories](../README.md)*
