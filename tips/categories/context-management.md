@@ -953,4 +953,14 @@ Claude Code CLI now features auto-memory. Useful context from previous interacti
 
 ---
 
+
+## 257. Automate Context with Claude Context Keeper (CCK)
+**Source:** takawasi (Hackernews)
+
+Use CCK to automatically generate a CLAUDE.md file that provides context to Claude Code at the start of each session. This eliminates the need to repeatedly explain project details and conventions. Additionally, CCK's 'watch' command can inject relevant history into each turn, improving context retention.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-02
+
+---
+
 *[Back to Categories](../README.md)*
