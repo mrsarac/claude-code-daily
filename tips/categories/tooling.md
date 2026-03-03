@@ -579,4 +579,14 @@ The Claude Code CLI now includes bundled `/simplify` and `/batch` slash commands
 
 ---
 
+
+## 258. Vim integration for Claude Code CLI
+**Source:** Rishi Sharma (Devto)
+
+This plugin integrates the Claude Code CLI directly into Vim, allowing you to run Claude commands from within the Vim editor using the `:Claude <subcommand>` command. This simplifies interaction with Claude while coding.
+
+[Original](https://dev.to/rishi_sharma/claude-code-inside-vim-ai-powered-workflows-without-leaving-your-editor-1158) | Added: 2026-03-03
+
+---
+
 *[Back to Categories](../README.md)*
