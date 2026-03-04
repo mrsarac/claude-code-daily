@@ -963,4 +963,24 @@ Use CCK to automatically generate a CLAUDE.md file that provides context to Clau
 
 ---
 
+
+## 259. Use CLAUDE.md for Persistent Coding Standards
+**Source:** Serenities AI (Devto)
+
+Avoid repetitive instructions and inconsistent code generation by using a CLAUDE.md file. This file allows Claude Code to remember your coding standards, project conventions, and testing preferences across sessions, preventing it from forgetting corrected mistakes and improving overall productivity.
+
+[Original](https://dev.to/serenitiesai/the-complete-guide-to-claudemd-files-for-ai-development-2026-4316) | Added: 2026-03-04
+
+---
+
+
+## 260. Claude Code: MEMORY.md truncation at 200 lines
+**Source:** Jade Soriano (Devto)
+
+Claude Code automatically loads MEMORY.md for context, but truncates it to the first 200 lines. Be aware of this limit when relying on MEMORY.md for large projects, as information beyond this point will be ignored. This impacts your ability to maintain project knowledge effectively.
+
+[Original](https://dev.to/jadessoriano/memorymd-doesnt-scale-heres-what-does-34ic) | Added: 2026-03-04
+
+---
+
 *[Back to Categories](../README.md)*
