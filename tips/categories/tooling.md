@@ -589,4 +589,14 @@ This plugin integrates the Claude Code CLI directly into Vim, allowing you to ru
 
 ---
 
+
+## 261. Enhanced Claude Code Statusline with Token & Git Info
+**Source:** Varun D (Devto)
+
+Enhance your Claude Code workflow by enabling a detailed statusline. This displays the model name, input/output token counts, context progress, and Git status directly in the terminal. This improves visibility and awareness of context usage, ensuring you stay within limits and easily track Git changes.
+
+[Original](https://dev.to/vee_atnameless/claude-code-super-simple-statusline-1lbp) | Added: 2026-03-05
+
+---
+
 *[Back to Categories](../README.md)*

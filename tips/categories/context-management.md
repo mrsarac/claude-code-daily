@@ -983,4 +983,14 @@ Claude Code automatically loads MEMORY.md for context, but truncates it to the f
 
 ---
 
+
+## 262. Use /rules/ for persistent preferences in Claude Code
+**Source:** Rick-D-99 (Reddit)
+
+Leverage the `/rules/` directory in Claude Code to enforce consistent behaviors and preferences across all interactions. This is especially useful for ensuring compliance with security standards, mandating specific UI behaviors (like always accepting modal prompts with 'Enter'), and promoting the use of shared asset libraries.  Using `/rules/` prevents the AI from deviating from important guidelines and reduces the need for repeated instructions.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1rkswjs/the_true_secret_to_token_savings/) | Added: 2026-03-05
+
+---
+
 *[Back to Categories](../README.md)*
