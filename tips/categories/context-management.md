@@ -993,4 +993,14 @@ Leverage the `/rules/` directory in Claude Code to enforce consistent behaviors 
 
 ---
 
+
+## 264. CCK: Automate Claude Code Context with CLAUDE.md & Injection
+**Source:** takawasi (Hackernews)
+
+Use `cck` (Claude Context Keeper) to automate context management for Claude Code sessions. Generate a `CLAUDE.md` file containing project information for Claude to read at the beginning of each session. Employ per-turn context injection with `cck watch --with-history` to automatically include relevant code snippets and conversation history in each prompt, eliminating redundant explanations and improving efficiency.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-06
+
+---
+
 *[Back to Categories](../README.md)*

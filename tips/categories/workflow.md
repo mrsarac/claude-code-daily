@@ -730,4 +730,14 @@ Integrate Claude Code into GitHub Pull Requests using GitHub Actions for automat
 
 ---
 
+
+## 263. Automate Claude Code with Lifecycle Hooks
+**Source:** Idapixl (Devto)
+
+Claude Code's little-known 'hooks' feature allows you to run shell scripts at key points in a session, like before or after tool calls. By using these bash scripts, you can automate tasks and customize your workflow, extending Claude Code's functionality beyond its default behavior. This provides a way to integrate Claude Code with your existing development environment.
+
+[Original](https://dev.to/idapixl/the-claude-code-hooks-system-changed-how-i-work-heres-what-i-built-173i) | Added: 2026-03-06
+
+---
+
 *[Back to Categories](../README.md)*
