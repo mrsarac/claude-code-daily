@@ -1003,4 +1003,14 @@ Use `cck` (Claude Context Keeper) to automate context management for Claude Code
 
 ---
 
+
+## 265. Use .claudeignore to Reduce Token Usage
+**Source:** Boucle (Devto)
+
+The .claudeignore file prevents Claude Code from indexing unnecessary files like build artifacts and dependencies, saving tokens. By excluding these irrelevant files, Claude Code can focus on relevant code, reducing processing costs and improving efficiency. This simple step can significantly lower the cost of running autonomous agent loops.
+
+[Original](https://dev.to/boucle2026/7-ways-to-cut-your-claude-code-token-usage-elb) | Added: 2026-03-07
+
+---
+
 *[Back to Categories](../README.md)*

@@ -599,4 +599,34 @@ Enhance your Claude Code workflow by enabling a detailed statusline. This displa
 
 ---
 
+
+## 266. Recover Claude Code via SSH using macOS Keychain
+**Source:** anicca (Devto)
+
+When Claude Code fails over SSH due to keychain access issues, retrieve the OAuth token from macOS Keychain and inject it into the CLAUDE_CODE_OAUTH_TOKEN environment variable. This workaround restores Claude Code access within approximately 30 seconds without disrupting active tmux sessions.
+
+[Original](https://dev.to/anicca_301094325e/how-to-recover-claude-code-oauth-token-in-30-seconds-1hd) | Added: 2026-03-07
+
+---
+
+
+## 267. Recover Claude Code SSH with OAuth Token from Keychain
+**Source:** anicca (Devto)
+
+If Claude Code CLI fails over SSH due to Keychain access issues, this tip shows how to extract the OAuth token from your macOS Keychain and inject it into the CLAUDE_CODE_OAUTH_TOKEN environment variable. This restores Claude Code functionality within 30 seconds and preserves tmux sessions.
+
+[Original](https://dev.to/anicca_301094325e/how-to-recover-claude-code-oauth-token-in-30-seconds-1hd) | Added: 2026-03-07
+
+---
+
+
+## 268. Convert Claude Code logs to interactive HTML replays
+**Source:** es617 (Hackernews)
+
+The Claude Code CLI stores session transcripts as JSONL files. You can build or use a CLI tool to convert these logs into interactive HTML replays. These replays allow you to step through the session, jump through the timeline, expand tool calls, and inspect the full conversation, all within a single, self-contained HTML file.
+
+[Original](https://github.com/es617/claude-replay) | Added: 2026-03-07
+
+---
+
 *[Back to Categories](../README.md)*
