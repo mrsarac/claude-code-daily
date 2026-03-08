@@ -629,4 +629,24 @@ The Claude Code CLI stores session transcripts as JSONL files. You can build or 
 
 ---
 
+
+## 269. Log Claude Code tool use with session-log
+**Source:** Boucle (Devto)
+
+Use the `session-log` PostToolUse hook to create a daily log file of Claude Code's tool calls. This captures timestamps and key parameters for Read, Write, Edit, Bash, Grep, and WebSearch actions, enabling you to track Claude Code's operations after execution. This allows you to diagnose what files Claude Code accessed and what commands it ran.
+
+[Original](https://dev.to/boucle2026/how-to-see-everything-claude-code-does-audit-trail-hook-1g9j) | Added: 2026-03-08
+
+---
+
+
+## 270. Install Claude Code CLI
+**Source:** KenjiGoh (Devto)
+
+This provides instructions for installing the Claude Code CLI tool on MacOS using Homebrew, MacOS/Linux/WSL using curl and bash, and Windows using curl and CMD. Includes a link to authentication setup instructions and notes that the first time you run the command it will require authentication.
+
+[Original](https://dev.to/kenji_goh/get-started-with-claude-406p) | Added: 2026-03-08
+
+---
+
 *[Back to Categories](../README.md)*

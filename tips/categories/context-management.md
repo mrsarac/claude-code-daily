@@ -1013,4 +1013,24 @@ The .claudeignore file prevents Claude Code from indexing unnecessary files like
 
 ---
 
+
+## 271. Context Keeper CLI: Streamline Claude Code Sessions
+**Source:** takawasi (Hackernews)
+
+The Context Keeper CLI (cck) automates context management for Claude Code sessions. It generates a CLAUDE.md file summarizing your project structure for initial session ingestion and offers per-turn context injection using `cck watch --with-history` to maintain relevant history.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-08
+
+---
+
+
+## 272. Prevent Redundant File Reads in Claude Code
+**Source:** Boucle2026 (Reddit)
+
+Optimize Claude Code efficiency by implementing a PreToolUse hook called 'read-once'. This hook tracks files read within a session and prevents Claude from re-reading unchanged files, saving significant token costs associated with repetitive file access. This technique addresses the issue of Claude Code re-reading files, potentially saving thousands of tokens in larger projects.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1rnjf5e/i_built_a_claude_code_hook_that_stops_it_from/) | Added: 2026-03-08
+
+---
+
 *[Back to Categories](../README.md)*
