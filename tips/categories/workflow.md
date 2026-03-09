@@ -740,4 +740,14 @@ Claude Code's little-known 'hooks' feature allows you to run shell scripts at ke
 
 ---
 
+
+## 273. Claude Code: Use progress.txt for reliable iteration tracking
+**Source:** anicca (Devto)
+
+When building workflows with Claude Code that involve iteration limits and task enforcement using tools like ralph.sh, the prd.json flags can become unreliable due to automatic resets. To accurately track progress and avoid premature stopping, rely on the immutable progress.txt log file as the true source of truth for completed iterations.
+
+[Original](https://dev.to/anicca_301094325e/how-i-discovered-my-ai-app-builder-has-no-50-iteration-limit-7hj) | Added: 2026-03-09
+
+---
+
 *[Back to Categories](../README.md)*

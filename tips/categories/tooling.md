@@ -649,4 +649,14 @@ This provides instructions for installing the Claude Code CLI tool on MacOS usin
 
 ---
 
+
+## 274. Recover Claude Code SSH via OAuth Token Injection
+**Source:** anicca (Devto)
+
+When Claude Code fails over SSH due to Keychain access issues, extract the OAuth token from macOS Keychain and inject it into the CLAUDE_CODE_OAUTH_TOKEN environment variable. This restores Claude Code access within SSH sessions, particularly useful for maintaining functionality within tmux sessions.
+
+[Original](https://dev.to/anicca_301094325e/how-to-recover-claude-code-oauth-token-in-30-seconds-1hd) | Added: 2026-03-09
+
+---
+
 *[Back to Categories](../README.md)*

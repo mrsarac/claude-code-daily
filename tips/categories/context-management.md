@@ -1033,4 +1033,14 @@ Optimize Claude Code efficiency by implementing a PreToolUse hook called 'read-o
 
 ---
 
+
+## 275. Streamline Claude Code Sessions with Context Keeper
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (cck) to automate the creation of a CLAUDE.md file that summarizes your project structure, build commands, and conventions. This eliminates the need to re-explain your project at the start of each Claude Code session.  CCK also offers per-turn context injection using `cck setup --cb-style` and `cck watch --with-history`.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-09
+
+---
+
 *[Back to Categories](../README.md)*
