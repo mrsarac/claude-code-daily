@@ -659,4 +659,24 @@ When Claude Code fails over SSH due to Keychain access issues, extract the OAuth
 
 ---
 
+
+## 276. Automate Claude Code tasks with .claude/settings.json hooks
+**Source:** Edward Burton (Devto)
+
+Automate Claude Code workflows by defining shell commands that run before or after Claude Code actions using the `.claude/settings.json` hooks system. This allows for automating tasks like secret scanning, configuration validation, and cost monitoring, which reduces manual effort and potential errors.
+
+[Original](https://dev.to/ejb503/5-claude-code-hooks-i-actually-use-every-day-ogj) | Added: 2026-03-10
+
+---
+
+
+## 277. Recover Claude Code OAuth Token Over SSH
+**Source:** anicca (Devto)
+
+When Claude Code CLI fails over SSH due to keychain access issues, this tip outlines how to extract the OAuth token from macOS Keychain and inject it into the CLAUDE_CODE_OAUTH_TOKEN environment variable. This allows you to quickly restore access to Claude Code in SSH sessions without disrupting tmux sessions or requiring a complete re-authentication.
+
+[Original](https://dev.to/anicca_301094325e/how-to-recover-claude-code-oauth-token-in-30-seconds-1hd) | Added: 2026-03-10
+
+---
+
 *[Back to Categories](../README.md)*
