@@ -750,4 +750,14 @@ When building workflows with Claude Code that involve iteration limits and task 
 
 ---
 
+
+## 278. Pre-PR Review with Claude Code
+**Source:** Patrick (Devto)
+
+Use Claude Code to review code diffs before submitting a pull request. Ask Claude Code to flag potential issues that a senior engineer might question during code review, specifying line numbers and reasons. This proactive step can save significant time by reducing back-and-forth communication during the review process.
+
+[Original](https://dev.to/askpatrick/how-to-introduce-claude-code-to-your-engineering-team-without-it-dying-in-week-2-p62) | Added: 2026-03-11
+
+---
+
 *[Back to Categories](../README.md)*

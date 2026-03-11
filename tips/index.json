@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-10T00:14:44.101409",
-  "totalTips": 277,
+  "lastUpdated": "2026-03-11T00:13:58.204284",
+  "totalTips": 279,
   "categories": [
     {
       "name": "Orchestration",
@@ -18,7 +18,7 @@
     {
       "name": "Workflow",
       "slug": "workflow",
-      "count": 66,
+      "count": 67,
       "icon": "\u26a1"
     },
     {
@@ -30,7 +30,7 @@
     {
       "name": "Tooling",
       "slug": "tooling",
-      "count": 67,
+      "count": 68,
       "icon": "\ud83d\udd27"
     }
   ],
