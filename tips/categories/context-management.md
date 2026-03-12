@@ -1043,4 +1043,24 @@ Use Claude Context Keeper (cck) to automate the creation of a CLAUDE.md file tha
 
 ---
 
+
+## 280. Use CLAUDE.md for Project-Specific Instructions
+**Source:** Warhol (Devto)
+
+The `CLAUDE.md` file allows you to provide Claude Code with project-specific context at the start of each session. By placing this markdown file in the project root, you can guide Claude Code's suggestions and ensure it aligns with your project's architecture, patterns, and coding style. This helps to eliminate generic suggestions and incorrect code generation.
+
+[Original](https://dev.to/the200dollarceo/the-claudemd-file-that-made-my-ai-coding-assistant-actually-useful-2dfg) | Added: 2026-03-12
+
+---
+
+
+## 281. Automated Context Management with cck CLI
+**Source:** takawasi (Hackernews)
+
+Use the `cck` CLI to automatically generate a `CLAUDE.md` file summarizing your project structure and conventions for Claude Code. Additionally, `cck watch --with-history` injects relevant context into each turn, streamlining interactions and improving Claude's understanding of your codebase without repetitive explanations.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-12
+
+---
+
 *[Back to Categories](../README.md)*
