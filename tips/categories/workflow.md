@@ -760,4 +760,14 @@ Use Claude Code to review code diffs before submitting a pull request. Ask Claud
 
 ---
 
+
+## 282. Create Reusable Code Review Skill in Claude Code
+**Source:** Warhol (Devto)
+
+This tip demonstrates how to create a reusable `/review` skill in Claude Code. By creating a `.claude/skills/review.md` file, you can define a custom slash command that automates the code review process using a checklist for security, style, and potential bugs. This promotes efficiency by saving frequently used prompts as reusable workflows within Claude Code CLI.
+
+[Original](https://dev.to/the200dollarceo/15-claude-code-skills-that-replace-repetitive-dev-workflows-with-free-review-skill-1j4) | Added: 2026-03-13
+
+---
+
 *[Back to Categories](../README.md)*
