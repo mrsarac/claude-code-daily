@@ -1063,4 +1063,14 @@ Use the `cck` CLI to automatically generate a `CLAUDE.md` file summarizing your 
 
 ---
 
+
+## 283. Customize Claude Code Behavior with CLAUDE.md
+**Source:** TAKUYA HIRATA (Devto)
+
+Use a CLAUDE.md file at your project root to configure Claude Code's behavior and coding conventions. This file allows you to override default assumptions Claude Code makes, ensuring it adheres to your project's specific requirements and stylistic preferences during code generation and modification.
+
+[Original](https://dev.to/th19930828/the-complete-guide-to-claudemd-turn-claude-code-into-your-project-custom-ai-5n7) | Added: 2026-03-14
+
+---
+
 *[Back to Categories](../README.md)*
