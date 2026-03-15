@@ -1073,4 +1073,14 @@ Use a CLAUDE.md file at your project root to configure Claude Code's behavior an
 
 ---
 
+
+## 284. Streamline Claude Code Sessions with CCK (Claude Context Keeper)
+**Source:** takawasi (Hackernews)
+
+Use the Claude Context Keeper (CCK) CLI tool to automatically generate a `CLAUDE.md` file summarizing your project structure, commands, and conventions. CCK also offers per-turn context injection, which can be set up with `cck setup --cb-style` and activated with `cck watch --with-history`. This ensures Claude has consistent and comprehensive context across coding sessions.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-15
+
+---
+
 *[Back to Categories](../README.md)*
