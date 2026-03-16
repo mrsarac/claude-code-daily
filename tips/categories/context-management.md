@@ -1083,4 +1083,14 @@ Use the Claude Context Keeper (CCK) CLI tool to automatically generate a `CLAUDE
 
 ---
 
+
+## 286. Automate Claude Code Context with cck CLI
+**Source:** takawasi (Hackernews)
+
+The cck CLI tool automates context management for Claude Code sessions by generating a CLAUDE.md file from your codebase and injecting relevant project history into each turn. This eliminates the need to re-explain project details and conventions at the start of each session, and during coding iterations, improving efficiency and consistency.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-16
+
+---
+
 *[Back to Categories](../README.md)*

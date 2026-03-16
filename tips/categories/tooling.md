@@ -689,4 +689,14 @@ When Claude Code fails due to Keychain access issues over SSH on macOS, extract 
 
 ---
 
+
+## 285. Debugging Silent Hook Failures in Claude Code
+**Source:** Yurukusa (Devto)
+
+Claude Code hooks may silently fail without throwing errors, leading to false security assumptions. This tip highlights common mistakes, such as using exit code 1 instead of 2 to block execution, and provides corrected code examples to ensure hooks function as intended for reliable workflow control.
+
+[Original](https://dev.to/yurukusa/5-claude-code-hook-mistakes-that-silently-break-your-safety-net-58l3) | Added: 2026-03-16
+
+---
+
 *[Back to Categories](../README.md)*
