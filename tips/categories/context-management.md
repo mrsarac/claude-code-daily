@@ -1093,4 +1093,34 @@ The cck CLI tool automates context management for Claude Code sessions by genera
 
 ---
 
+
+## 287. Exclude lockfiles to reduce token usage in Claude Code
+**Source:** Zac (Devto)
+
+Lockfiles like package-lock.json, yarn.lock, and pnpm-lock.yaml can consume significant tokens due to their size and are unnecessary for Claude Code's operation. Excluding these files reduces token usage per turn, saving money without impacting functionality. Add them to your .gitignore or equivalent exclusion mechanism to prevent them from being included as context.
+
+[Original](https://dev.to/builtbyzac/5-things-eating-your-claude-code-tokens-that-arent-your-code-4667) | Added: 2026-03-17
+
+---
+
+
+## 288. Keep CLAUDE.md Focused for Efficient Context
+**Source:** Zac (Devto)
+
+To improve Claude's performance and reduce token usage, maintain concise and focused CLAUDE.md files. Avoid including extensive, irrelevant information like coding conventions or deployment steps. A smaller, more relevant CLAUDE.md ensures Claude can quickly access the necessary context without processing unnecessary tokens, especially during tasks like adjusting UI element spacing.
+
+[Original](https://dev.to/builtbyzac/the-claudemd-routing-pattern-keep-it-minimal-delegate-the-rest-388a) | Added: 2026-03-17
+
+---
+
+
+## 289. Use .claudeignore to Optimize Claude Code Context
+**Source:** Zac (Devto)
+
+Improve Claude Code's performance by using a `.claudeignore` file in your project root. This prevents unnecessary files like build artifacts, lockfiles, and generated code from being loaded into Claude Code's context, freeing up valuable context budget for the files that are most relevant to your task. Ignoring irrelevant files can significantly improve Claude Code's understanding and response quality.
+
+[Original](https://dev.to/builtbyzac/what-to-put-in-claudeignore-and-why-most-people-skip-it-1hdg) | Added: 2026-03-17
+
+---
+
 *[Back to Categories](../README.md)*
