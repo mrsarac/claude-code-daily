@@ -1123,4 +1123,14 @@ Improve Claude Code's performance by using a `.claudeignore` file in your projec
 
 ---
 
+
+## 295. CCK: Streamline Claude Code with Automated Context
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file describing your project structure, build commands, and conventions. CCK also allows injecting relevant context during each turn of your Claude Code session using `cck setup --cb-style` and `cck watch --with-history`, ensuring Claude always has the necessary information.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-18
+
+---
+
 *[Back to Categories](../README.md)*

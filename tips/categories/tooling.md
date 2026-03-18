@@ -699,4 +699,14 @@ Claude Code hooks may silently fail without throwing errors, leading to false se
 
 ---
 
+
+## 291. Troubleshooting Claude Code Tool Invocation Failures
+**Source:** Zac (Devto)
+
+If Claude Code tools connect successfully but are never invoked, the issue likely lies in the tool's schema, parameter names, or return format rather than the implementation itself. Carefully review these aspects to ensure Claude can correctly interpret and utilize the provided tool descriptions.
+
+[Original](https://dev.to/builtbyzac/your-mcp-server-is-running-fine-claude-just-isnt-calling-it-5h9i) | Added: 2026-03-18
+
+---
+
 *[Back to Categories](../README.md)*

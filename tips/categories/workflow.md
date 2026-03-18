@@ -770,4 +770,44 @@ This tip demonstrates how to create a reusable `/review` skill in Claude Code. B
 
 ---
 
+
+## 290. Disable Interactive Mode in Claude Code
+**Source:** Zac (Devto)
+
+Claude Code's default interactive mode halts execution to request permission for shell commands. To automate workflows, disable this behavior by modifying `settings.json` to auto-approve `ls`, `cat`, and `npm install`. Alternatively, use `--no-input` to bypass prompts for a single command.
+
+[Original](https://dev.to/builtbyzac/claude-code-stops-to-ask-permission-before-every-shell-command-heres-the-two-line-fix-3oo5) | Added: 2026-03-18
+
+---
+
+
+## 292. Driver-Navigator Pairing with Claude Code
+**Source:** Zac (Devto)
+
+Leverage Claude Code in a driver-navigator workflow. Instead of writing code yourself and asking Claude to review, describe the next coding step and have Claude generate the code. Review and refine the generated code, focusing on guiding the direction while Claude handles the implementation details. This interactive pairing method maximizes Claude's coding capabilities under your direction.
+
+[Original](https://dev.to/builtbyzac/pair-programming-patterns-with-claude-code-4a67) | Added: 2026-03-18
+
+---
+
+
+## 293. API Endpoint Generation with Claude Code
+**Source:** Zac (Devto)
+
+This tip provides a structured prompt template for generating API endpoints using Claude Code. It outlines the key components of the prompt, including specifying the method and path, input parameters, output schema, validation rules, business logic, and error handling. This structured approach helps Claude Code understand the requirements and generate accurate API endpoint code.
+
+[Original](https://dev.to/builtbyzac/building-api-endpoints-with-claude-code-patterns-that-work-45h8) | Added: 2026-03-18
+
+---
+
+
+## 294. Safe Database Migrations with Claude Code
+**Source:** Zac (Devto)
+
+To safely manage database migrations, configure Claude Code to generate the migration file but halt before execution. Review the generated file thoroughly before manually executing the migration. This prevents unintended data modifications and ensures a controlled deployment process.
+
+[Original](https://dev.to/builtbyzac/database-migration-workflow-with-claude-code-3e9k) | Added: 2026-03-18
+
+---
+
 *[Back to Categories](../README.md)*
