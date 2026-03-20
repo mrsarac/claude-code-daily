@@ -1143,4 +1143,14 @@ Use Claude Context Keeper (CCK) to automate context management for Claude Code C
 
 ---
 
+
+## 301. Shared CLAUDE.md for Team Context
+**Source:** Jun Suzuki (Devto)
+
+The Claude Code team uses a shared CLAUDE.md file stored in git. The entire team contributes to this file, providing a central, version-controlled repository of context for Claude Code interactions. This facilitates consistent and collaborative use of the CLI across the team, enabling what they call 'compound engineering'.
+
+[Original](https://dev.to/szkjn/we-outgrew-claudemd-building-a-knowledge-layer-that-compounds-33f) | Added: 2026-03-20
+
+---
+
 *[Back to Categories](../README.md)*

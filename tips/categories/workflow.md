@@ -810,4 +810,14 @@ To safely manage database migrations, configure Claude Code to generate the migr
 
 ---
 
+
+## 300. Automate Code Standards with Claude Code Hooks
+**Source:** Helder Burato Berto (Devto)
+
+Leverage Claude Code hooks, defined in settings.json, to automatically enforce coding standards or run checks at various lifecycle events (e.g., before pushing code). Because these hooks execute outside of Claude's control, they provide a reliable way to ensure compliance and prevent the AI from bypassing necessary steps in your workflow.
+
+[Original](https://dev.to/helderberto/claude-code-hooks-1k7a) | Added: 2026-03-20
+
+---
+
 *[Back to Categories](../README.md)*
