@@ -1153,4 +1153,14 @@ The Claude Code team uses a shared CLAUDE.md file stored in git. The entire team
 
 ---
 
+
+## 302. Streamline Claude Code with Persistent Context via CCK
+**Source:** takawasi (Hackernews)
+
+Use the `claude-context-keeper` (cck) CLI to maintain context across Claude Code sessions. CCK generates a `CLAUDE.md` file summarizing your project, which Claude can reference at the beginning of each session. Additionally, `cck watch --with-history` enables per-turn context injection, improving code understanding and consistency by injecting previous turns.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-21
+
+---
+
 *[Back to Categories](../README.md)*
