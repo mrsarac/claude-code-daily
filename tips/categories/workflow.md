@@ -820,4 +820,24 @@ Leverage Claude Code hooks, defined in settings.json, to automatically enforce c
 
 ---
 
+
+## 304. Using GitHub MCP with Claude Code CLI
+**Source:** XxvivekxX (Reddit)
+
+This tip highlights the convenience of using the GitHub MCP (Management Control Plane) within the Claude Code CLI for managing GitHub tasks directly from the terminal. It demonstrates how to add the GitHub MCP and create issues, review pull requests, and search code across repositories, effectively minimizing the need to switch to a web browser for these tasks.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1s0u2ms/mcp_servers_i_use_every_single_day_whats_in_your/) | Added: 2026-03-23
+
+---
+
+
+## 305. Claude MD conventions for consistent Claude Code
+**Source:** SilverConsistent9222 (Reddit)
+
+For complex Claude Code setups with multiple skills and agents, establishing clear Claude MD conventions is crucial. Define standards for testing rules, naming, and skill intent (splitting by intent, not features) to ensure predictable outputs and overall consistency in your Claude Code workflows.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1s0dq0f/claude_code_structure_that_didnt_break_after_23/) | Added: 2026-03-23
+
+---
+
 *[Back to Categories](../README.md)*

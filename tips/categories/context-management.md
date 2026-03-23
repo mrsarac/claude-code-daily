@@ -1163,4 +1163,14 @@ Use the `claude-context-keeper` (cck) CLI to maintain context across Claude Code
 
 ---
 
+
+## 303. CCK: Automate Claude Context with CLAUDE.md and Watch Mode
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file containing project context, which Claude can read at the start of a session. Utilize CCK's watch mode to inject relevant files and command history into each turn, enhancing Claude's awareness of the current conversation and codebase.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-23
+
+---
+
 *[Back to Categories](../README.md)*
