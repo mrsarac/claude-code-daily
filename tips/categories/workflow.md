@@ -840,4 +840,24 @@ For complex Claude Code setups with multiple skills and agents, establishing cle
 
 ---
 
+
+## 307. Automated Experiment Loop for Code Optimization in Claude Code
+**Source:** krzysztofdudek (Reddit)
+
+This tip outlines a method to implement an automated experiment loop within Claude Code, inspired by Karpathy's autoresearch. By dropping a Markdown file into your project, Claude Code will interview you about optimization goals, create a dedicated git branch and '.lab/' directory, and autonomously run experiments. Importantly, the system commits code before each run, ensuring version control and reproducibility during the optimization process.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1s1qa97/i_generalized_karpathys_autoresearch_into_a_skill/) | Added: 2026-03-24
+
+---
+
+
+## 308. GitHub MCP for issue/PR management in Claude Code
+**Source:** XxvivekxX (Reddit)
+
+Use the GitHub MCP (Claude MCP add --transport http github https://api.githubcopilot.com/mcp/) to create issues, review PRs, and search code across repositories directly from the Claude Code CLI. This reduces the need to switch to a browser for common GitHub tasks, streamlining your workflow.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1s0u2ms/mcp_servers_i_use_every_single_day_whats_in_your/) | Added: 2026-03-24
+
+---
+
 *[Back to Categories](../README.md)*
