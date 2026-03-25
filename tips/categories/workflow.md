@@ -860,4 +860,14 @@ Use the GitHub MCP (Claude MCP add --transport http github https://api.githubcop
 
 ---
 
+
+## 310. Sandboxed AI Agents with cbox: Diff & Merge Changes
+**Source:** Specialist-Owl2603 (Reddit)
+
+Use cbox to isolate AI agents in a sandboxed environment.  Run agents with `cbox run`, review changes made by the agent using `cbox diff --stat`, and selectively merge the desired changes into your project with `cbox merge --pick`. This allows for controlled experimentation and integration of AI-generated code.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1s2v9g4/i_built_an_oslevel_sandbox_so_claude_code_can_run/) | Added: 2026-03-25
+
+---
+
 *[Back to Categories](../README.md)*

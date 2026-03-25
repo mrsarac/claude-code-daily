@@ -749,4 +749,14 @@ Use the Firecrawl plugin with Claude Code CLI to automatically generate skill fi
 
 ---
 
+
+## 309. Track Daily Coding Activity with cc-receipt
+**Source:** Yurukusa (Devto)
+
+Use the `npx cc-receipt` command daily to generate a summary of your coding activity with Claude Code. This receipt provides insights into time spent on different projects, the number of sessions, and lines of code added, enabling you to monitor your productivity and identify areas for improvement in your Claude-powered workflows.
+
+[Original](https://dev.to/yurukusa/i-run-my-ai-247-this-ascii-receipt-shows-what-it-did-while-i-slept-1ca5) | Added: 2026-03-25
+
+---
+
 *[Back to Categories](../README.md)*
