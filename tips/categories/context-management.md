@@ -1173,4 +1173,24 @@ Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file conta
 
 ---
 
+
+## 311. Optimize CLAUDE.md for reliable instruction
+**Source:** Aj (Devto)
+
+Ensure CLAUDE.md instructions are consistently followed by keeping the file under 60 lines to prevent Claude from silently ignoring rules mid-session, respecting Claude's instruction budget of approximately 100-150 slots after its system prompt. This ensures that the most important configurations for the Claude Code CLI are reliably applied throughout the session.
+
+[Original](https://dev.to/ajbuilds/your-claudemd-is-probably-broken-5-silent-failure-patterns-and-how-to-fix-them-1abn) | Added: 2026-03-26
+
+---
+
+
+## 312. CCK: Automate Claude.md Generation and Context Injection
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summarizing your project for Claude Code, and inject relevant context from past turns into each new prompt. Install with `pip install .`, generate the Claude.md file with `cck sync`, and set up context injection with `cck setup --cb-style` and `cck watch --with-history`.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-26
+
+---
+
 *[Back to Categories](../README.md)*
