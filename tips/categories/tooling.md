@@ -759,4 +759,24 @@ Use the `npx cc-receipt` command daily to generate a summary of your coding acti
 
 ---
 
+
+## 313. rses-cli: Seamless Claude Code, Codex, OpenCode Workflow
+**Source:** plawlost (Hackernews)
+
+The `rses-cli` tool allows power users to seamlessly switch between Claude Code, Codex CLI, and OpenCode, enabling bidirectional workflows. It reads the Codex session (task, git log, recent turns), builds a structured handoff, and launches Claude with it as the first message. Install via `npm i -g rses-cli` and use shorthand commands to manage Claude sessions effectively. Requires Node 22+.
+
+[Original](https://news.ycombinator.com/item?id=47528990) | Added: 2026-03-27
+
+---
+
+
+## 314. rses: CLI for Seamless Claude Code/Codex Switching
+**Source:** plawlost (Hackernews)
+
+The `rses` CLI tool streamlines switching between Claude Code and Codex, allowing users to hand off sessions including task details, git logs, and recent turns. It simplifies workflows with commands like `rses cc w cdx --last` for power users, supporting interactions across Claude Code, Codex CLI, and OpenCode. The tool requires minimal setup, utilizes Node 22+ and built-in SQLite for session management.
+
+[Original](https://news.ycombinator.com/item?id=47528990) | Added: 2026-03-27
+
+---
+
 *[Back to Categories](../README.md)*
