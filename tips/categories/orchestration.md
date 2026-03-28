@@ -248,4 +248,14 @@ Automate daily research reports using Claude Code CLI in non-interactive mode. S
 
 ---
 
+
+## 315. Parallel Claude Code Instances for 10x Productivity
+**Source:** Aamer Mihaysi (Devto)
+
+To drastically improve development speed, run multiple Claude Code instances in parallel from your terminal. Boris Cherny uses five instances, configured via a `.claude/` directory, to tackle different aspects of a feature concurrently, enabling faster feature completion compared to a single, sequential approach. This emphasizes configuration over model choice for significant productivity gains.
+
+[Original](https://dev.to/o96a/the-claude-directory-is-the-missing-manual-for-ai-engineers-o4o) | Added: 2026-03-28
+
+---
+
 *[Back to Categories](../README.md)*
