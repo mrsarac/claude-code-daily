@@ -870,4 +870,14 @@ Use cbox to isolate AI agents in a sandboxed environment.  Run agents with `cbox
 
 ---
 
+
+## 317. Using Skills for Persistent Claude Code Expertise
+**Source:** RAXXO Studios (Devto)
+
+Claude Code Skills enable persistent workflows by storing instructions in SKILL.md files within the ~/.claude/skills/ directory.  These skills are triggered by slash commands, allowing Claude to retain expertise and avoid repetitive configuration.  A well-defined SKILL.md includes Trigger, Description, and Instructions, with Examples and Constraints improving accuracy.
+
+[Original](https://dev.to/raxxostudios/how-to-build-a-claude-code-skill-from-scratch-433b) | Added: 2026-03-29
+
+---
+
 *[Back to Categories](../README.md)*

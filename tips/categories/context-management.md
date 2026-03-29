@@ -1193,4 +1193,34 @@ Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summa
 
 ---
 
+
+## 316. Understanding the .claude/ Folder
+**Source:** Alan West (Devto)
+
+Most Claude Code issues stem from misunderstanding the .claude/ directory. The tip will explain the structure and functionality of this folder, which is crucial for ensuring Claude Code adheres to project-specific conventions and instructions specified in the CLAUDE.md file, improving code generation consistency.
+
+[Original](https://dev.to/alanwest/why-claude-code-ignores-your-instructions-and-how-to-fix-it-1ljp) | Added: 2026-03-29
+
+---
+
+
+## 318. Use CLAUDE.md for Project Context & Consistency
+**Source:** RAXXO Studios (Devto)
+
+To ensure Claude Code generates code that fits your project's style, create a comprehensive CLAUDE.md file. This file should document your tech stack, project structure, naming conventions, and any hard rules. By referencing this file, Claude Code can avoid repetitive explanations, reduce errors, and consistently produce components that align with your project's existing patterns and design systems.
+
+[Original](https://dev.to/raxxostudios/how-to-use-claude-code-for-web-development-complete-guide-4lg2) | Added: 2026-03-29
+
+---
+
+
+## 319. Automate Claude Code context injection with cck
+**Source:** takawasi (Hackernews)
+
+The Claude Context Keeper (cck) CLI tool automates context management for Claude Code sessions. It generates a CLAUDE.md file describing your project and injects relevant history into each turn.  Install cck, sync it to create CLAUDE.md, then use 'cck setup --cb-style' and 'cck watch --with-history' to automatically inject context and history into each Claude Code interaction.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-29
+
+---
+
 *[Back to Categories](../README.md)*
