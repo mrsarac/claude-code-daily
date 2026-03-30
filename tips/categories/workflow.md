@@ -880,4 +880,24 @@ Claude Code Skills enable persistent workflows by storing instructions in SKILL.
 
 ---
 
+
+## 322. Prevent Deadlocks in Git Hooks with CLAUDECODE Env Var
+**Source:** Russell Moss (Devto)
+
+When using Claude Code in git hooks, prevent deadlocks by checking for the CLAUDECODE environment variable. If set, skip running Claude Code engines within the hook. This avoids self-invocation when Claude Code is already running, ensuring the hook completes without blocking.
+
+[Original](https://dev.to/mossrussell/i-built-a-tool-that-forces-ai-coding-agents-to-keep-documentation-in-sync-310i) | Added: 2026-03-30
+
+---
+
+
+## 323. Use /pm-run for End-to-End Product Planning
+**Source:** nmrtn (Hackernews)
+
+The `/pm-run` command in Claude Code facilitates a full product planning cycle within the terminal, encompassing audit, objectives, strategy, roadmap, and PRD generation. Each stage writes a markdown artifact that the next stage reads, compounding context across the pipeline. The system maintains persistent product memory in `~/.nanopm/memory/`, enabling consistent re-evaluation even months later.
+
+[Original](https://news.ycombinator.com/item?id=47557144) | Added: 2026-03-30
+
+---
+
 *[Back to Categories](../README.md)*

@@ -1223,4 +1223,14 @@ The Claude Context Keeper (cck) CLI tool automates context management for Claude
 
 ---
 
+
+## 321. Use CLAUDE.md for Persistent Project Context
+**Source:** brian austin (Devto)
+
+Create a CLAUDE.md file in your repository root (or .claude/ folder) to provide Claude Code with persistent project context. This file is automatically read at the start of each session, eliminating the need to repeatedly explain your stack, conventions, and potential issues, leading to more efficient and relevant code suggestions.
+
+[Original](https://dev.to/subprime2010/claudemd-the-project-memory-file-that-makes-claude-code-10x-more-useful-22d6) | Added: 2026-03-30
+
+---
+
 *[Back to Categories](../README.md)*

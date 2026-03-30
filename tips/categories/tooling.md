@@ -779,4 +779,14 @@ The `rses` CLI tool streamlines switching between Claude Code and Codex, allowin
 
 ---
 
+
+## 320. Custom Slash Commands in Claude Code
+**Source:** brian austin (Devto)
+
+Use the .claude/commands/ directory to define custom slash commands in Claude Code. These reusable prompts can be triggered with /command-name in any Claude Code session, allowing you to streamline your workflows and quickly access frequently used prompts.
+
+[Original](https://dev.to/subprime2010/claude-code-custom-slash-commands-the-commands-directory-youre-probably-not-using-5a18) | Added: 2026-03-30
+
+---
+
 *[Back to Categories](../README.md)*
