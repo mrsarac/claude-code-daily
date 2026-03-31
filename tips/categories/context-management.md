@@ -1233,4 +1233,14 @@ Create a CLAUDE.md file in your repository root (or .claude/ folder) to provide 
 
 ---
 
+
+## 325. Streamline Claude Code with Persistent Context
+**Source:** takawasi (Hackernews)
+
+Use the 'claude-context-keeper' (cck) CLI to manage and inject context into each Claude Code session. This tool addresses Claude's fresh-start behavior by generating a CLAUDE.md file from your codebase, which Claude reads at the start. Additionally, it supports per-turn context injection using 'cck setup --cb-style' and 'cck watch --with-history', allowing you to maintain context across interactions.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-03-31
+
+---
+
 *[Back to Categories](../README.md)*

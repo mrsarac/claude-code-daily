@@ -789,4 +789,14 @@ Use the .claude/commands/ directory to define custom slash commands in Claude Co
 
 ---
 
+
+## 324. Use SKILL.md to Guide Claude Code CLI
+**Source:** Jonathan Búcaro (Devto)
+
+To improve Claude Code's efficiency, create a `SKILL.md` file. This Markdown file acts as a compact guide, providing a streamlined introduction to the CLI's functionality and key commands, preventing the agent from repeatedly relearning the same commands and speeding up task execution.
+
+[Original](https://dev.to/jebucaro/teach-claude-code-how-to-use-your-cli-with-skillsmd-29om) | Added: 2026-03-31
+
+---
+
 *[Back to Categories](../README.md)*
