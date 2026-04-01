@@ -799,4 +799,14 @@ To improve Claude Code's efficiency, create a `SKILL.md` file. This Markdown fil
 
 ---
 
+
+## 327. Global Effort Level Affects All Claude Code Terminals
+**Source:** iviireczech (Reddit)
+
+When using multiple Claude Code instances, setting the effort level (e.g., `/effort low`) in one terminal updates a global configuration file (`~/.claude/settings.json`). Other running Claude Code instances detect this change and overwrite their in-memory effort level. This means the API will use the last set effort level across all your sessions, impacting output generation.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1s8zii8/effort_in_one_claude_code_instance_silently_nukes/) | Added: 2026-04-01
+
+---
+
 *[Back to Categories](../README.md)*

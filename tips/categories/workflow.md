@@ -900,4 +900,14 @@ The `/pm-run` command in Claude Code facilitates a full product planning cycle w
 
 ---
 
+
+## 328. Auto-Improve Agents with Claude Code Trace Analysis
+**Source:** cheetguy (Reddit)
+
+Use Claude Code's `/recursive-improve` command to automatically analyze execution traces, identify failure patterns, and apply fixes to your agent on a new branch. First, add tracing to your agent to save execution data locally, then run your agent on a set of tasks to collect these traces. Finally, execute the command to initiate the improvement process based on the collected data.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1s8qcut/how_i_make_my_agents_recursively_improve/) | Added: 2026-04-01
+
+---
+
 *[Back to Categories](../README.md)*

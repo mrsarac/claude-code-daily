@@ -1243,4 +1243,14 @@ Use the 'claude-context-keeper' (cck) CLI to manage and inject context into each
 
 ---
 
+
+## 326. Control Claude Code Token Usage with ARCHITECTURE.md
+**Source:** longdo102 (Reddit)
+
+To reduce token consumption when using Claude Code, maintain an `ARCHITECTURE.md` file outlining your project's structure. By feeding this file to Claude, you constrain its exploration, preventing it from freely roaming the codebase and thus saving tokens and reducing the risk of hitting rate limits.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1s8k12v/explore_just_burned_94k_tokens_in_3_minutes_im/) | Added: 2026-04-01
+
+---
+
 *[Back to Categories](../README.md)*
