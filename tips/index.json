@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-04-01T00:23:09.185381",
-  "totalTips": 328,
+  "lastUpdated": "2026-04-02T00:19:19.884828",
+  "totalTips": 331,
   "categories": [
     {
       "name": "Orchestration",
@@ -18,19 +18,19 @@
     {
       "name": "Workflow",
       "slug": "workflow",
-      "count": 82,
+      "count": 83,
       "icon": "\u26a1"
     },
     {
       "name": "Subagents",
       "slug": "subagents",
-      "count": 21,
+      "count": 22,
       "icon": "\ud83e\udd16"
     },
     {
       "name": "Tooling",
       "slug": "tooling",
-      "count": 80,
+      "count": 81,
       "icon": "\ud83d\udd27"
     }
   ],

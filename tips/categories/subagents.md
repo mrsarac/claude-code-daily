@@ -192,4 +192,14 @@ You can now isolate subagents in temporary Git worktrees using the `worktree` op
 
 ---
 
+
+## 330. Create custom Claude Code agents for specialized tasks
+**Source:** Stephen McCullough  (Devto)
+
+This tip explains how to create custom agents for Claude Code by defining them as Markdown files with YAML frontmatter in the `~/.claude/agents/` directory. This allows you to tailor Claude Code's behavior with specific names, descriptions, models, and tool configurations (like Bash, Glob, Grep, and Read) for specialized tasks like code review.
+
+[Original](https://dev.to/swmcc/custom-agents-for-claude-code-35dh) | Added: 2026-04-02
+
+---
+
 *[Back to Categories](../README.md)*

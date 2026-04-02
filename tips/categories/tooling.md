@@ -809,4 +809,14 @@ When using multiple Claude Code instances, setting the effort level (e.g., `/eff
 
 ---
 
+
+## 331. Force Claude Code to Use Built-in Tools
+**Source:** Yurukusa (Devto)
+
+Claude Code sometimes defaults to bash commands like sed and grep, even though it has faster and safer built-in tools (Read, Edit, Grep, Glob). This tip suggests using hooks to force Claude Code to prioritize its internal tools, improving efficiency and reliability. The provided example focuses on addressing instances where Claude Code resorts to bash commands instead of leveraging its native functionalities.
+
+[Original](https://dev.to/yurukusa/claude-code-ignores-its-own-tools-here-are-3-hooks-that-force-it-to-behave-1g1l) | Added: 2026-04-02
+
+---
+
 *[Back to Categories](../README.md)*

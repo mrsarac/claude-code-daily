@@ -910,4 +910,14 @@ Use Claude Code's `/recursive-improve` command to automatically analyze executio
 
 ---
 
+
+## 329. Custom Claude Code Slash Commands for Project Workflow
+**Source:** brian austin (Devto)
+
+Create custom slash commands within the .claude/commands/ directory (or ~/.claude/commands/ for global commands) to streamline project-specific workflows in Claude Code CLI. These commands act as shortcuts, allowing you to encode and quickly execute frequently used processes, boosting efficiency. The article gives examples of commonly used custom commands and configurations.
+
+[Original](https://dev.to/subprime2010/claude-code-custom-slash-commands-the-ones-i-actually-use-every-day-ole) | Added: 2026-04-02
+
+---
+
 *[Back to Categories](../README.md)*
