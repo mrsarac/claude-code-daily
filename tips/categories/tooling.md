@@ -819,4 +819,14 @@ Claude Code sometimes defaults to bash commands like sed and grep, even though i
 
 ---
 
+
+## 334. Explore Claude Code Power-Ups for Feature Discovery
+**Source:** shanraisshan (Reddit)
+
+Claude Code v2.1.90 introduces a gamified onboarding system called '/powerup'. This system offers 10 unlockable power-ups, each demonstrating a specific, often overlooked feature of the CLI tool with an animated demo in the terminal. This provides an interactive way to discover advanced functionalities and improve your workflow with Claude Code.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1saacyj/powerup_slash_command_in_claude_code_v2190_a/) | Added: 2026-04-03
+
+---
+
 *[Back to Categories](../README.md)*

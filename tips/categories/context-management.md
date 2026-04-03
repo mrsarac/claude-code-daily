@@ -1253,4 +1253,14 @@ To reduce token consumption when using Claude Code, maintain an `ARCHITECTURE.md
 
 ---
 
+
+## 332. Use .claudeignore to control Claude Code context
+**Source:** brian austin (Devto)
+
+Prevent Claude Code from accessing sensitive files and large directories like node_modules by using a `.claudeignore` file. This file acts similarly to a `.gitignore`, allowing you to specify files and directories that Claude Code should exclude from its context, improving efficiency and preventing accidental exposure of sensitive information.
+
+[Original](https://dev.to/subprime2010/claude-code-claudeignore-stop-leaking-secrets-and-nodemodules-into-your-context-54i2) | Added: 2026-04-03
+
+---
+
 *[Back to Categories](../README.md)*

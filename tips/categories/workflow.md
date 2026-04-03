@@ -920,4 +920,14 @@ Create custom slash commands within the .claude/commands/ directory (or ~/.claud
 
 ---
 
+
+## 333. Test-Driven Development with Claude Code
+**Source:** brian austin (Devto)
+
+Leverage Claude Code for test-driven development by using a single command to write pytest tests for a given file, run the tests, and fix any failures. This allows for a streamlined workflow where Claude handles the entire testing process within the terminal, from writing the initial tests to debugging the implementation based on the test results.
+
+[Original](https://dev.to/subprime2010/claude-code-for-testing-write-run-and-fix-tests-without-leaving-your-terminal-2gkh) | Added: 2026-04-03
+
+---
+
 *[Back to Categories](../README.md)*
