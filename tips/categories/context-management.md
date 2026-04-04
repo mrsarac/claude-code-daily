@@ -1263,4 +1263,14 @@ Prevent Claude Code from accessing sensitive files and large directories like no
 
 ---
 
+
+## 338. Automate Context Injection with cck
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (cck) to automate the creation of a CLAUDE.md file, ensuring Claude Code has up-to-date project context at the start of each session. Also, set up per-turn context injection with `cck watch --with-history`, allowing Claude Code to access previous conversation history and relevant codebase snippets for more informed code generation and problem-solving.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-04-04
+
+---
+
 *[Back to Categories](../README.md)*

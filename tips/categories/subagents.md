@@ -202,4 +202,14 @@ This tip explains how to create custom agents for Claude Code by defining them a
 
 ---
 
+
+## 335. Subagent Pattern: Breaking Down Complex Tasks for Claude Code
+**Source:** brian austin (Devto)
+
+To avoid Claude Code getting lost in large, complex tasks, decompose the work into smaller, bounded units. This 'subagent' pattern helps Claude Code maintain context and focus, allowing for parallel execution and more effective results when refactoring code or handling extensive projects. By breaking down big problems, you can get better results.
+
+[Original](https://dev.to/subprime2010/claude-code-subagent-patterns-how-to-break-big-tasks-into-bounded-scopes-n0f) | Added: 2026-04-04
+
+---
+
 *[Back to Categories](../README.md)*

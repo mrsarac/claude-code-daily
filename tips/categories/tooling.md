@@ -829,4 +829,24 @@ Claude Code v2.1.90 introduces a gamified onboarding system called '/powerup'. T
 
 ---
 
+
+## 336. Sandboxed Claude Code with Docker Compose Integration
+**Source:** sayil (Hackernews)
+
+Use the `dangerously` tool with the `--dangerously-skip-permissions` flag to run Claude Code in a sandboxed Docker container. This isolates file system changes and allows Claude Code to interact with a full service stack defined in your `docker-compose.yml`, enabling testing against real dependencies like databases and queues.
+
+[Original](https://github.com/sayil/dangerously) | Added: 2026-04-04
+
+---
+
+
+## 337. Sandbox Claude Code with Docker Compose using dangerously
+**Source:** sayil (Hackernews)
+
+Use the `dangerously` tool to sandbox Claude Code, especially when using the `--dangerously-skip-permissions` flag. `dangerously` leverages Docker to isolate Claude Code, restricting file system changes and allowing it to interact with your project's dependencies defined in `docker-compose.yml` by spinning up your full service stack.
+
+[Original](https://github.com/sayil/dangerously) | Added: 2026-04-04
+
+---
+
 *[Back to Categories](../README.md)*
