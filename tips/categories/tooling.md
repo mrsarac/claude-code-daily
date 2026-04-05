@@ -849,4 +849,44 @@ Use the `dangerously` tool to sandbox Claude Code, especially when using the `--
 
 ---
 
+
+## 339. Create Custom Claude Code Commands
+**Source:** brian austin (Devto)
+
+Claude Code CLI allows creation of custom slash commands by placing markdown files inside the .claude/commands/ directory in the project root. This enables encoding team workflows into repeatable one-line prompts for actions like deploy, review, and standup, streamlining development processes.
+
+[Original](https://dev.to/subprime2010/claude-code-custom-commands-build-your-own-deploy-review-and-standup-132a) | Added: 2026-04-05
+
+---
+
+
+## 340. Bypass Rate Limits with ANTHROPIC_BASE_URL
+**Source:** brian austin (Devto)
+
+Avoid Claude AI usage limits interrupting Claude Code sessions by setting the ANTHROPIC_BASE_URL environment variable. This allows directing requests to a different endpoint, preventing broken sessions and loss of context during refactoring or other intensive tasks.
+
+[Original](https://dev.to/subprime2010/claude-code-without-rate-limits-set-anthropicbaseurl-in-30-seconds-4odp) | Added: 2026-04-05
+
+---
+
+
+## 342. Safely Run Claude Code with Dockerized Dependencies
+**Source:** sayil (Hackernews)
+
+Use the `dangerously` tool to sandbox Claude Code with `--dangerously-skip-permissions`. This tool isolates Claude Code in a Docker container, restricting file system changes to your project directory. It can also detect and spin up services defined in your `docker-compose.yml`, allowing Claude Code to interact with real dependencies like databases and queues for testing.
+
+[Original](https://github.com/sayil/dangerously) | Added: 2026-04-05
+
+---
+
+
+## 343. Sandboxed Claude Code with Dependencies
+**Source:** sayil (Hackernews)
+
+Use the `dangerously` tool to sandbox Claude Code execution, preventing unintended system-wide changes. This tool spins up an isolated container, restricting file system changes to your project directory. The latest version supports `docker-compose.yml`, enabling Claude Code to interact with your full service stack (databases, queues, etc.) for realistic testing within the sandboxed environment.
+
+[Original](https://github.com/sayil/dangerously) | Added: 2026-04-05
+
+---
+
 *[Back to Categories](../README.md)*

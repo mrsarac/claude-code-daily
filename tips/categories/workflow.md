@@ -930,4 +930,14 @@ Leverage Claude Code for test-driven development by using a single command to wr
 
 ---
 
+
+## 341. Automated Test-Fix Loops with Claude Code
+**Source:** brian austin (Devto)
+
+Automate test-driven development by having Claude Code write tests, run them, analyze failures, and fix code iteratively, all from the terminal. This streamlined workflow reduces manual effort and accelerates debugging by enabling Claude to handle the entire test-fix cycle without constant user intervention.
+
+[Original](https://dev.to/subprime2010/claude-code-testing-write-tests-run-them-fix-failures-automatically-5h26) | Added: 2026-04-05
+
+---
+
 *[Back to Categories](../README.md)*
