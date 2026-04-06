@@ -889,4 +889,24 @@ Use the `dangerously` tool to sandbox Claude Code execution, preventing unintend
 
 ---
 
+
+## 345. Avoid Claude Code Rate Limits with ANTHROPIC_BASE_URL
+**Source:** brian austin (Devto)
+
+Set the ANTHROPIC_BASE_URL environment variable to bypass default rate limits when using Claude Code. This reroutes API calls through a specified URL, preventing session interruptions during intensive refactoring or other tasks. This setting leverages Anthropic's official escape hatch for users needing more consistent access.
+
+[Original](https://dev.to/subprime2010/claude-code-with-anthropicbaseurl-the-2month-rate-limit-escape-hatch-234j) | Added: 2026-04-06
+
+---
+
+
+## 346. Automated CLI Generation with Claude Code
+**Source:** zanditamar (Reddit)
+
+Claude Code automates the creation of production-grade Python CLIs from live HTTP traffic. It captures browser interactions, analyzes endpoints, generates CLI code with unit and E2E tests, and employs parallel Claude agents for compliance review, resulting in a fully tested and standardized CLI.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1sde44i/i_built_clianythingweb_a_claude_code_plugin_that/) | Added: 2026-04-06
+
+---
+
 *[Back to Categories](../README.md)*
