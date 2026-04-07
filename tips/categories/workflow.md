@@ -940,4 +940,14 @@ Automate test-driven development by having Claude Code write tests, run them, an
 
 ---
 
+
+## 347. TDD with Claude Code using PostToolUse Hooks
+**Source:** brian austin (Devto)
+
+Use Claude Code's PostToolUse hook to automatically run tests after each implementation. This allows for a TDD workflow where you write a failing test, Claude implements the code, the hook runs the test suite, and Claude fixes any failures until the test passes, enabling a faster feedback loop during development.
+
+[Original](https://dev.to/subprime2010/claude-code-tdd-write-tests-first-let-claude-implement-watch-them-pass-238i) | Added: 2026-04-07
+
+---
+
 *[Back to Categories](../README.md)*

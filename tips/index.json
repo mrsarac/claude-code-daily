@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-04-06T00:21:45.799550",
-  "totalTips": 346,
+  "lastUpdated": "2026-04-07T00:20:53.349405",
+  "totalTips": 347,
   "categories": [
     {
       "name": "Orchestration",
@@ -18,7 +18,7 @@
     {
       "name": "Workflow",
       "slug": "workflow",
-      "count": 85,
+      "count": 86,
       "icon": "\u26a1"
     },
     {
