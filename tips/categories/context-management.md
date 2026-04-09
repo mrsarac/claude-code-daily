@@ -1283,4 +1283,14 @@ The Claude Context Keeper (CCK) CLI tool automates context management for Claude
 
 ---
 
+
+## 349. Reduce Claude context size with codesight
+**Source:** Eastern_Exercise2637 (Reddit)
+
+Use `npx codesight --wiki` to reduce the number of tokens sent to Claude at the beginning of each session. By summarizing your codebase into a knowledge base, you can drastically reduce the initial context size from 47,450 tokens to a much smaller number, saving on token costs and improving Claude's focus.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1sfdztg/90_fewer_tokens_per_session_by_reading_a/) | Added: 2026-04-09
+
+---
+
 *[Back to Categories](../README.md)*

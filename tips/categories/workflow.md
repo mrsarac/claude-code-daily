@@ -950,4 +950,14 @@ Use Claude Code's PostToolUse hook to automatically run tests after each impleme
 
 ---
 
+
+## 348. Engineering Workflow with Claude Code and CLAUDE.md
+**Source:** Waruna (Devto)
+
+Orchestrate Claude Code with a comprehensive engineering workflow defined in CLAUDE.md. Implement roles like Tech Lead, specialist agents, code reviewers, and validation pipelines. This advanced setup transforms Claude Code from a simple tool to a fully managed engineering assistant.
+
+[Original](https://dev.to/waruna/i-turned-claude-code-into-a-dev-team-with-one-file-29i6) | Added: 2026-04-09
+
+---
+
 *[Back to Categories](../README.md)*
