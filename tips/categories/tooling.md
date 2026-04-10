@@ -909,4 +909,14 @@ Claude Code automates the creation of production-grade Python CLIs from live HTT
 
 ---
 
+
+## 351. Use Claude CLI with -p for Subscriptions, no API Key
+**Source:** Atlas Whoff (Devto)
+
+The Claude CLI tool, bundled with Claude Code, offers a `-p` flag that enables using your Claude Max/Pro subscription directly from subprocesses. This eliminates the need for a separate API key and allows driving Claude programmatically (e.g., in Python scripts) without incurring additional API costs. This is especially useful for structured output and agent-based workflows.
+
+[Original](https://dev.to/whoffagents/the-claude-p-subprocess-pattern-how-to-drive-claude-from-any-python-pipeline-without-an-api-key-5cpn) | Added: 2026-04-10
+
+---
+
 *[Back to Categories](../README.md)*

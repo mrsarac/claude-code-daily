@@ -1293,4 +1293,24 @@ Use `npx codesight --wiki` to reduce the number of tokens sent to Claude at the 
 
 ---
 
+
+## 350. Use CLAUDE.md for Project Context
+**Source:** Seb (Devto)
+
+Create a CLAUDE.md file at the project root to provide Claude Code with essential context. This allows Claude to understand the project structure, dependencies, and coding conventions, leading to more accurate and relevant suggestions. Referencing this file avoids repetitive context pasting.
+
+[Original](https://dev.to/gurkiu/how-i-actually-use-claude-as-a-senior-dev-partner-not-just-a-code-generator-3ii6) | Added: 2026-04-10
+
+---
+
+
+## 352. CCK: Automate Claude Context for Consistent Sessions
+**Source:** takawasi (Hackernews)
+
+Use the Claude Context Keeper (CCK) CLI to automatically generate a CLAUDE.md file describing your project, ensuring Claude Code has consistent context across sessions. CCK's 'sync' command scans your codebase, creating a comprehensive CLAUDE.md that Claude reads at the beginning of each session, eliminating the need for repetitive explanations.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-04-10
+
+---
+
 *[Back to Categories](../README.md)*
