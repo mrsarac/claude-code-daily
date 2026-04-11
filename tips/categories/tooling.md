@@ -919,4 +919,14 @@ The Claude CLI tool, bundled with Claude Code, offers a `-p` flag that enables u
 
 ---
 
+
+## 353. Prevent Secrets Exposure with Claude Code Hooks
+**Source:** Chudi Nnorukam (Devto)
+
+Use Claude Code hooks to automatically execute shell commands on tool events. Implement a hook that scans files for secrets *before* they're written, preventing unintentional inclusion of credentials in `.env` files or other sensitive locations. This adds a layer of security to your Claude Code workflows by validating output before it's persisted.
+
+[Original](https://dev.to/chudi_nnorukam/build-ai-code-guardrails-claude-hooks-in-5-steps-4k04) | Added: 2026-04-11
+
+---
+
 *[Back to Categories](../README.md)*
