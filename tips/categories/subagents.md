@@ -212,4 +212,14 @@ To avoid Claude Code getting lost in large, complex tasks, decompose the work in
 
 ---
 
+
+## 354. Chain Agents for Research, Review & Correction
+**Source:** João Pedro  (Devto)
+
+This demonstrates chaining Claude Code agents for automated workflows. Agents defined in Markdown can be invoked via @agent-name or the agents API. It showcases a system with agents for research (web fetching), review (error analysis), and correction (applying fixes) within Claude Code projects, improving content quality.
+
+[Original](https://dev.to/joaoprd/multi-agent-local-claude-code-4k5) | Added: 2026-04-12
+
+---
+
 *[Back to Categories](../README.md)*

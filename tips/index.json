@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-04-11T00:20:44.785526",
-  "totalTips": 353,
+  "lastUpdated": "2026-04-12T00:22:34.375332",
+  "totalTips": 354,
   "categories": [
     {
       "name": "Orchestration",
@@ -24,7 +24,7 @@
     {
       "name": "Subagents",
       "slug": "subagents",
-      "count": 23,
+      "count": 24,
       "icon": "\ud83e\udd16"
     },
     {
