@@ -1,12 +1,12 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-04-12T00:22:34.375332",
-  "totalTips": 354,
+  "lastUpdated": "2026-04-13T00:23:30.024939",
+  "totalTips": 355,
   "categories": [
     {
       "name": "Orchestration",
       "slug": "orchestration",
-      "count": 25,
+      "count": 26,
       "icon": "\ud83c\udfad"
     },
     {

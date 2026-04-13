@@ -258,4 +258,14 @@ To drastically improve development speed, run multiple Claude Code instances in 
 
 ---
 
+
+## 355. Automate Claude Code Tasks with Shell Hooks
+**Source:** Kjetil Furås (Devto)
+
+Claude Code hooks are shell commands triggered by specific events during coding sessions. This allows you to automate tasks like code formatting, blocking dangerous commands, or sending notifications upon task completion, providing deterministic control over Claude Code's behavior and ensuring consistent adherence to rules without relying on the LLM's memory.
+
+[Original](https://dev.to/kfuras/claude-code-hooks-automate-your-coding-workflow-in-2026-3dkg) | Added: 2026-04-13
+
+---
+
 *[Back to Categories](../README.md)*
