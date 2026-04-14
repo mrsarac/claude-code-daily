@@ -1313,4 +1313,14 @@ Use the Claude Context Keeper (CCK) CLI to automatically generate a CLAUDE.md fi
 
 ---
 
+
+## 357. Auditing Claude Code Context Files for Drift
+**Source:** Prestigious_Draw6633 (Reddit)
+
+The tip highlights a common problem with Claude Code workflows: context files drifting silently as codebases evolve, leading to inefficient agent behavior. It suggests regularly auditing context files to ensure they accurately reflect the current state of the codebase, thereby improving the agent's ability to perform tasks effectively and avoid redundant tool calls or incorrect inferences.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1skn98k/cleaned_up_my_claudemd_and_my_agent_sessions_got/) | Added: 2026-04-14
+
+---
+
 *[Back to Categories](../README.md)*

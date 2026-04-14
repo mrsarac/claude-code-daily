@@ -929,4 +929,14 @@ Use Claude Code hooks to automatically execute shell commands on tool events. Im
 
 ---
 
+
+## 356. Migrate Legacy Commands to Agent Skills
+**Source:** Volodymyr Nehir (Devto)
+
+Migrate custom commands from the older `.claude/commands/` directory to the Agent Skills standard. This approach allows you to bundle supporting files, executable scripts, and use pre-processing shell commands for improved custom tool integration within Claude Code CLI workflows.
+
+[Original](https://dev.to/volodymyr_nehir/build-custom-commands-for-claude-code-using-agent-skills-standard-pfd) | Added: 2026-04-14
+
+---
+
 *[Back to Categories](../README.md)*
