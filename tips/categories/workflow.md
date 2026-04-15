@@ -960,4 +960,14 @@ Orchestrate Claude Code with a comprehensive engineering workflow defined in CLA
 
 ---
 
+
+## 358. Pre-Approve Command Patterns in Claude Code
+**Source:** Jeff Sinason (Devto)
+
+The default approval workflow in Claude Code can become tedious. You can pre-approve specific command patterns in the `.claude/settings.json` file to reduce friction and streamline your workflow, preventing you from mindlessly clicking 'yes' to every prompt. This allows for a more efficient development process by automating approval for trusted commands.
+
+[Original](https://dev.to/echoforgex/stop-approving-every-claude-code-command-a-claudesettingsjson-1kce) | Added: 2026-04-15
+
+---
+
 *[Back to Categories](../README.md)*
