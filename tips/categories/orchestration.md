@@ -268,4 +268,14 @@ Claude Code hooks are shell commands triggered by specific events during coding 
 
 ---
 
+
+## 360. Automate Tasks with Claude Code Routines
+**Source:** RAXXO Studios (Devto)
+
+Leverage Claude Code Routines to automate tasks on Anthropic's cloud using scheduled or webhook-triggered runs. Package prompts, repos, and connectors for use cases like CI/CD verification, alert triage, and repository maintenance. Remember that these routines are short-lived and event-driven, ensuring adaptability without maintaining persistent state.
+
+[Original](https://dev.to/raxxostudios/claude-code-routines-run-your-automations-in-the-cloud-4783) | Added: 2026-04-16
+
+---
+
 *[Back to Categories](../README.md)*

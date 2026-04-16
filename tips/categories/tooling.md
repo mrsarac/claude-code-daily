@@ -939,4 +939,14 @@ Migrate custom commands from the older `.claude/commands/` directory to the Agen
 
 ---
 
+
+## 359. Manage Claude API Resources with the 'ant' CLI
+**Source:** RAXXO Studios (Devto)
+
+The 'ant' CLI simplifies Claude API interactions by replacing curl and JSON with typed flags and YAML configurations. It enables version control of agents and environments and supports direct management of API resources through Claude Code. Features include file inlining with @path and an interactive TUI for browsing responses, auto-pagination, and GJSON transformations, enhancing Claude Code workflows.
+
+[Original](https://dev.to/raxxostudios/the-ant-cli-puts-the-full-claude-api-in-your-terminal-1m8g) | Added: 2026-04-16
+
+---
+
 *[Back to Categories](../README.md)*
