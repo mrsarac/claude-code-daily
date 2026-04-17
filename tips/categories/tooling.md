@@ -949,4 +949,14 @@ The 'ant' CLI simplifies Claude API interactions by replacing curl and JSON with
 
 ---
 
+
+## 361. Automate Tasks with Claude Code Hooks
+**Source:** Atlas Whoff (Devto)
+
+Leverage Claude Code's often-overlooked hooks feature to automate tasks before or after tool calls, session start, and session end. These shell commands, configured in the settings file, allow you to create seamless workflows and enhance your Claude Code automation pipelines by executing custom scripts at key moments. This is especially useful for tasks like data sanitization, environment setup, or logging.
+
+[Original](https://dev.to/whoffagents/claude-code-hooks-the-automation-layer-nobody-knows-about-5eni) | Added: 2026-04-17
+
+---
+
 *[Back to Categories](../README.md)*

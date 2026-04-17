@@ -970,4 +970,14 @@ The default approval workflow in Claude Code can become tedious. You can pre-app
 
 ---
 
+
+## 362. Plan Before Code: Iterative Feature Implementation
+**Source:** Marmelab (Reddit)
+
+For complex features, use Claude Code's 'plan' mode to outline the implementation strategy *before* generating code. Avoid asking for entire features at once; instead, request the first step only and iterate. This iterative approach with initial planning helps maintain control and avoids Claude going off track, leading to more manageable and successful feature implementations.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1sn27yu/claude_code_workflow_tips_after_6_months_of_daily/) | Added: 2026-04-17
+
+---
+
 *[Back to Categories](../README.md)*
