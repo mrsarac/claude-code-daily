@@ -959,4 +959,14 @@ Leverage Claude Code's often-overlooked hooks feature to automate tasks before o
 
 ---
 
+
+## 363. Bash Statusline for Claude Code Usage and Context
+**Source:** Vientapps (Devto)
+
+Display Claude Code CLI usage, context token count, session reset time, and working directory as colored progress bars in your bash terminal. This allows for quick monitoring of resource consumption and context size directly in the CLI, helping you avoid unexpected cooldowns and manage your 7-day rolling limit effectively. The exact script to add to your bash profile is included.
+
+[Original](https://dev.to/vientapps/i-replaced-usage-and-context-in-claude-code-with-a-single-statusline-7h9) | Added: 2026-04-18
+
+---
+
 *[Back to Categories](../README.md)*
