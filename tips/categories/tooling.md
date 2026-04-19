@@ -969,4 +969,14 @@ Display Claude Code CLI usage, context token count, session reset time, and work
 
 ---
 
+
+## 364. Check Claude API Rate Limits from the Command Line
+**Source:** micaeked (Hackernews)
+
+This tip shows how to configure Claude Code to display rate limit usage directly in the status line. By adding a custom command in `~/.claude/settings.json` to capture the raw JSON from Claude, processing it using `jq`, and displaying the information, users can quickly monitor their five-hour and seven-day API usage, ensuring they stay within their allocated limits. This is particularly useful for users heavily reliant on Claude Code and needing to track API consumption.
+
+[Original](https://news.ycombinator.com/item?id=47806742) | Added: 2026-04-19
+
+---
+
 *[Back to Categories](../README.md)*
