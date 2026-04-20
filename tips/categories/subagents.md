@@ -222,4 +222,14 @@ This demonstrates chaining Claude Code agents for automated workflows. Agents de
 
 ---
 
+
+## 365. Parallel Claude Code Sub-agents for 10x Productivity
+**Source:** Nex Tools (Devto)
+
+Utilize Claude Code's sub-agent feature to create multiple parallel AI workers, each with independent context and tools. This approach boosts productivity beyond a linear scale by shifting the bottleneck from individual agent speed to orchestration efficiency. This allows users to accomplish tasks significantly faster by distributing workload across multiple agents.
+
+[Original](https://dev.to/nextools/how-i-use-claude-code-sub-agents-to-run-parallel-tasks-and-why-you-should-too-fg5) | Added: 2026-04-20
+
+---
+
 *[Back to Categories](../README.md)*

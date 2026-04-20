@@ -980,4 +980,24 @@ For complex features, use Claude Code's 'plan' mode to outline the implementatio
 
 ---
 
+
+## 366. Accessing Env Vars in Claude Code: Use SessionStart Hooks
+**Source:** quickconv (Devto)
+
+Environment variables in Claude Code's .env panel aren't available during the setup script. To access them for commands like `git clone`, move the command into a SessionStart hook, ensuring the environment variables are populated by the time the command executes, resolving authentication issues with services like GitHub.
+
+[Original](https://dev.to/cc_quickconv_ff5b94a1d015/claude-code-on-the-web-why-your-env-vars-dont-reach-the-setup-script-and-how-sessionstart-hook-4n6) | Added: 2026-04-20
+
+---
+
+
+## 369. Self-Improving Claude Code Loop with /insight & Skills
+**Source:** drag8800 (Reddit)
+
+Automate Claude Code's self-improvement by using `/insight` to analyze past sessions, identify friction points, and then create a Skill that automatically generates new skills, subagents, or `CLAUDE.md` rules to address these weaknesses. Schedule this as a recurring task to create a self-improving loop.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1sppv7n/self_improving_claude_code_sessions/) | Added: 2026-04-20
+
+---
+
 *[Back to Categories](../README.md)*

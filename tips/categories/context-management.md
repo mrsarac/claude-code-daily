@@ -1323,4 +1323,24 @@ The tip highlights a common problem with Claude Code workflows: context files dr
 
 ---
 
+
+## 367. Unclog: Trim Claude Code Context Usage
+**Source:** tomchill (Hackernews)
+
+The `unclog` tool helps you identify and remove unnecessary files from your Claude Code CLI context (~/.claude) to reduce token usage. It scans your Claude Code directory, displays token counts for each file, and allows selective removal with automatic snapshots for reversibility. Install with `uv tool install unclog` and run with `unclog`.
+
+[Original](https://github.com/thomaschill/unclog) | Added: 2026-04-20
+
+---
+
+
+## 368. Unclog: Manage Claude Code Context and Reduce Token Usage
+**Source:** tomchill (Hackernews)
+
+Use the 'unclog' tool to analyze and selectively remove files from your ~/.claude directory that are consuming excessive tokens. This helps reduce context window size and improve Claude Code performance. The tool creates snapshots for easy reversibility of changes.
+
+[Original](https://github.com/thomaschill/unclog) | Added: 2026-04-20
+
+---
+
 *[Back to Categories](../README.md)*
