@@ -1343,4 +1343,14 @@ Use the 'unclog' tool to analyze and selectively remove files from your ~/.claud
 
 ---
 
+
+## 370. Unclog: Manage Claude Code Context & Reduce Token Usage
+**Source:** tomchill (Hackernews)
+
+Use the `unclog` tool to analyze and reduce token usage in your Claude Code projects. It scans your `~/.claude` directory, identifies context-heavy files like MCPs, skills, and hooks, and allows you to selectively remove them while creating reversible snapshots. Install with `uv tool install unclog` and run with `unclog`.
+
+[Original](https://github.com/thomaschill/unclog) | Added: 2026-04-21
+
+---
+
 *[Back to Categories](../README.md)*
