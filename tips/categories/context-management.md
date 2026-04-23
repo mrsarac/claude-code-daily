@@ -1353,4 +1353,14 @@ Use the `unclog` tool to analyze and reduce token usage in your Claude Code proj
 
 ---
 
+
+## 371. CCK: Automate Claude Code Context with Claude Context Keeper
+**Source:** takawasi (Hackernews)
+
+Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summarizing your project's structure and conventions. This ensures Claude Code always has the necessary context at the start of each session. CCK also offers per-turn context injection using `cck watch --with-history` for even deeper contextual awareness.
+
+[Original](https://news.ycombinator.com/item?id=46435083) | Added: 2026-04-23
+
+---
+
 *[Back to Categories](../README.md)*
