@@ -1363,4 +1363,14 @@ Use Claude Context Keeper (CCK) to automatically generate a CLAUDE.md file summa
 
 ---
 
+
+## 372. Project-Level Configuration with CLAUDE.md
+**Source:** A3E Ecosystem (Devto)
+
+Use a CLAUDE.md file in your repo root to configure Claude Code at the start of each session. Claude reads this file before writing code or answering questions, enabling you to onboard Claude to your project quickly by providing essential context and instructions. This avoids repeatedly providing the same information.
+
+[Original](https://dev.to/a3e_ecosystem/claudemd-the-config-file-that-makes-claude-code-remember-your-rules-30m8) | Added: 2026-04-25
+
+---
+
 *[Back to Categories](../README.md)*
