@@ -979,4 +979,14 @@ This tip shows how to configure Claude Code to display rate limit usage directly
 
 ---
 
+
+## 373. Claude Code: Vim Visual Mode, Usage Stats, Custom Themes
+**Source:** RAXXO Studios (Devto)
+
+Claude Code CLI now supports Vim-style visual mode with full operator support for selected text (v and V). The `/usage` command consolidates cost and stats, offering per-model breakdowns and cache-hit numbers for subscription users. Users can also define custom themes via `/theme` by supplying a JSON color file, enabling personalized aesthetics without modifying the core application.
+
+[Original](https://dev.to/raxxostudios/claude-code-21118-adds-vim-mode-theme-and-hook-mcp-43m5) | Added: 2026-04-26
+
+---
+
 *[Back to Categories](../README.md)*

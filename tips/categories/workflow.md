@@ -1000,4 +1000,14 @@ Automate Claude Code's self-improvement by using `/insight` to analyze past sess
 
 ---
 
+
+## 374. Automate Code Review & Onboarding with Claude Code
+**Source:** RAXXO Studios (Devto)
+
+Claude Code Ultraplan enables cloud-based draft planning and web editor review, while Monitor streams real-time background events into chat for immediate reactions. Use `/autofix-pr` to automatically apply fixes to pull requests and push commits. The `/team-onboarding` command creates shareable ramp-up guides, improving team integration with Claude Code.
+
+[Original](https://dev.to/raxxostudios/claude-code-ultraplan-plan-in-the-cloud-run-anywhere-3jjm) | Added: 2026-04-26
+
+---
+
 *[Back to Categories](../README.md)*
