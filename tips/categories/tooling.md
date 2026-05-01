@@ -989,4 +989,14 @@ Claude Code CLI now supports Vim-style visual mode with full operator support fo
 
 ---
 
+
+## 375. Self-Evolving Claude Code CLI Workflow with Harness-Loop
+**Source:** Tufail Khan (Devto)
+
+Automate Claude Code CLI interactions with harness-loop, a bash script designed to handle feature backlogs, recover from failures, and learn iteratively. This tool streamlines the process of shipping features over time using Claude Code CLI, enhancing its reliability and efficiency by creating a self-evolving loop.
+
+[Original](https://dev.to/tufailkhan457/harness-engineering-a-self-evolving-feature-loop-in-312-lines-of-bash-4j33) | Added: 2026-05-01
+
+---
+
 *[Back to Categories](../README.md)*
