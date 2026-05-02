@@ -999,4 +999,24 @@ Automate Claude Code CLI interactions with harness-loop, a bash script designed 
 
 ---
 
+
+## 376. Automate Claude Code Permission Prompts with ccgate
+**Source:** Takuya Takahashi (Devto)
+
+ccgate is a CLI tool that automates permission prompts in Claude Code by delegating them to another LLM (Haiku). It handles the 'allow', 'deny', or 'fallthrough' decisions, significantly reducing user interaction. The 'deny' option provides a reason for the agent to act on. This setup can resolve a large percentage of permission requests automatically, streamlining Claude Code workflows.
+
+[Original](https://dev.to/tak848/ccgate-delegate-claude-code-codex-cli-permission-prompts-to-an-llm-274c) | Added: 2026-05-02
+
+---
+
+
+## 378. Persist Claude Code sessions beyond 30 days
+**Source:** Ivantgam (Reddit)
+
+By default, Claude code automatically deletes session .jsonl files after 30 days. To retain sessions for longer, either modify the `.claude/settings.json` file or use the command `npx agentinit agent set claude cleanupPeriodDays 365` to extend the retention period to 365 days.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1t1936m/claude_code_session_history/) | Added: 2026-05-02
+
+---
+
 *[Back to Categories](../README.md)*

@@ -1010,4 +1010,14 @@ Claude Code Ultraplan enables cloud-based draft planning and web editor review, 
 
 ---
 
+
+## 377. Controlling Claude Code Refactoring Complexity
+**Source:** Ken Imoto (Devto)
+
+To avoid overly complex refactorings from Claude Code, provide specific instructions rather than vague requests. Vague prompts like "refactor this nicely" can lead to the addition of unnecessary features and patterns, burying the original goal. Experiment with precise prompts to guide Claude Code towards focused improvements and avoid overwhelming changes.
+
+[Original](https://dev.to/kenimo49/i-asked-ai-to-refactor-this-nicely-and-got-unwanted-decimals-and-dataclasses-1o77) | Added: 2026-05-02
+
+---
+
 *[Back to Categories](../README.md)*
