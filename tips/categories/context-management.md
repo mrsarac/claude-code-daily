@@ -1373,4 +1373,14 @@ Use a CLAUDE.md file in your repo root to configure Claude Code at the start of 
 
 ---
 
+
+## 380. Use Persistent Configs for Consistent Claude Code Sessions
+**Source:** CodinDev (Reddit)
+
+Avoid repetitive setup by creating a persistent configuration file for Claude Code. Store preferred code structure, error handling preferences, directory constraints, and confirmation settings. This allows Claude to remember your preferences across sessions, eliminating the need to re-explain your requirements each time and streamlining your workflow.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1t23l7f/spent_way_too_long_manually_steering_claude_code/) | Added: 2026-05-03
+
+---
+
 *[Back to Categories](../README.md)*

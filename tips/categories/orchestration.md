@@ -278,4 +278,14 @@ Leverage Claude Code Routines to automate tasks on Anthropic's cloud using sched
 
 ---
 
+
+## 379. Offload Tasks to Cheaper Models via Claude Code CLI
+**Source:** More-Hunter-3457 (Reddit)
+
+Use Claude Code CLI with Bash tools to delegate simple tasks like file reading or boilerplate generation to cheaper models (e.g., Kimi K2.5). Create routing rules in a CLAUDE.md file to determine when to use Claude's built-in intelligence versus delegating. This reduces Claude usage and lowers costs.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1t1o43w/i_gave_claude_code_a_002call_coworker_and_stopped/) | Added: 2026-05-03
+
+---
+
 *[Back to Categories](../README.md)*
