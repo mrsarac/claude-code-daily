@@ -1383,4 +1383,14 @@ Avoid repetitive setup by creating a persistent configuration file for Claude Co
 
 ---
 
+
+## 383. Persistent Config for Consistent Claude Code Sessions
+**Source:** CodinDev (Reddit)
+
+Use a persistent configuration file to store preferred code structure, error handling methods, default directories, and other preferences. This avoids repeatedly re-explaining your workflow to Claude Code in each session, streamlining the process and reducing onboarding time by ensuring consistent behavior.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1t23l7f/spent_way_too_long_manually_steering_claude_code/) | Added: 2026-05-04
+
+---
+
 *[Back to Categories](../README.md)*

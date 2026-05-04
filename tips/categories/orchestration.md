@@ -288,4 +288,14 @@ Use Claude Code CLI with Bash tools to delegate simple tasks like file reading o
 
 ---
 
+
+## 382. Offload Repetitive Tasks to Cheaper Models via CLI
+**Source:** More-Hunter-3457 (Reddit)
+
+Use Claude Code's tool use to delegate repetitive tasks like bulk file reading and boilerplate generation to cheaper models (e.g., via a CLI script calling Kimi). This prevents hitting Claude Pro limits by reserving Claude's intelligence for more complex tasks. Route tasks based on complexity using a markdown file for decision-making.
+
+[Original](https://www.reddit.com/r/ClaudeAI/comments/1t1o43w/i_gave_claude_code_a_002call_coworker_and_stopped/) | Added: 2026-05-04
+
+---
+
 *[Back to Categories](../README.md)*

@@ -1,18 +1,18 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-05-03T00:29:25.622206",
-  "totalTips": 380,
+  "lastUpdated": "2026-05-04T00:29:36.739509",
+  "totalTips": 383,
   "categories": [
     {
       "name": "Orchestration",
       "slug": "orchestration",
-      "count": 28,
+      "count": 29,
       "icon": "\ud83c\udfad"
     },
     {
       "name": "Context Management",
       "slug": "context-management",
-      "count": 133,
+      "count": 134,
       "icon": "\ud83d\udcdd"
     },
     {
@@ -30,7 +30,7 @@
     {
       "name": "Tooling",
       "slug": "tooling",
-      "count": 101,
+      "count": 102,
       "icon": "\ud83d\udd27"
     }
   ],

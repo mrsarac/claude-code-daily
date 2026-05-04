@@ -1019,4 +1019,14 @@ By default, Claude code automatically deletes session .jsonl files after 30 days
 
 ---
 
+
+## 381. Sandbox Claude Code CLI with Docker
+**Source:** Oleksii Trekhleb (Devto)
+
+Use claude-pod, a Docker container, to sandbox Claude Code CLI and limit its access to only the project directory. This mitigates the risk of unintended access to sensitive files when using the `--dangerously-skip-permissions` flag, which can grant Claude Code broad read/write access.
+
+[Original](https://dev.to/trekhleb/run-claude-codes-dangerously-skip-permissions-safely-with-docker-514d) | Added: 2026-05-04
+
+---
+
 *[Back to Categories](../README.md)*
