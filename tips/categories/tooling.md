@@ -1029,4 +1029,14 @@ Use claude-pod, a Docker container, to sandbox Claude Code CLI and limit its acc
 
 ---
 
+
+## 384. Configure Claude Code CLI with Amazon Bedrock
+**Source:** Haowen Huang (Devto)
+
+Configure Claude Code CLI to use Amazon Bedrock as the inference backend, eliminating the need for an Anthropic API key. Set the required environment variables in `~/.claude/settings.json`. The setup uses the same AWS credentials and Bedrock model access, making it a straightforward alternative to the standard Anthropic API.
+
+[Original](https://dev.to/haowen_huang/running-claude-code-and-claude-desktop-on-amazon-bedrock-1ed2) | Added: 2026-05-05
+
+---
+
 *[Back to Categories](../README.md)*
